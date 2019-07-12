@@ -18,7 +18,7 @@ public class Cart
 		map.put("wheatflour",320f);
 		map.put("cornflour",320f);
 		map.put("rice", 90f);
-		map.put("premium oil", 380f);
+		map.put("oil", 380f);
 		
 	    Set<String> keys = map.keySet();
 	    for(String i:keys)
@@ -42,17 +42,17 @@ public class Cart
     	  case 2 : System.out.println("enter item to be removed...");
     	         Scanner myItem1 = new Scanner(System.in);
                  String s1 = myItem1.nextLine();
-    	         //removeItem(s1);
+    	         removeItem(s1);
     			 break;
-    	  case 3 : //generateBill();
-    			 break; 
+    	  case 3 : generateBill();
+    			   break; 
     	  default : System.out.println("invalid action");
     	          break;    	
     	 }
     	 System.out.println("for more activity press 1.... else press 2 for generating bill...");
     	 Scanner ss = new Scanner(System.in);
     	 int a = ss.nextInt();
-    	 if(a==2)
+    	 if(a!=1)
     	 {
     	  action=2;	 
           generateBill();
@@ -60,7 +60,6 @@ public class Cart
 	     }
 	    }
 	}	      
-   	 
    	 
    	 static void addItem(String s, float p)
    	 {   		 
@@ -71,8 +70,7 @@ public class Cart
    			{
    				l=1;
    				previous = i;
-   				break;
-   			
+   				break;		
    			}
    		}
    		 
@@ -100,6 +98,18 @@ public class Cart
 	    }
    	 }
    	 
+   	 
+   	 static void removeItem(String s)
+     {
+       myCart.remove(s);   
+       Set<String> keys = myCart.keySet();
+  	   System.out.println("item_name      price     quantity");
+	   for(String i:keys)
+	   {
+	     System.out.println(i+"        "+myCart.get(i)+"        "+amount.get(i));
+	   }
+     }
+     
    	static void generateBill()
     {
    	  float total=0;
@@ -111,6 +121,7 @@ public class Cart
     	System.out.println(i+"     "+myCart.get(i)+"      "+amount.get(i));
       }            
       
+      //calculation of total amount 
       for(String i:keys)
       {
     	total=total+(myCart.get(i)*amount.get(i));  
