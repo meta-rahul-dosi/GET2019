@@ -26,8 +26,8 @@ public class Cart
 	    	System.out.println(i+"   "+map.get(i));
 	    }
 	    
-	    boolean action=true;
-	    label: while(action)
+	    int action=1;
+	    label: while(action==1)
 	    {
 	     System.out.println("\npress 1 for adding item in cart...press 2 for removing item from cart...press 3 for generating bill\n");
 	     Scanner choice = new Scanner(System.in);
@@ -49,20 +49,16 @@ public class Cart
     	  default : System.out.println("invalid action");
     	          break;    	
     	 }
-    	 System.out.println("more activity ?");
+    	 System.out.println("for more activity press 1.... else press 2 for generating bill...");
     	 Scanner ss = new Scanner(System.in);
-    	 String a = ss.nextLine();
-    	 if(a=="yes")
-    	 action=true;
-    	 if(a=="no")
+    	 int a = ss.nextInt();
+    	 if(a==2)
     	 {
-          action=false;
+    	  action=2;	 
           generateBill();
-    	 }
-         if(action=false)
     	 break label;
+	     }
 	    }
-	    
 	}	      
    	 
    	 
@@ -100,19 +96,26 @@ public class Cart
    		System.out.println("item_name      price     quantity");
 	    for(String i:keys)
 	    {
-	    	System.out.println(i+"   "+myCart.get(i)+"   "+amount.get(i));
+	    	System.out.println(i+"        "+myCart.get(i)+"        "+amount.get(i));
 	    }
    	 }
    	 
    	static void generateBill()
     {
+   	  float total=0;
    	  System.out.println("Your whole shopping is \n");
    	  System.out.println("item_name     price     quantity");
       Set<String> keys = myCart.keySet();
       for(String i:keys)
       {
-    	System.out.println(i+"         "+myCart.get(i)+"      "+amount.get(i));
+    	System.out.println(i+"     "+myCart.get(i)+"      "+amount.get(i));
       }            
+      
+      for(String i:keys)
+      {
+    	total=total+(myCart.get(i)*amount.get(i));  
+      }
+      System.out.println("total="+total);
     } 
     
 }
