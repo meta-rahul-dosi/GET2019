@@ -1,0 +1,48 @@
+/*System.out.println("\nwants to remove item from your cart ?.... enter item name....");
+		j=4;
+		switch(i)
+		{
+		case 1 : removeItem(map.get(i).itemName, map.get(i).price);
+		break;
+		case 2 : removeItem(map.get(i).itemName, map.get(i).price);
+		break;
+		case 3 : removeItem(map.get(i).itemName, map.get(i).price);
+		break;
+		case 4 : removeItem(map.get(i).itemName, map.get(i).price); 
+		break;
+		}	
+
+
+public static void removeItem(String s, float p)
+	{
+        myCart.remove(s); 
+        for(int i=1; i<=4; i++)
+		{
+		 // System.out.println(myCart.get(s)+"   "+myCart.get(p));
+		}
+	}
+*/	
+	
+	
+	
+	// Java code to illustrate 
+// using label and continue 
+// instead of goto 
+
+// file name: Main.java 
+public class Main { 
+	public static void main(String[] args) 
+	{ 
+
+	// label for outer loop 
+	outer: 
+		for (int i = 0; i < 10; i++) { 
+			for (int j = 0; j < 10; j++) { 
+				if (j == 1) 
+					continue outer; 
+				System.out.println(" value of j = " + j); 
+			} 
+		} // end of outer loop 
+	} // end of main() 
+} // end of class Main 
+	
