@@ -18,7 +18,11 @@ public class Cart
 		map.put("wheatflour",320f);
 		map.put("cornflour",320f);
 		map.put("rice", 90f);
+<<<<<<< HEAD
+		map.put("premium oil", 380f);
+=======
 		map.put("oil", 380f);
+>>>>>>> 34915e1d3f245eff75d50a743bef8a885b1dac39
 		
 	    Set<String> keys = map.keySet();
 	    for(String i:keys)
@@ -26,8 +30,13 @@ public class Cart
 	    	System.out.println(i+"   "+map.get(i));
 	    }
 	    
+<<<<<<< HEAD
+	    boolean action=true;
+	    label: while(action)
+=======
 	    int action=1;
 	    label: while(action==1)
+>>>>>>> 34915e1d3f245eff75d50a743bef8a885b1dac39
 	    {
 	     System.out.println("\npress 1 for adding item in cart...press 2 for removing item from cart...press 3 for generating bill\n");
 	     Scanner choice = new Scanner(System.in);
@@ -42,6 +51,29 @@ public class Cart
     	  case 2 : System.out.println("enter item to be removed...");
     	         Scanner myItem1 = new Scanner(System.in);
                  String s1 = myItem1.nextLine();
+<<<<<<< HEAD
+    	         //removeItem(s1);
+    			 break;
+    	  case 3 : //generateBill();
+    			 break; 
+    	  default : System.out.println("invalid action");
+    	          break;    	
+    	 }
+    	 System.out.println("more activity ?");
+    	 Scanner ss = new Scanner(System.in);
+    	 String a = ss.nextLine();
+    	 if(a=="yes")
+    	 action=true;
+    	 if(a=="no")
+         action=false;
+    	 if(action=false)
+    	 break label;
+	    }
+	    
+	}	      
+   	 
+   	 
+=======
     	         removeItem(s1);
     			 break;
     	  case 3 : generateBill();
@@ -61,6 +93,7 @@ public class Cart
 	    }
 	}	      
    	 
+>>>>>>> 34915e1d3f245eff75d50a743bef8a885b1dac39
    	 static void addItem(String s, float p)
    	 {   		 
    		int l=0, previous=0;
@@ -70,7 +103,12 @@ public class Cart
    			{
    				l=1;
    				previous = i;
+<<<<<<< HEAD
+   				break;
+   			
+=======
    				break;		
+>>>>>>> 34915e1d3f245eff75d50a743bef8a885b1dac39
    			}
    		}
    		 
@@ -94,11 +132,22 @@ public class Cart
    		System.out.println("item_name      price     quantity");
 	    for(String i:keys)
 	    {
+<<<<<<< HEAD
+	    	System.out.println(i+"   "+myCart.get(i)+"   "+amount.get(i));
+=======
 	    	System.out.println(i+"        "+myCart.get(i)+"        "+amount.get(i));
+>>>>>>> 34915e1d3f245eff75d50a743bef8a885b1dac39
 	    }
    	 }
    	 
    	 
+<<<<<<< HEAD
+   	 
+   	 
+   	 
+   	static void generateBill()
+    {
+=======
    	 static void removeItem(String s)
      {
        myCart.remove(s);   
@@ -113,11 +162,16 @@ public class Cart
    	static void generateBill()
     {
    	  float total=0;
+>>>>>>> 34915e1d3f245eff75d50a743bef8a885b1dac39
    	  System.out.println("Your whole shopping is \n");
    	  System.out.println("item_name     price     quantity");
       Set<String> keys = myCart.keySet();
       for(String i:keys)
       {
+<<<<<<< HEAD
+    	System.out.println(i+"         "+myCart.get(i)+"      "+amount.get(i));
+      }
+            
     	System.out.println(i+"     "+myCart.get(i)+"      "+amount.get(i));
       }            
       
