@@ -1,19 +1,20 @@
 import java.util.Scanner;
-import java.lang.*;
 
 public class GradingCalculation {
 	public int numberOfStudents() {
-		Scanner s = new Scanner(System.in);
-		int n = s.nextInt();
+		Scanner inputObj = new Scanner(System.in);
+		int n = inputObj.nextInt();
+		inputObj.close();
 		return n;
 	}
 
 	int[] gradeEntries(int n) {
-		Scanner s = new Scanner(System.in);
+		Scanner obj = new Scanner(System.in);
 		int entries[] = new int[n];
 		for (int i = 0; i < n; i++) {
-			entries[i] = s.nextInt();
+			entries[i] = obj.nextInt();
 		}
+		obj.close();
 		return entries;
 	}
 
@@ -46,3 +47,4 @@ public class GradingCalculation {
 		return min;
 	}
 }
+

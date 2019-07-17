@@ -17,19 +17,19 @@ class area {
 		inputParameters.close();
 	}
 
-	double circle(double radius) {
+	private double circle(double radius) {
 		return (3.14 * radius * radius);
 	}
 
-	double square(double width) {
+	private double square(double width) {
 		return (width * width);
 	}
 
-	double rectangle(double width, double height) {
+	private double rectangle(double width, double height) {
 		return (width * height);
 	}
 
-	double triangle(double width, double height) {
+	private double triangle(double width, double height) {
 		return (width * height / 2);
 	}
 
