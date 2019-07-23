@@ -10,32 +10,30 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
-public class DegreeTest {
-	private int inputPoly1[] = new int[10];
-	private int expectedResult;
+public class AddTest {
+	private float expectedResult;
 	private Poly poly;
 
 	@Before
 	public void initialize() {
-		poly = new Poly(inputPoly1);
+		poly = new Poly();
+		poly.poly1 = new int[]{5,0,4,1,3,2};
+		poly.poly2 = new int[]{3,0,4,2};
 	}
 
-	public DegreeTest(int[] poly1, Integer expectedResult) {
-		this.inputPoly1 = poly1;
+	public AddTest(Float expectedResult) {
 		this.expectedResult = expectedResult;
 	}
 
 	@Parameterized.Parameters
 	public static Collection<Object[]> parameters() {
 		return Arrays.asList(new Object[][] {
-				{ new int[] { 1, 0, 2, 2 }, 2 },
-				{ new int[] { 1, 2}, 2 },
-				{ new int[] { 11, 2, 4, 3 }, 3 } });
+				{ new int[] { 8, 0, 4, 1, 7, 2 }}});
 	}
 
 	@Test
 	public void testEvaluate() {
-		assertEquals(expectedResult, poly.degree());
+		assertEquals(expectedResult, poly.addPoly(poly, poly));
 	}
 }
 
