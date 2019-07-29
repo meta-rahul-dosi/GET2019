@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Marksheet {
 	public static void main(String[] args) {
 		GradingCalculation grades = new GradingCalculation();

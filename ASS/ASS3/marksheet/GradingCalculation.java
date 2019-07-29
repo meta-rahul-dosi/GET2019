@@ -4,7 +4,6 @@ public class GradingCalculation {
 	public int numberOfStudents() {
 		Scanner inputObj = new Scanner(System.in);
 		int n = inputObj.nextInt();
-		inputObj.close();
 		return n;
 	}
 

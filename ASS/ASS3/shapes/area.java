@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-class area {
+public class Area {
 
 	public static void main(String[] args) {
-		area obj = new area();
+		Area obj = new Area();
 		System.out.println("enter width, height and radius");
 		Scanner inputParameters = new Scanner(System.in);
 		double width = inputParameters.nextDouble();
@@ -17,7 +17,7 @@ class area {
 		inputParameters.close();
 	}
 
-	private double circle(double radius) {
+	 double circle(double radius) {
 		return (3.14 * radius * radius);
 	}
 
@@ -32,5 +32,4 @@ class area {
 	private double triangle(double width, double height) {
 		return (width * height / 2);
 	}
-
 }
