@@ -1,0 +1,14 @@
+
+public class Node {
+
+	int data;
+	Node next;
+}
+
+Node createNode()
+{
+	System.out.println("enter data for this new  node : ");
+	Node obj = new Node();
+	Scanner scanner = new Scanner(System.in);
+	obj.data = inputData;
+}

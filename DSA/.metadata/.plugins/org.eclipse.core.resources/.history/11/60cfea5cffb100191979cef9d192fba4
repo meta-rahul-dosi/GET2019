@@ -1,0 +1,14 @@
+import java.util.Collection;
+
+public class MainController {
+
+	public LinkedList() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
