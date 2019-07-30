@@ -1,0 +1,32 @@
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class MainController {
+
+	 public static void main(String args[]) 
+	    { 
+	       Node object = new Node();
+	       
+	       
+	       int leftPosition = object.getLeftPosition();
+	       int rightPosition = object.getRightPosition();
+  	       
+	       object.createNode(4);
+	       object.createNode(3);
+	       object.createNode(2);
+	       object.show();
+	    } 
+  
+       void input()
+       {
+    	   System.out.println("enter number of nodes to be inserted in linked list");
+    	   Scanner scanner = new Scanner(System.in);
+    	   int noOfNodes = scanner.nextInt();
+    	   int storeData[] = new int[noOfNodes];
+    	   
+    	   System.out.println("enter data for nodes : ");
+    	   for(int index = 0; index < noOfNodes; index++)
+    		   storeData[index] = scanner.nextInt();
+       }
+
+}
