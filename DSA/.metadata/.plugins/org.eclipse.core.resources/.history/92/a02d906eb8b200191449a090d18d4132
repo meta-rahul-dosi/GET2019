@@ -1,0 +1,23 @@
+
+public class Polynomial {
+
+	void createPolynomial()
+	{
+		Scanner scanner = new Scanner(System.in);
+		Node node = new Node();
+		
+		
+		System.out.println("tell how many terms you wants in polynomial : ");
+		
+		
+		
+		if(header == null)
+			header = node;
+	}
+	
+	void printPolynomial()
+	{
+		
+	}
+	
+}

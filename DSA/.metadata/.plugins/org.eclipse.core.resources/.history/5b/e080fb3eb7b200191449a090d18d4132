@@ -1,0 +1,10 @@
+public class Node {
+	int coefficient;
+	List<Integer> power = new ArrayList<>();
+	char variable;
+	Node next;
+
+	public static void main(String argument[]) {
+			
+	}
+}

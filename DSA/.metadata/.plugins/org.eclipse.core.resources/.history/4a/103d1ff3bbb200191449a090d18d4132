@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Polynomial {
+
+	Scanner scanner = new Scanner(System.in);
+	Node header = null;
+
+	public static void main(String argument[]) {
+		createPolynomial();
+		createPolynomial();
+		createPolynomial();
+	}
+
+	void createPolynomial() {
+		Node node = new Node();
+
+		if (header == null)
+			header = node;
+		
+		node
+
+	}
+
+	void printPolynomial() {
+
+	}
+
+}

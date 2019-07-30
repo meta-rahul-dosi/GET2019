@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Polynomial {
+
+	Scanner scanner = new Scanner(System.in);
+	Node header = null;
+
+	void createPolynomial()
+	{		
+		Node node = new Node();
+		
+		System.out.println("tell how many terms you wants in polynomial : ");
+		int numberOfTerms = scanner.nextInt();
+		
+		if(header == null)
+			header = node;
+		
+		for(int index=0; index < numberOfTerms; index++)
+		{
+			System.out.println("enter coefficient - ");
+			node.coefficient = scanner.nextInt();
+			System.out.println("enter number of variables : ");
+		}
+	}
+
+	void printPolynomial() {
+
+	}
+
+}

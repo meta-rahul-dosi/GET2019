@@ -9,7 +9,9 @@ import java.util.Scanner;
  */
 
 public class MainController {
-
+ 
+	private Scanner scanner = new Scanner(System.in);
+	
 	public static void main(String arguments[]) {
 		MainController mainObject = new MainController();
 		Node object = new Node();
@@ -27,20 +29,20 @@ public class MainController {
 		int leftPosition = object.getLeftPosition();
 		int rightPosition = object.getRightPosition();
 		int noOfRotations = object.getNoOfRotations();
-		object.sublist(leftPosition, rightPosition);
+		int sublistStore[] = new int[rightPosition-leftPosition+1]; 
+		sublistStore = object.sublist(leftPosition, rightPosition);
+		int afterRotation[] = new int[1000]; 
+		object.rotationSublist(noOfRotations, nodeData);
 	}
 
 	List<Integer> input() {
-		System.out
-				.println("enter number of nodes to be inserted in linked list");
-		Scanner scanner = new Scanner(System.in);
+		System.out.println("enter number of nodes to be inserted in linked list");
 		int noOfNodes = scanner.nextInt();
 
 		List<Integer> storeData = new ArrayList<>();
 		System.out.println("enter data for nodes : ");
 		for (int index = 0; index < noOfNodes; index++)
 			storeData.add(scanner.nextInt());
-		scanner.close();
 		return storeData;
 	}
 }

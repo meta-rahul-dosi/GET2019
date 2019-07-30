@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 
 /**
  * params
@@ -9,10 +8,11 @@ import java.lang.*;
  */
 public class Node {
 
-	int data;
-	Node next;
-	Node header = null;
-
+	private int data;
+	private Node next;
+	private Node header = null, sublistHeader = null, sublistFooter = null;
+	private Scanner scanner = new Scanner(System.in);
+	
 	void createNode(int inputData) {
 		Node node = new Node();
 		Node node1 = new Node();
@@ -42,9 +42,7 @@ public class Node {
 
 	int getLeftPosition() {
 		System.out.println("enter left position of sublist : ");
-		Scanner scanner = new Scanner(System.in);
 		int left = scanner.nextInt();
-		scanner.close();
 		return left;
 	}
 
@@ -52,7 +50,8 @@ public class Node {
 		System.out.println("enter right position of sublist : ");
 		Scanner scanner = new Scanner(System.in);
 		int right = scanner.nextInt();
-		scanner.close();
+		System.out.println(right);
+		
 		return right;
 	}
 
@@ -64,24 +63,47 @@ public class Node {
 		return numberOfRotations;
 	}
 
-	void sublist(int leftEnd, int rightEnd) {
+	int[] sublist(int leftEnd, int rightEnd) {
+		int [] array = new int[rightEnd-leftEnd+1];
 		Node node = new Node();
 		node = header;
-		int index = 1;
+		int index = 1, arrayIndex = 0;
 
 		if (header == null) {
 			System.out.println("\noOps ! empty linked list");
-			return;
+			return null;
 		}
 
 		System.out.println("\nSublist is ");
 		while (index++ < leftEnd)
 			node = node.next;
-
+		sublistHeader = node;
 		index = leftEnd;
 		while (index++ <= rightEnd) {
+			array[arrayIndex++]=node.data;
 			System.out.println(node.data);
 			node = node.next;
 		}
+		sublistFooter = node;
+		return array;
+	}
+	
+	void rotationSublist(int number, List<Integer> nodeData)
+	{
+		Node node = new Node();
+		node = sublistHeader;
+		System.out.println("\n\n");
+		while(node != sublistFooter)
+		{
+			System.out.println(node.data);
+			node = node.next;
+		}
+	  
+		for(int index = 1; index <= 2; index++)
+		{
+			
+		}
 	}
 }
+
+

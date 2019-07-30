@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Polynomial {
+
+	Scanner scanner = new Scanner(System.in);
+	static Node header = null;
+
+	public static void main(String argument[]) {
+		createPolynomial();
+		createPolynomial();
+		createPolynomial();
+	}
+
+	 void Polynomial() {
+		Node node = new Node();
+		int index = 0;
+		
+		if (header == null)
+			header = node;
+		
+		node.coefficient = 3;
+		node.variables.add('x');
+		
+
+	}
+
+	int returnDegree() {
+		int degree=7;
+		
+		return degree;
+	}
+
+}

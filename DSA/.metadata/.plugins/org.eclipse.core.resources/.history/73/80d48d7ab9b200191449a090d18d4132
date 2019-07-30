@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class MainClass {
+
+	Node header = new Node();
+	header=null;
+
+	public static void main(String argument[]) {
+		Node node = new Node();
+		Polynomial polynomial = new Polynomial();
+
+		System.out.println("lets create a polynomial");
+		polynomial.createPolynomial(header);
+
+	}
+}

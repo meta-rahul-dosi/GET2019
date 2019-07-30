@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Polynomial {
+
+	Scanner scanner = new Scanner(System.in);
+	Node header = null;
+
+	void createPolynomial() {
+		Node node = new Node();
+
+		if (header == null)
+			header = node;
+
+	}
+
+	void printPolynomial() {
+
+	}
+
+}

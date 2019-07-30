@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Polynomial {
+
+	Scanner scanner = new Scanner(System.in);
+	Node header = null;
+	
+	void createPolynomial()
+	{
+		
+		Node node = new Node();
+		
+		System.out.println("tell how many terms you wants in polynomial : ");
+		int numberOfTerms = scanner.nextInt();
+		
+		if(header == null)
+			header = node;
+		
+		
+	}
+	
+	void printPolynomial()
+	{
+		
+	}
+	
+}

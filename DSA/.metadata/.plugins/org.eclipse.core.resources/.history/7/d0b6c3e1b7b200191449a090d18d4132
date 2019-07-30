@@ -1,0 +1,14 @@
+
+public class Polynomial {
+
+	 createPolynomial()
+	{
+		
+	}
+	
+	void printPolynomial()
+	{
+		
+	}
+	
+}

@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Polynomial {
+
+	Scanner scanner = new Scanner(System.in);
+	Node header = null;
+
+	public static void main(String argument[]) {
+
+	}
+
+	void createPolynomial() {
+		Node node = new Node();
+		int numberOfTerms = scanner.nextInt();
+
+		for (int index = 0; index < numberOfTerms; index++) {
+			System.out.println("enter coefficient : ");
+			node.coefficient = scanner.nextInt();
+
+			System.out.println("enter number of variables : ");
+			int var = scanner.nextInt();
+			System.out.println("enter variables ");
+			for (int i = 0; i < var; i++) {
+				node.variables.add(scanner.next().charAt(i));
+			}
+			System.out.println("enter corresponding powers ");
+			for (index = 0; index < var; index++) {
+				node.powers.add(scanner.nextInt());
+			}
+		}
+
+		if (header == null)
+			header = node;
+		else {
+			node.next = header;
+			header = node;
+		}
+	}
+
+	int returnDegree() {
+		int degree = 7;
+
+		return degree;
+	}
+}
