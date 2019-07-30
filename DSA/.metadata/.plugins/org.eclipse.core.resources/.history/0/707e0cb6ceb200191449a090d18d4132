@@ -39,22 +39,16 @@ public class Polynomial {
 			node.next = header;
 			header = node;
 		}
-		
-		returnDegree();
 	}
 
-	static int returnDegree() {
-		int degree = 0, previous = 0, i=0;
+	int returnDegree() {
+		int degree = 0;
 		Node node = new Node();
 		node = header;
 		while (node != null) {
-			for(int index=0; index < node.powers.size(); index++)
-			degree += node.powers.get(i);
-			
-			if(degree < previous)
-				degree = previous;
+
 		}
-        System.out.println(degree);
+
 		return degree;
 	}
 }

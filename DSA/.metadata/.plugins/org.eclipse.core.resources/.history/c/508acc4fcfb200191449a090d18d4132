@@ -43,7 +43,7 @@ public class Polynomial {
 		returnDegree();
 	}
 
-	static int returnDegree() {
+	int returnDegree() {
 		int degree = 0, previous = 0, i=0;
 		Node node = new Node();
 		node = header;
