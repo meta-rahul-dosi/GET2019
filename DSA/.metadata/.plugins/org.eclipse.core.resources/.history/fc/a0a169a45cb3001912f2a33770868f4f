@@ -1,0 +1,71 @@
+import java.util.*;
+
+/**
+ * param
+ * 
+ * @author Rahul
+ *
+ */
+
+public class LinkedList {
+
+	private Scanner scanner = new Scanner(System.in);
+	private Node header = null, sublistHeader = null;
+
+	public static void main(String arguments[]) {
+		LinkedList mainObject = new LinkedList();
+		Node object = new Node();
+	}
+
+	void createLinkedList(int[] inputList) {
+
+		for (int index = 0; index < inputList.length; index++) {
+			Node node = new Node();
+			Node node1 = new Node();
+			node.data = inputList[index];
+			node.next = null;
+			if (header == null) {
+				header = node;
+			} else {
+				node1 = header;
+			}
+			while (node1.next != null) {
+				node1 = node1.next;
+			}
+			node1.next = node;
+		}
+		
+	}
+
+	void sublist(int leftEnd, int rightEnd) {
+		int[] array = new int[rightEnd - leftEnd + 1];
+		Node node = new Node();
+		node = header;
+		int index = 1, arrayIndex = 0;
+
+		if (header == null) {
+			System.out.println("\noOps ! empty linked list");
+			return null;
+		}
+
+		System.out.println("\nSublist is ");
+		while (index++ < leftEnd)
+			node = node.next;
+		sublistHeader = node;
+		index = leftEnd;
+		while (index++ <= rightEnd) {
+			array[arrayIndex++] = node.data;
+			System.out.println(node.data);
+			node = node.next;
+		}
+		sublistFooter = node;
+		return array;
+	}
+
+	void afterRotation(int[] inputList, int leftEnd, int rightEnd,
+			int noOfRotations) {
+		createLinkedList(inputList);
+		createSubList(leftEnd, rightEnd, noOfRotations);
+		Node node = new Node();
+	}
+}

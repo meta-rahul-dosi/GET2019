@@ -1,0 +1,23 @@
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ * params
+ * 
+ * @author Rahul
+ *
+ */
+public class Node {
+
+	private int data;
+	private Node next;
+}
+
+	private Node header = null, sublistHeader = null, sublistFooter = null;
+	private Scanner scanner = new Scanner(System.in);
+	
+}
+
+
+
+
