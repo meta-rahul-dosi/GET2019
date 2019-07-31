@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Polynomial {
+
+	Scanner scanner = new Scanner(System.in);
+	Node header = null;
+
+	public static void main(String argument[]) {
+		Polynomial poly = new Polynomial();
+		System.out.println("lets create polynomial\n");
+		
+		poly.createPolynomial(3,new char[]{'x','y'}, new int[]{2,1});
+		poly.createPolynomial(3,new char[]{'y','z'}, new int[]{3,2});
+		poly.createPolynomial(3,new char[]{'x','y','z'}, new int[]{1,4});
+	}
+
+	void createPolynomial(int coeff, int[] variables, int[] powers) {		
+		Node node = new Node();
+		node.coeff = coeff;
+		System.out.println(variables[0]);
+		for(int index=0; index < variables.length; index++)
+		{
+			//node.variables.add(variables[index]);
+			node.powers.add(powers[index]);
+		}
+	}
+
+/*	void visualize(int coefficient, List<Character> variables,
+			List<Integer> powers) {
+		Node node = new Node();
+	}
+
+	int returnDegree() {
+	}*/
+}

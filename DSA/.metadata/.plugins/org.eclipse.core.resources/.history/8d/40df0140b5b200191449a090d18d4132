@@ -1,7 +1,0 @@
-
-public class Node {
-	int coefficient;
-	int power;
-	char variable;
-	Node next;
-}

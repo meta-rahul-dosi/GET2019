@@ -1,9 +1,0 @@
-import java.util.*;
-
-public class MainClass {
-
-	public static void main(String argument[]) {
-		Node node = new Node();
-		Polynomial polynomial = new Polynomial();
-	}
-}

@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Polynomial {
+
+	Scanner scanner = new Scanner(System.in);
+	Node header = null;
+
+	public static void main(String argument[]) {
+		Polynomial poly = new Polynomial();
+
+		System.out.println("lets create polynomial\n");
+
+		poly.createPolynomial();
+	}
+
+	void createPolynomial() {
+		
+		System.out.println("enter no of terms");
+		int noOfTerms = scanner.nextInt();
+		
+		int index = 0;
+		while (index < numberOfTerms) {
+			Node node = new Node();
+			node.coeff = scanner.
+		}
+
+	}
+
+	void visualize(int coefficient, List<Character> variables,
+			List<Integer> powers) {
+		Node node = new Node();
+	}
+
+	int returnDegree() {
+	}
+}
