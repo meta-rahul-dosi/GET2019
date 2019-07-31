@@ -34,7 +34,7 @@ public class TestCase {
 
 	@Test
 	public void testing() {
-		assertEquals(expectedResult, polynomial.visualize(coeff, variables, powers));
+		assertEquals(expectedResult, polynomial.returnDegree());
 	}
 }
 

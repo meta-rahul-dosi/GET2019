@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.Collection;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -20,10 +21,7 @@ public class TestCase {
 		polynomial = new Polynomial();
 	}
 
-	public TestCase(int coeff, List<Character> variables, List<Integer> powers, Integer expectedResult) {
-		this.coeff = coeff;
-		this.variables = variables;
-		this.powers = powers;
+	public TestCase(intInteger expectedResult) {
 		this.expectedResult = expectedResult;
 	}
 
@@ -34,7 +32,7 @@ public class TestCase {
 
 	@Test
 	public void testing() {
-		assertEquals(expectedResult, polynomial.visualize(coeff, variables, powers));
+		assertEquals(expectedResult, polynomial.returnDegree());
 	}
 }
 

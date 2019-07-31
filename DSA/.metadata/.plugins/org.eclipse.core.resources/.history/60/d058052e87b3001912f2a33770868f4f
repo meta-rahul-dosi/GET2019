@@ -21,12 +21,9 @@ public class Polynomial {
 		Node node = new Node();
 	}
 	
-	void visualize(int coefficient, List<Character> variables, List<Integer> powers)
+	void visualize()
 	{
-		Node node = new Node();
 		
-		while
-		node
 	}
 
 	 int returnDegree() {
