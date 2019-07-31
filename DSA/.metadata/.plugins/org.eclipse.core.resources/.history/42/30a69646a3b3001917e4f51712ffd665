@@ -42,13 +42,6 @@ public class Polynomial {
 			header.next = node;
 		
 		//printing linked list
-		Node node1 = new Node();
-		node1 = header;
-		while(node1 != null)
-		{
-			System.out.println(node.coeff);
-			node1 = node1.next;
-		}
 	}
 	
 	void printPolynomial()

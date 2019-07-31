@@ -43,7 +43,6 @@ public class Polynomial {
 		
 		//printing linked list
 		Node node1 = new Node();
-		node1 = header;
 		while(node1 != null)
 		{
 			System.out.println(node.coeff);
