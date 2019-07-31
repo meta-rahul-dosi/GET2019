@@ -7,9 +7,11 @@ import java.util.Scanner;
  * @author Rahul
  *
  */
+
 public class Node {
 
     int data;
     Node next;
 }
+
 
