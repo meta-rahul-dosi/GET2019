@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Admission {
+
+	private Map<String,Integer> programs = new HashMap<>();
+	Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String argument[])
+	{
+		
+	}
+	
+	int inputSize()
+	{
+		int size = scanner.nextInt();
+		return size;
+	}
+}
+

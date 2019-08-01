@@ -1,0 +1,6 @@
+
+public class StudentNode {
+
+	String name;
+	List<String> programs;
+}

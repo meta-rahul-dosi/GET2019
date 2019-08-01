@@ -1,0 +1,10 @@
+
+public class Admission {
+
+	private Map<String, Integer> = new Hashmap<>();
+
+	public static void main(String argument[])
+	{
+		
+	}
+}

@@ -1,0 +1,11 @@
+import java.util.*;
+
+public class Admission {
+
+	private Map<String,Integer> programs = new Hashmap<String,Integer>();
+
+	public static void main(String argument[])
+	{
+		
+	}
+}
