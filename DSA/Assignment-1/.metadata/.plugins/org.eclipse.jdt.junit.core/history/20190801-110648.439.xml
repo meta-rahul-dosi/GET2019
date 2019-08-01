@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestLoopDetection" project="LinkedList" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="TestLoopDetection" time="0.001">
+    <testsuite name="[0]" time="0.001">
+      <testcase name="testing[0]" classname="TestLoopDetection" time="0.001"/>
+    </testsuite>
+  </testsuite>
+</testrun>
