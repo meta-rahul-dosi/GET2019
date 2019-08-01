@@ -9,9 +9,6 @@ import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
 public class TestCase {
-	private int coeff;
-	private List<Character> variables = new ArrayList<>();
-	private List<Integer> powers = new ArrayList<>();
 	private int expectedResult;
 	private Polynomial polynomial;
 
@@ -20,21 +17,18 @@ public class TestCase {
 		polynomial = new Polynomial();
 	}
 
-	public TestCase(int coeff, List<Character> variables, List<Integer> powers, Integer expectedResult) {
-		this.coeff = coeff;
-		this.variables = variables;
-		this.powers = powers;
+	public TestCase(Integer expectedResult) {
 		this.expectedResult = expectedResult;
 	}
 
 	@Parameterized.Parameters
 	public static Collection<Object[]> parameters() {
-		return Arrays.asList(new Object[][] {{4}});
+		return Arrays.asList(new Object[][] {{7}});
 	}
 
 	@Test
 	public void testing() {
-		assertEquals(expectedResult, polynomial.visualize(coeff, variables, powers));
+		assertEquals(expectedResult, polynomial.returnDegree());
 	}
 }
 

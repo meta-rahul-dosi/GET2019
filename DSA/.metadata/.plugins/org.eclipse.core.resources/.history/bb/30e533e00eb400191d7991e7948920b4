@@ -1,0 +1,93 @@
+import java.util.*;
+
+public class Polynomial {
+
+	private Scanner scanner = new Scanner(System.in);
+	private Node header = null;
+	private static String poly = "";
+	private int degree = 0, power = 0;
+
+	public static void main(String argument[]) {
+		Polynomial polynomial = new Polynomial();
+		System.out.println("your polynomial is \n");
+
+		polynomial.createPolynomial(3, new String[] { "x^", "y^" }, new int[] {
+				2, 8 });
+		polynomial.createPolynomial(4, new String[] { "x^", "z^" }, new int[] {
+				2, 7 });
+		polynomial.createPolynomial(-2, new String[] { "x^", "y^", "z^" },
+				new int[] { 4, 1, 2 });
+
+		polynomial.printPolynomial();
+		System.out.println("degree is" + polynomial.returnDegree());
+
+		//polynomial.print();
+	}
+
+	void createPolynomial(int coeff, String[] variables, int[] powers) {
+		Node node = new Node();
+
+		node.coeff = coeff;
+		poly = poly + Integer.toString(node.coeff);
+
+		for (int index = 0; index < variables.length; index++) {
+			node.variables.add(variables[index]);
+			poly = poly.concat(variables[index]);
+			node.powers.add(powers[index]);
+			poly = poly + powers[index];
+		}
+
+		poly = poly + " " + '+' + " ";
+		node.next = null;
+
+		if (header == null)
+		{		header = node;
+		
+	}else
+		{
+			header.next = node;
+		
+	}
+	}
+
+	void print() {
+		// printing linked list
+		Node node = new Node();
+		node = header;
+		do {
+			//System.out.println("nnnn  " + node.coeff);
+			//System.out.println("nmmmn  " + node.variables);
+			//System.out.println("mmm  " + node.powers);
+			node = node.next;
+		} while (node != null);
+	}
+
+	void printPolynomial() {
+		System.out.println(poly);
+	}
+
+	/**
+	 * returnDegree method finds power of every term which is sum of every
+	 * variable's power in a term params @ returns degree (highest power)
+	 */
+	int returnDegree() {
+		Node node = new Node();
+
+		if (header != null) {
+			node = header;
+
+			while (node != null) {
+				power = 0;
+				for (int index = 0; index < node.powers.size(); index++) {
+					power = power + node.powers.get(index);
+				}
+
+				if (degree < power) {
+					degree = power;
+				}
+				node = node.next;
+			}
+		}
+		return degree;
+	}
+}
