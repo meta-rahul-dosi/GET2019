@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class DetectLoop
+{
+	DetectLoop()
+	{
+		createLinkedList();
+	}
+		
+	public createLinkedList()
+	{
+		Node node = new Node();
+		
+		node
+	}
+}
+

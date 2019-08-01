@@ -21,7 +21,6 @@ public class Polynomial {
 		createPolynomial(4, new String[] { "x^", "z^" }, new int[] { 2, 4 });
 		createPolynomial(-2, new String[] { "x^", "y^", "z^" }, new int[] { 4,
 				1, 2 });
-
 	}
 
 	void createPolynomial(int coeff, String[] variables, int[] powers) {
@@ -77,3 +76,5 @@ public class Polynomial {
 		return degree;
 	}
 }
+
+

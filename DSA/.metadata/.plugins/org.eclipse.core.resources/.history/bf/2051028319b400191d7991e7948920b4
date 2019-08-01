@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class DetectLoop {
+
+	Node header = null;
+
+	DetectLoop() {
+
+	}
+
+	public void createLinkedList(int[] list) {
+
+		for (int index = 0; index < list.length; index++) {
+			Node node = new Node();
+
+			if (header == null)
+				node = header;
+			else {
+                if(list[index == 2])
+                	node = header;                	
+			}
+		}
+
+	}
+
+	boolean loopDetector() {
+		boolean status = false;
+
+		return status;
+	}
+}
