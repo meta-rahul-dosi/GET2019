@@ -1,0 +1,19 @@
+import java.util.*;
+
+public interface stack {
+
+	String infix();
+}
+
+public class StackOperations implements stack {
+
+	public static void main(String[] args) {
+
+	}
+
+	void infix() {
+		System.out.println("enter an expression as input  : ");
+		String expression = "";
+	}
+
+}

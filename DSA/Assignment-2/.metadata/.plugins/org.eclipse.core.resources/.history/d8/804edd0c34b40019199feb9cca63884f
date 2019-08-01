@@ -1,0 +1,17 @@
+
+
+public interface stack
+{
+	
+}
+
+
+
+
+public class StackOperations implements stack{
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,11 @@
+
+public class QueueOperations implements Queue{
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	
+
+}

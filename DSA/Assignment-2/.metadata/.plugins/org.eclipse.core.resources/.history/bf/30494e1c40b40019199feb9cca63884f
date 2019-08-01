@@ -1,0 +1,11 @@
+
+public class Node {
+	
+	int data;
+	Node link;
+	
+	Node()
+	{	    	
+		 this.top = null;
+	}
+}

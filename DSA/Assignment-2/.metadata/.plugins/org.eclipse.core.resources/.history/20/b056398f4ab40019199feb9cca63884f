@@ -1,0 +1,13 @@
+
+public class QueueOperations implements Queue{
+
+	private int[] queueStore = new int[];
+	
+	public static void main(String[] args) {
+		
+
+	}
+	
+	
+
+}

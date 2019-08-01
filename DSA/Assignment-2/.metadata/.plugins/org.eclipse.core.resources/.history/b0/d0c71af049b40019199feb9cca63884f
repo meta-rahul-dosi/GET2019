@@ -1,0 +1,5 @@
+interface Queue {
+void add();
+	void delete();
+	boolean isEmpty();
+}

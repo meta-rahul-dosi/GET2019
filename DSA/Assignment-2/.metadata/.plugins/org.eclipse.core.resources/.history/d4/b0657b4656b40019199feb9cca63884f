@@ -1,0 +1,36 @@
+import java.util.Arrays;
+
+public class QueueOperations implements Queue {
+
+	private int[] queueStore = new int[100];
+	private int queueIndex = 0, front = 0, rear = 0;
+
+	public static void main(String[] args) {
+		QueueOperations object = new QueueOperations();
+		object.add(5);
+		object.add(6);
+		object.add(7);
+		object.delete();
+		printQueue();
+	}
+
+	public void add(int data) {
+		rear = queueIndex;
+		queueStore[queueIndex++] = data;
+
+	}
+
+	public void delete()
+	{
+		
+	}
+
+    void printQueue()
+    {
+    	for(int index=0; index <= rear; index++)
+    	{
+    		System.out.println(Arrays.toString(queueStore));
+    	}
+    }
+
+}

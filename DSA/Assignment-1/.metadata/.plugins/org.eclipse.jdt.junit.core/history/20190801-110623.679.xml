@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestClass" project="LinkedList" tests="1" started="1" failures="0" errors="0" ignored="0">
-  <testsuite name="TestClass" time="0.006">
-    <testsuite name="[0]" time="0.006">
-      <testcase name="testingY[0]" classname="TestClass" time="0.006"/>
-    </testsuite>
-  </testsuite>
-</testrun>
