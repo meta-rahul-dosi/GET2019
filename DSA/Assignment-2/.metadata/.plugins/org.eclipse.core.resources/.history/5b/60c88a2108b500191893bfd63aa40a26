@@ -41,4 +41,3 @@ public class MainClass {
 		students.admissionProcess();
 	}
 }
-
