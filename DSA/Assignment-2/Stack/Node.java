@@ -1,11 +1,12 @@
+/**
+ * Represent the node of stack.
+ */
 public class Node {
+	String data;
+	Node next;
 
-	int data;
-	Node link;
-
-	Node(int data) {
+	Node(String data) {
 		this.data = data;
-		this.link = null;
+		this.next = null;
 	}
 }
-

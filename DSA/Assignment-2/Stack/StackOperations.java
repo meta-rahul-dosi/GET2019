@@ -1,35 +1,52 @@
-import java.util.*;
 
-interface Stack {
-	public void push(String op);
+/**
+ * Implement the stack interface method.
+ */
+public class StackOperations implements Stack {
+	Node top = null;
 
-	public String pop();
-
-	public String peep();
-
-	boolean isEmpty();
-}
-
-public class StackOperations {
-
-	Scanner scanner = new Scanner(System.in);
-
-	public static void main(String[] args) {
-
-		StackOperations stack = new StackOperations();
-		stack.infix();
+	// Method push the data on stack.
+	@Override
+	public void push(String data) {
+		Node node = new Node(data);
+		if (isEmpty()) {
+			top = node;
+		} else {
+			node.next = top;
+			top = node;
+		}
 	}
 
-	String infix() {
-		System.out.println("enter an expression as input  : ");
-		String expression = scanner.nextLine();
-
-		// tokenizing input expression
-
-		for (int index = 0; index < expression.length(); index++) {
-
+	// Method pop the top data of stack.
+	@Override
+	public String pop() {
+		if (isEmpty()) {
+			System.out.print("Stack is empty");
+			return null;
+		} else {
+			Node node = top;
+			top = node.next;
+			return node.data;
 		}
 
-		return expression;
 	}
+
+	// Return the top most data of stack.
+	@Override
+	public String peek() {
+		if (isEmpty()) {
+			System.out.println("Stack is empty");
+			return null;
+		} else {
+			return top.data;
+		}
+	}
+
+	// Check the stack is empty or not.
+	@Override
+	public boolean isEmpty() {
+		return (top == null);
+	}
+
 }
+
