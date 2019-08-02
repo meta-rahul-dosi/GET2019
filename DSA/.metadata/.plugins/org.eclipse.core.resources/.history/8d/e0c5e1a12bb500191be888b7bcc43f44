@@ -1,0 +1,23 @@
+package PriorityQueue;
+
+public class ArrayImplementation implements PriorityQueue {
+	
+	private Scanner scanner = new Scanner(System.in);
+	private int array[];		
+	
+	ArrayImplemenation(int size)
+	{
+		array = new int[size];
+	}
+	
+	int inputSize()
+	{
+		int size = scanner.nextInt();
+		return size;
+	}
+	
+	void insert()
+	{
+		
+	}
+}

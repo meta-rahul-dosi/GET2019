@@ -1,0 +1,38 @@
+package PriorityQueue;
+
+import java.util.*;
+
+public class ArrayImplementation implements PriorityQueue {
+	
+	private Scanner scanner = new Scanner(System.in);
+	private int array[];		
+	
+	ArrayImplementation(int size)
+	{
+		array = new int[size];
+	}
+	
+	int inputSize()
+	{
+		int size = scanner.nextInt();
+		return size;
+	}
+	
+	public void insert(int data, int priority)
+	{
+		Node node = new Node();
+		node.data = data;
+		node.priority = priority;		
+	}
+	
+	public int getHighestPriorityElement()
+	{
+		int highest;
+		while()
+	}
+	
+	public void deleteHighestPriorityElement()
+	{
+		
+	}
+}

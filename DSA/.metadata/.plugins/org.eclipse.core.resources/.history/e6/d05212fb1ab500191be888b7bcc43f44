@@ -1,0 +1,13 @@
+package VCP;
+
+import java.util.List;
+
+public class CommanPrompt {
+
+	
+	void createDirectory()
+	{
+		List<String> dirName = new ArrayList<>();
+	}
+	
+}

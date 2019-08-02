@@ -1,0 +1,25 @@
+package PriorityQueue;
+
+import java.util.Scanner;
+
+public class MainClass {
+
+	private Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		MainClass main = new MainClass();
+		
+		System.out.println("provide maximum size of queue ");
+		int size = main.inputSize();
+		ArrayImplementation array = new ArrayImplementation(size);
+
+	}
+	
+	int inputSize()
+	{
+		int size = scanner.nextInt();
+		return size;
+	}
+
+}

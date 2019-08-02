@@ -1,0 +1,7 @@
+package VCP;
+
+public class Node {
+
+	String name;
+	List<Node> children = new ArrayList<>();
+}

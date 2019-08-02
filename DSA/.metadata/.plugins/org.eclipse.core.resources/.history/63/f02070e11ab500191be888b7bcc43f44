@@ -1,0 +1,11 @@
+package VCP;
+
+public class CommanPrompt {
+
+	
+	void createDirectory()
+	{
+		List<String> dirName = new ArrayList<>();
+	}
+	
+}

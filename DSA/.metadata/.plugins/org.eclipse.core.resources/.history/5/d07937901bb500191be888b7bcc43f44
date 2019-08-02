@@ -1,0 +1,6 @@
+package VCP;
+
+public class Node {
+
+	int left;
+}

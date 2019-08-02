@@ -1,0 +1,11 @@
+package PriorityQueue;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		
+		System.out.println("provide maximum size of queue " + object.inputSize());
+
+	}
+
+}
