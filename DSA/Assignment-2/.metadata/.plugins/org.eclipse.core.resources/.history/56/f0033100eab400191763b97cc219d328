@@ -1,0 +1,36 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Students {
+
+	private Map<String, Integer> programs = new HashMap<>();
+	private Scanner scanner = new Scanner(System.in);
+	private StudentNode front = null, rear = null;
+	private int index = 0;
+
+	List<String> studentsList() {
+		List<String> list = new ArrayList<>();
+		return list;
+	}
+
+	void formQueue(List<String> list) {
+		StudentNode node = new StudentNode();
+		node.name = list.get(index++);
+		
+		for(int index=0; index<5; index++)
+		{
+			node.programs[index] = 
+		}
+		node.next;
+		
+		if(front==null)
+			front = null;
+		else
+		{
+			
+		}
+	}
+}

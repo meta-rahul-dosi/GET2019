@@ -1,0 +1,14 @@
+
+public class MainClass {
+
+	public static void main(String argument[])
+	{
+		College college = new College();
+		Students students = new Students();
+
+		System.out.println("Total number of programs available is "
+				+ college.noOfPrograms());
+		System.out.println("Programs with corresponding capacity : ");
+		students.programs = college.Programs();
+	}
+}

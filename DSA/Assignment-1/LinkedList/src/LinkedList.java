@@ -10,12 +10,16 @@ import java.util.*;
 public class LinkedList {
 
 	private Scanner scanner = new Scanner(System.in);
-	private Node header = null, sublistHeader = null;
+	private Node header = null;
+	private Node subHeader = null;
+	private Node subFooter = null;
 
 	public static void main(String argument[]) {
 		LinkedList linkedlist = new LinkedList();
 		int a[] = { 2, 3, 4, 5, 6, 7 };
-		linkedlist.afterRotation(a, 2, 5, 2);
+		linkedlist.createLinkedList(a);
+		linkedlist.createSublist(2, 5);
+		linkedlist.afterRotation(2,2,5);
 	}
 
 	void createLinkedList(int[] inputList) {
@@ -40,6 +44,24 @@ public class LinkedList {
 		printLinkedList();
 	}
 
+	void createSublist(int left, int right) {
+		int count = 1;
+		Node node = new Node();
+		node = header;
+		while (count++ < left) {
+			node = node.next;
+		}
+		subHeader = node;
+
+		count = left;
+		while (count++ < right) {
+			node = node.next;
+		}
+		subFooter = node;
+
+		printSublist();
+	}
+
 	void printLinkedList() {
 		Node node = new Node();
 		node = header;
@@ -50,66 +72,47 @@ public class LinkedList {
 		}
 	}
 
-	int[] createSubList(int leftEnd, int rightEnd) {
-		int[] sublist = new int[rightEnd - leftEnd + 1];
+	void printSublist() {
 		Node node = new Node();
-		int count = 1, index = 0;
-
-		if (header == null)
-			System.out.println("\noOps ! empty linked list");
-		else
-			sublistHeader = header;
-
-		while (count++ < leftEnd) {
-			sublistHeader = sublistHeader.next;
-			node = sublistHeader;
-		}
-
-		count = leftEnd;
-		while (count++ <= rightEnd) {
-			sublist[index++] = node.data;
+		node = subHeader;
+		System.out.println("Sublist is ");
+		while (node != subFooter.next) {
+			System.out.println(node.data);
 			node = node.next;
 		}
-		node.next = null;
-		return sublist;
 	}
-
-	int[] afterRotation(int[] inputList, int leftEnd, int rightEnd,
-			int noOfRotations) {
-		int[] result = new int[inputList.length];
-		int count = 1;
-		createLinkedList(inputList);
-		int[] sublist = createSubList(leftEnd, rightEnd);
-		System.out.println("sublist is " + Arrays.toString(sublist));
-
-		Node node = new Node();
-
-		for (int index = 0; index < noOfRotations; index++) {
-			int temp = sublist[sublist.length - 1];
-			for (int innerIndex = sublist.length - 1; innerIndex > 0; innerIndex--) {
-				sublist[innerIndex] = sublist[innerIndex - 1];
+	
+	void afterRotation(int number, int left, int right)
+	{
+		for(int index = 1; index <= number; index++)
+		{
+			int count =1;
+			Node node  = new Node();
+			node = header;
+			
+			while(count++ < left-1)
+			{
+				node = node.next;
 			}
-			sublist[0] = temp;
+			node.next = subFooter;
+			count = left;
+			while(count++ < right-1)
+			{
+				node = node.next;
+			}
+			node.next = subFooter.next;
+			subFooter.next = subHeader;
+			subHeader = subFooter;
+			subFooter = node;
 		}
-		System.out.println("sublist after rotation is "
-				+ Arrays.toString(sublist));
-
-		int resultIndex = 0;
-		while (count++ < leftEnd) {
-			result[resultIndex] = inputList[resultIndex++];
+		
+		//print final list
+		Node node = new Node();
+		node = header;
+		while(node != null)
+		{
+			System.out.println(node.data);
+			node = node.next;
 		}
-
-		int index = 0;
-		count = leftEnd;
-		while (count++ <= rightEnd) {
-			result[resultIndex++] = sublist[index++];
-		}
-		count = rightEnd;
-
-		while (count++ < inputList.length) {
-			result[resultIndex] = inputList[resultIndex++];
-		}
-		System.out.println("resultant is " + Arrays.toString(result));
-		return result;
 	}
 }

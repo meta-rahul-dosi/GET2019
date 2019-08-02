@@ -1,0 +1,10 @@
+import java.util.*;
+
+public class College {
+
+	int noOfPrograms() {
+		
+		return size;
+	}
+}
+
