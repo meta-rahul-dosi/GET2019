@@ -1,0 +1,15 @@
+package VCP;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class CommanPrompt {
+
+	public static void main(String argument[]) {
+		
+		DirectoryOperations dir = new DirectoryOperations();
+		
+		dir.root();
+	}
+
+}

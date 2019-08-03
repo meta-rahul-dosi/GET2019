@@ -1,9 +1,0 @@
-import java.util.*;
-
-public class College {
-
-	int inputSize() {
-		int size = scanner.nextInt();
-		return size;
-	}
-}

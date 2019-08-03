@@ -1,0 +1,23 @@
+package employee;
+
+public class Employee {
+	int empId;
+	String name;
+	String address;
+	Employee next;
+	
+	Employee header = null;
+	
+	void createRecord(int empId, String name, String address)
+	{
+		Employee emp = new Employee();
+		
+		this.empId = empId;
+		this.name = name;
+		this.address = address;
+		this.next = null;
+		
+		if(haeder == null)
+			header = 
+	}
+}

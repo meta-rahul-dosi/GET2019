@@ -1,3 +1,5 @@
+package Stack;
+
 /**
  * Represent the node of stack.
  */

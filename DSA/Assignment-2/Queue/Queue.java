@@ -1,3 +1,5 @@
+package Queue;
+
 interface Queue {
 	void add(int i);
 

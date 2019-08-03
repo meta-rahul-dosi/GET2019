@@ -1,0 +1,36 @@
+package VCP;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CommandPrompt {
+	private Scanner scanner = new Scanner(System.in);
+	private CommandPrompt cmd = new CommandPrompt();
+	private DirectoryOperations dir = new DirectoryOperations();
+
+	public static void main(String argument[]) {
+
+		dir.root();
+		System.out.println("Eclipse Command Prompt [version : latest] \n");
+		cmd.giveCommand();
+	}
+
+	void giveCommand() {
+		String choice = scanner.nextLine();
+
+		while (choice != "exit") {
+			switch (choice) {
+			case "mkdir":
+				dir.mkdir();
+				break;
+			case "exit":
+				break;
+			case "default":
+				System.out.println("invalid command !");
+				break;
+			}
+		}
+
+	}
+}

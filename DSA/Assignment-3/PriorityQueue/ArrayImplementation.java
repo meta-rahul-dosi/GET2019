@@ -10,24 +10,29 @@ public class ArrayImplementation implements PriorityQueue {
 	private int front = 0, rear = -1;
 
 	ArrayImplementation(int size) {
+		size = 12;
 		array = new int[size];
 	}
 
+	/* (non-Javadoc)
+	 * @see PriorityQueue.PriorityQueue#insert(int, int)
+	 */
 	public void insert(int data, int priority) {
 		if (rear == -1) {
 			array[index++] = data;
 			rear++;
 		} else {
-
-			while (priority <= rear) {
-				int temp = data;
+			int temp = 0;
+			while (priority <= rear+1) {
+			    temp = array[priority - 1];
 				array[priority++ - 1] = data;
 				data = temp;
 			}
-			array[rear + 1] = data;
-			array[index++] = data;
+			array[priority-1] = data;
 			rear++;
 		}
+		
+		System.out.println(rear);
 	}
 
 	public int getHighestPriorityElement() {
@@ -35,12 +40,14 @@ public class ArrayImplementation implements PriorityQueue {
 	}
 
 	public void deleteHighestPriorityElement() {
-		int total = 0;
-		while (total <= rear) {
-			array[total] = array[total + 1];
-			total--;
+		int arrayIndex =0;;
+		while (arrayIndex < rear) {
+			array[arrayIndex] = array[++arrayIndex];
 		}
 		array[rear] = 0;
 		rear--;
 	}
 }
+
+
+

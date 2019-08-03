@@ -11,7 +11,7 @@ public class MainClass {
 
 		MainClass main = new MainClass();
 
-		System.out.println("provide maximum size of queue ");
+		//System.out.println("provide maximum size of queue ");
 		int size = main.inputSize();
 
 		ArrayImplementation array = new ArrayImplementation(size);
@@ -21,12 +21,16 @@ public class MainClass {
 		array.insert(9, 1);
 		array.insert(6, 3);
 		array.insert(16, 2);
+		array.insert(23, 1);
+		array.deleteHighestPriorityElement();
+		array.deleteHighestPriorityElement();
 
 		System.out.println(Arrays.toString(array.array));
 	}
 
-	int inputSize() {
-		return scanner.nextInt();
-
+	 int inputSize() {
+		//return scanner.nextInt();
+		 return 12;
 	}
 }
+

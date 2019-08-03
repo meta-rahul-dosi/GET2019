@@ -1,3 +1,5 @@
+package Stack;
+
 interface Stack {
 
 	public void push(String op);

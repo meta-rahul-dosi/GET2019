@@ -1,0 +1,15 @@
+package employee;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Employee emp = new Employee();
+
+		emp.createRecord(123,"rahul","jaipur");
+		emp.createRecord(211,"rahul","jaipur");
+		emp.createRecord(321,"rahul","jaipur");
+		emp.createRecord(432,"rahul","jaipur");
+		emp.createRecord(586,"ram","ayodhya");
+	}
+}

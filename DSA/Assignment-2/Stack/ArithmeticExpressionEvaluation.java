@@ -1,3 +1,5 @@
+package Stack;
+
 import java.text.DecimalFormat;
 
 public class ArithmeticExpressionEvaluation {

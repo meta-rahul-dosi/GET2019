@@ -1,0 +1,32 @@
+package VCP;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class CommanPrompt {
+
+	public static void main(String argument[]) {
+
+		CommandPrompt com = new CommandPrompt();
+		DirectoryOperations dir = new DirectoryOperations();
+
+		dir.root();
+		System.out.println("Eclipse Command Prompt [version : latest] \n");
+		dir.giveCommand();
+	}
+
+	void giveCommand() {
+		
+		String choice = scanner.nextLine();
+		while(choice != exit)
+		{
+			switch(choice)
+			{
+			case "mkdir" : mkdir();
+			}
+		}
+		
+		
+		
+	}
+}

@@ -1,3 +1,5 @@
+package College;
+
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Scanner;

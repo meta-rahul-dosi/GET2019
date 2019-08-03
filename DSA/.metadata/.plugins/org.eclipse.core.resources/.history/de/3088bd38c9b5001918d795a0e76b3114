@@ -1,0 +1,32 @@
+package employee;
+
+public class Employee {
+	int empId;
+	String name;
+	String address;
+	Employee next;
+	
+	Employee header = null;
+	
+	void createRecord(int empId, String name, String address, Employee empp)
+	{	
+		empId = empId;
+		name = name;
+		address = address;
+		next = null;
+		
+		if(header == null)
+			header = this;
+	}
+	
+	void recordShow()
+	{
+		Employee emp = new Employee();
+		emp = header;
+		while(emp != null)
+		{
+			System.out.println(emp.name);
+			emp = emp.next;
+		}
+	}
+}

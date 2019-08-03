@@ -1,0 +1,11 @@
+package employee;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Employee emp = new Employee();
+
+
+	}
+}

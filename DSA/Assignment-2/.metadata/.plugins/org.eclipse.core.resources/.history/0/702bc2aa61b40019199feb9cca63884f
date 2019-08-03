@@ -1,6 +1,0 @@
-
-public class Node {
-	String name;
-	int id;
-}
-
