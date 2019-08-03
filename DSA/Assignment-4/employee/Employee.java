@@ -35,9 +35,20 @@ public class Employee {
 			emp = emp.next;
 		}
 	}
-	
-	void sorting()
-	{		
-		
+
+	void sorting() {
+		Employee emp = new Employee();
+		Employee tempHeader = header;
+		int index = 0;
+
+		while (emp != null) {
+			boolean status = true;
+			while (status == false) {
+				if (emp.name.charAt(index) == emp.next.name.charAt(index))
+					index++;
+			}
+
+			emp = emp.next;
+		}
 	}
 }

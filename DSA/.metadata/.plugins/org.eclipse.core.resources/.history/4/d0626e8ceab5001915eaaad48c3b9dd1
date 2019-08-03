@@ -1,0 +1,13 @@
+package String;
+
+import java.util.Map;
+import java.util.HashMap;
+
+public class StringOperations {
+
+	Map<String, Integer> stringList = new HashMap<>();
+
+	void storage() {
+		stringList.add(expression, noOfUniqueCharacters);
+	}
+}

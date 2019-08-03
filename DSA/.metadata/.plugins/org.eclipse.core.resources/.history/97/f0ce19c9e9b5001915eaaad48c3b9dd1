@@ -1,0 +1,20 @@
+package String;
+import java.util.*;
+
+public class MainClass {
+
+	private Scanner scanner = new Scanner(System.in);
+	private StringOperations object = new StringOperations();
+	
+	public static void main(String[] args) {
+
+		System.out.println("enter an string");
+		object.inputString();
+		
+	}
+
+	String inputString() {
+		return scanner.nextLine();
+	}
+
+}

@@ -1,0 +1,15 @@
+package String;
+
+public class MainClass {
+
+	Scanner scanner = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+
+	}
+
+	String inputString() {
+		return scanner.nextLine();
+	}
+
+}

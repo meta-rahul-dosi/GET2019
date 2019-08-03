@@ -9,3 +9,4 @@ interface Queue {
 
 	boolean isFull();
 }
+

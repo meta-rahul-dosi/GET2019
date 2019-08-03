@@ -1,0 +1,18 @@
+package String;
+
+public class MainClass {
+
+	private Scanner scanner = new Scanner(System.in);
+	private 
+	
+	public static void main(String[] args) {
+
+		System.out.println("enter an string");
+		
+	}
+
+	String inputString() {
+		return scanner.nextLine();
+	}
+
+}

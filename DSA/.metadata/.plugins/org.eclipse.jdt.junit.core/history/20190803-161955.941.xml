@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Assignment-1" project="Assignment-1" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="LinkedList.TestLoopDetection" time="0.002">
+    <testsuite name="[0]" time="0.002">
+      <testcase name="testing[0]" classname="LinkedList.TestLoopDetection" time="0.002"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="Polynomial.TestCase" time="0.004">
+    <testsuite name="[0]" time="0.004">
+      <testcase name="testing[0]" classname="Polynomial.TestCase" time="0.004"/>
+    </testsuite>
+  </testsuite>
+</testrun>

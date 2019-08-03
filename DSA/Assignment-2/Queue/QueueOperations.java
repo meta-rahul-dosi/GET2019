@@ -7,6 +7,10 @@ public class QueueOperations implements Queue {
 	private int[] queueStore = new int[10];
 	private int queueIndex = 0, front = 0, rear = 0;
 
+	/**
+	 * main method adds elements to last in queue, deletes from front, printing all elements of queue
+	 * informs whether queue is empty or full
+	 */
 	public static void main(String[] args) {
 		QueueOperations object = new QueueOperations();
 		object.add(5);
@@ -20,6 +24,7 @@ public class QueueOperations implements Queue {
 		System.out.println("is it full ? " + object.isFull());
 	}
 
+	
 	public void add(int data) {
 		rear = queueIndex;
 		queueStore[queueIndex++] = data;

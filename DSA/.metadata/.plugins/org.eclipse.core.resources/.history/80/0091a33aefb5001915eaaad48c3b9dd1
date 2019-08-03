@@ -1,0 +1,30 @@
+package String;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class StringOperations {
+
+	HashMap<String, Integer> stringMap = new HashMap<>();
+	HashMap<Character, Integer> charMap = new HashMap<>();
+
+	int findTotalUniqueCharacters(String expression) {
+
+		int result = 0;
+		for (int index = 0; index < expression.length-1; index++) {
+			if (charMap.get(expression.charAt(index)) == 1)
+				charMap.put(expression.charAt(index), 0);
+			else
+				charMap.put(expression.charAt(index), 1);
+		}
+
+		for (int charMapIndex : charMap.values())
+			result += charMap.get(charMapIndex);
+
+		return result;
+	}
+
+	void storage(String expression, int noOfUniqueCharacters) {
+		stringMap.put(expression, noOfUniqueCharacters);
+	}
+}
