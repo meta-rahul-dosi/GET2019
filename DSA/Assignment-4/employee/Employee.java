@@ -4,15 +4,12 @@ import java.util.*;
 import java.lang.*;
 
 public class Employee {
-	int empId;
-	String name;
-	String address;
-	Employee next;
 
-	Employee header = null;
+	private Node header = null;
+	private int noOfEmployees = 0;
 
 	void createRecord(int empId, String name, String address) {
-		Employee emp = new Employee();
+		Node emp = new Node();
 
 		emp.empId = empId;
 		emp.name = name;
@@ -28,20 +25,30 @@ public class Employee {
 	}
 
 	void recordShow() {
-		Employee emp = new Employee();
+		Node emp = new Node();
 		emp = header;
 		while (emp != null) {
 			System.out.println(emp.name);
 			emp = emp.next;
+			noOfEmployees++;
 		}
 	}
 
 	void sorting() {
-		Employee emp = new Employee();
-		Employee tempHeader = header;
-		int index = 0;
+		Node emp = new Node();
+		Node tempHeader = header;
+		String temp;
 
-		while (emp != null) {
+		for (int index = 0; index < noOfEmployees-1; index++) {
+			for (int innerIndex = 0; innerIndex < noOfEmployess-1-index; innerIndex++) {
+			    Node node = new Node();
+			    while()
+			    {
+			    	node.name.charAt(count) > node.next.name.charAt(count)
+			    }			}			
+		}
+			
+		} 
 			boolean status = true;
 			while (status == false) {
 				if (emp.name.charAt(index) == emp.next.name.charAt(index))

@@ -1,0 +1,15 @@
+package Chemistry;
+
+public class MoleculeOperation {
+
+	Node root = null;
+
+	void formTree(String compound)
+	{
+		if(root == null)
+		{
+     		Node node = new Node();	
+			root = node;
+		}
+	}
+}

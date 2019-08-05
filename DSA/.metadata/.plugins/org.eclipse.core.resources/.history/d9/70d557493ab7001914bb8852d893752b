@@ -1,0 +1,18 @@
+package Chemistry;
+
+public class MoleculeOperation {
+
+	Node root = null;
+
+	void root()
+	{
+		Node node = new Node();	
+		node.element = compound;
+ 		root = node;
+	}
+	
+	void formTree(String compound)
+	{
+	 
+	}
+}
