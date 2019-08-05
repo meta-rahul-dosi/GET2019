@@ -13,5 +13,7 @@ public class MainClass {
 		emp.createRecord(586,"ram","ayodhya");
 		
 		emp.recordShow();
+		emp.sorting();
+		emp.recordShow();
 	}
 }

@@ -39,23 +39,21 @@ public class Employee {
 		Node tempHeader = header;
 		String temp;
 
-		for (int index = 0; index < noOfEmployees-1; index++) {
-			for (int innerIndex = 0; innerIndex < noOfEmployess-1-index; innerIndex++) {
-			    Node node = new Node();
-			    while()
-			    {
-			    	node.name.charAt(count) > node.next.name.charAt(count)
-			    }			}			
-		}
-			
-		} 
-			boolean status = true;
-			while (status == false) {
-				if (emp.name.charAt(index) == emp.next.name.charAt(index))
-					index++;
+		for (int index = 0; index < noOfEmployees - 1; index++) {
+			for (int innerIndex = 0; innerIndex < noOfEmployees - 1 - index; innerIndex++) {
+				Node node = new Node();
+				String name1 = node.name;
+				String name2 = node.next.name;
+				int comparison = name1.compareTo(name2);
+				
+				if(comparison < 0)
+				{
+				    temp = node.next.name;
+					node.next.name = node.name;
+					node.name = temp;
+				}
 			}
-
-			emp = emp.next;
 		}
 	}
 }
+
