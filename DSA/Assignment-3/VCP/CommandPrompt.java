@@ -3,6 +3,7 @@ package VCP;
 public class CommandPrompt {
 
 	public Node root = null;
+	public Node traversalNode = null;
 	String path = "";
 
 	void root() {
@@ -12,11 +13,12 @@ public class CommandPrompt {
 		root = node;
 		path = path + root.name + ":/>";
 		System.out.println(path);
+		traversalNode = root;
 	}
 
-	void updatePath() {
+	void updatePath(String folderName) {
 		path = path.replace(path.substring(path.length() - 1), "");
-		path = path + "f1" + ">";
+		path = path + folderName + "/>";
 		System.out.println(path);
 
 	}
@@ -28,12 +30,13 @@ public class CommandPrompt {
 			temp = Character.toString(command.charAt(index));
 			folderName += temp;
 		}
-		System.out.println(folderName);
-		updatePath();
+
+		updatePath(folderName);
 
 		Node node = new Node();
 		node.name = folderName;
-		node.parent = root;
+		traversalNode = node;
+		node.parent = trav
 
 	}
 }

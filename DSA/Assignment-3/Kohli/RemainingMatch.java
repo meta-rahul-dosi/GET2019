@@ -21,28 +21,35 @@ public class RemainingMatch {
 			node.name = names[index];
 			node.balls = balls[index];
 			node.children = null;
-			
-			totalBalls.children.add(node);
+			System.out.println(node);
+			System.out.println(node.balls);
+			//System.out.println(totalBalls.children.get(0));
+			try
+			{
+				totalBalls.children.add(node.name);
+			}
+			catch(Exception e)
+			{
+				System.out.println(e);
+			}
 		}
 	}
 
 	void bowlerSequence() {
 		String bowler = "";
-		int temp=0;
-		
+		int temp = 0;
 		for (int index = 1; index < totalBalls.children.size(); index++) {
 			// Node node = totalBalls.children.get(index);
-			if (totalBalls.children.get(index - 1).balls > totalBalls.children
+		if (totalBalls.children.get(index - 1).balls > totalBalls.children
 					.get(index).balls) {
 
 				bowler = totalBalls.children.get(index - 1).name;
-				temp = totalBalls.children.get(index - 1).balls;
+				temp = 	totalBalls.children.get(index - 1).balls;
 			} else {
 				temp = totalBalls.children.get(index).balls;
 				bowler = totalBalls.children.get(index - 1).name;
 			}
 		}
-		System.out.println(temp+bowler);
+		System.out.println(temp + bowler);
 	}
-
 }
