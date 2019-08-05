@@ -1,0 +1,11 @@
+package Kohli;
+
+import java.util.List;
+
+public class Node {
+	
+	String name;
+	int balls;
+	List<Node> children;
+}
+

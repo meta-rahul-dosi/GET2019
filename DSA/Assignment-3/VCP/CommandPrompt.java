@@ -1,36 +1,39 @@
 package VCP;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class CommandPrompt {
-	private static Scanner scanner = new Scanner(System.in);
-	private static CommandPrompt cmd = new CommandPrompt();
-	private static DirectoryOperations dir = new DirectoryOperations();
 
-	public static void main(String argument[]) {
+	public Node root = null;
+	String path = "";
 
-		dir.root();
-		System.out.println("Eclipse Command Prompt [version : latest] \n");
-		cmd.giveCommand();
+	void root() {
+		Node node = new Node();
+		node.name = "root";
+		node.parent = null;
+		root = node;
+		path = path + root.name + ":/>";
+		System.out.println(path);
 	}
 
-	void giveCommand() {
-		String choice = scanner.nextLine();
+	void updatePath() {
+		path = path.replace(path.substring(path.length() - 1), "");
+		path = path + "f1" + ">";
+		System.out.println(path);
 
-		while (choice != "exit") {
-			switch (choice) {
-			case "mkdir":
-				dir.mkdir();
-				break;
-			case "exit":
-				break;
-			case "default":
-				System.out.println("invalid command !");
-				break;
-			}
+	}
+
+	void mkdir(String command) {
+		String folderName = "";
+		String temp = "";
+		for (int index = 6; index <= command.length() - 1; index++) {
+			temp = Character.toString(command.charAt(index));
+			folderName += temp;
 		}
+		System.out.println(folderName);
+		updatePath();
+
+		Node node = new Node();
+		node.name = folderName;
+		node.parent = root;
 
 	}
 }
