@@ -7,3 +7,4 @@ public class Node {
 	String address;
 	Node next;
 }
+

@@ -26,7 +26,7 @@ public class RemainingMatch {
 			//System.out.println(totalBalls.children.get(0));
 			try
 			{
-				totalBalls.children.add(node.name);
+				totalBalls.children.add(node);
 			}
 			catch(Exception e)
 			{

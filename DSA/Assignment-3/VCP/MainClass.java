@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 public class MainClass {
 
+	
+	
 	private Scanner scanner = new Scanner(System.in);
 	private static MainClass main = new MainClass();
 	private static CommandPrompt cmd = new CommandPrompt();

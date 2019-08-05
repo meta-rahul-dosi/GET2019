@@ -1,0 +1,10 @@
+package rough;
+
+import java.util.HashMap;
+import java.util.*;
+public class Rough
+{
+	Node node = new Node();
+	node.setData(54);
+	node.getData();
+}

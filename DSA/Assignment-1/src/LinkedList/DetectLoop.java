@@ -37,7 +37,6 @@ public class DetectLoop {
 	boolean loopDetector() {
 		boolean status = true;
 		Node fast = header, slow = header;
-		;
 
 		do {
 			slow = slow.next;

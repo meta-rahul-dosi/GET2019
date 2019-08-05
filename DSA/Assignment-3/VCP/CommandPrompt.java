@@ -36,7 +36,7 @@ public class CommandPrompt {
 		Node node = new Node();
 		node.name = folderName;
 		traversalNode = node;
-		node.parent = trav
+		node.parent = null;
 
 	}
 }
