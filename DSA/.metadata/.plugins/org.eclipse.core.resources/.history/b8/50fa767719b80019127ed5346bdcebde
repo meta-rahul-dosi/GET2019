@@ -1,0 +1,10 @@
+package Dictionary;
+
+public interface Dictionary {
+
+	addTo();
+	sortedList();
+	delete();
+	
+}
+

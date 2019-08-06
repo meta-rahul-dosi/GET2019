@@ -7,8 +7,6 @@ import java.util.Scanner;
 
 public class MainClass {
 
-	
-	
 	private Scanner scanner = new Scanner(System.in);
 	private static MainClass main = new MainClass();
 	private static CommandPrompt cmd = new CommandPrompt();
@@ -36,16 +34,18 @@ public class MainClass {
 				break;
 
 			case 'c':
-				break;
-			case 'b':
-				break;
-			case 'e':
+				cmd.cd(command);
 				break;
 
-			default:
+			case 'e':
+				System.out.println("THE END");
+				break;
+
+			default: {
 				System.out.println("cannot process given command");
+
 			}
-			
+			}
 		}
 	}
 }

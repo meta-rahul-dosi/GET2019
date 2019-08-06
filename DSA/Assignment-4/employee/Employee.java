@@ -11,7 +11,8 @@ public class Employee {
 	void createRecord(int empId, String name, String address) {
 		Node emp = new Node();
 
-		emp.empId = empId;
+		emp.setEmpId(empId);
+		emp.getEmpId();
 		emp.name = name;
 		emp.address = address;
 		emp.next = null;
@@ -37,28 +38,34 @@ public class Employee {
 	void sorting() {
 		Node emp = new Node();
 		String temp;
-		String[] array = new String[noOfEmployees];
-		int index = 0;
 
-		while (emp != null) {
-			array[index++] = emp.name;
-			emp = emp.next;
-		}
-
-		for (int outerIndex = 0; outerIndex < noOfEmployees - 1; outerIndex++) {
-			for (int innerIndex = 0; innerIndex < noOfEmployees - 1
-					- outerIndex; innerIndex++) {
-				Node node = new Node();
-
-				int comparisonValue = array[innerIndex]
-						.compareTo(array[innerIndex + 1]);
-				if (comparisonValue < 0) {
-					temp = array[innerIndex];
-					array[innerIndex] = array[innerIndex + 1];
-					array[innerIndex + 1] = temp;
-				}
+		// for (int outerIndex = 0; outerIndex < noOfEmployees - 1;
+		// outerIndex++) {
+		// for (int innerIndex = 0; innerIndex < noOfEmployees - 1- outerIndex;
+		// innerIndex++) {
+		Node node = new Node();
+		node = header;
+		
+		int lengthOfFirstName =node.name.length();
+		int lengthOfSecondName =node.next.name.length();
+        int index = 0;
+		if(lengthOfFirstName > lengthOfSecondName)
+		{
+			boolean flag = true;
+			int(flag == false)
+			{
+			if(node.name.charAt(index) > node.next.name.charAt(index))	
+			{
+			
 			}
+			else if(node.name.charAt(index) < node.name.next.charAt(index))
+			{
+				
+			}
+			else
+				index++;
+		}
+		
 		}
 	}
 }
-

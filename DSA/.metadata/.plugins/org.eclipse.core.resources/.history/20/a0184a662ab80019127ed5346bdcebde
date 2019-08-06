@@ -1,0 +1,9 @@
+package employee;
+
+public class Node {
+
+	private int empId;
+	String name;
+	String address;
+	Node next;
+}

@@ -1,0 +1,27 @@
+package Dictionary;
+
+public class DictionaryOperations {
+
+	DictionaryOperations() {
+		
+		
+
+	}
+
+	
+	formBST()
+	{
+		
+	}
+	
+	addTo() {
+
+	}
+
+	delete()
+	{
+		
+	}
+	
+	
+}

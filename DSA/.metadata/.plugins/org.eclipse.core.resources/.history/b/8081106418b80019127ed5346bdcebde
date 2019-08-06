@@ -1,0 +1,35 @@
+package Dictionary;
+
+public class Node {
+
+	private int key;
+	String Word;
+	Node left;
+	Node right;
+	
+	public int getKey() {
+		return key;
+	}
+	public void setKey(int key) {
+		this.key = key;
+	}
+	public String getWord() {
+		return Word;
+	}
+	public void setWord(String word) {
+		Word = word;
+	}
+	public Node getLeft() {
+		return left;
+	}
+	public void setLeft(Node left) {
+		this.left = left;
+	}
+	public Node getRight() {
+		return right;
+	}
+	public void setRight(Node right) {
+		this.right = right;
+	}
+	
+}

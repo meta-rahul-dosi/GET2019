@@ -14,6 +14,7 @@ public class MainClass {
 		
 		emp.recordShow();
 		emp.sorting();
-		emp.recordShow();
+		//emp.recordShow();
 	}
 }
+
