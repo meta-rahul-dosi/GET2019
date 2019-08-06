@@ -7,13 +7,6 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Arrays;
 
-import java.io.File;
-import jxl.Workbook;
-import jxl.write.WritableSheet;
-import jxl.write.WritableWorkbook;
-import jxl.write.Label;
-import jxl.write.WriteException;
-
 public class MainClass {
 
 	private Scanner scanner = new Scanner(System.in);

@@ -1,71 +1,61 @@
 package employee;
-
-import java.util.*;
-import java.lang.*;
-
+/**
+ *this class contains the employee data
+ */
 public class Employee {
 
-	private Node header = null;
-	private int noOfEmployees = 0;
-
-	void createRecord(int empId, String name, String address) {
-		Node emp = new Node();
-
-		emp.setEmpId(empId);
-		emp.getEmpId();
-		emp.name = name;
-		emp.address = address;
-		emp.next = null;
-
-		if (header == null)
-			header = emp;
-		else {
-			emp.next = header;
-			header = emp;
-		}
+	private int employeeID = 0;
+	private String employeeName = null;
+	private String employeeAddress = null;
+	
+	/**constructor  to initialize the employee parameters.
+	 * @param employeeID
+	 * @param employeeName
+	 * @param employeeAddress
+	 */
+	public Employee(int employeeID, String employeeName, String employeeAddress)
+	{
+		this.employeeID = employeeID;
+		this.employeeName = employeeName;
+		this.employeeAddress = employeeAddress;
 	}
 
-	void recordShow() {
-		Node emp = new Node();
-		emp = header;
-		while (emp != null) {
-			System.out.println(emp.name);
-			emp = emp.next;
-			noOfEmployees++;
-		}
+	@Override
+	public boolean equals(Object e)
+	{
+		return this.employeeID == ((Employee)e).employeeID;
+	}
+	
+	@Override
+	public int hashCode() 
+	{ 
+	   return this.employeeID; 
+	} 
+	
+	@Override
+	public String toString() { 
+	    return "\nName: '" + this.employeeName + "', ID: '" + this.employeeID + "', address: '" + this.employeeAddress + "'";
+	} 
+	
+	// getters and setters
+	
+	public int getEmployeeID() {
+		return employeeID;
 	}
 
-	void sorting() {
-		Node emp = new Node();
-		String temp;
+	public String getEmployeeName() {
+		return employeeName;
+	}
 
-		// for (int outerIndex = 0; outerIndex < noOfEmployees - 1;
-		// outerIndex++) {
-		// for (int innerIndex = 0; innerIndex < noOfEmployees - 1- outerIndex;
-		// innerIndex++) {
-		Node node = new Node();
-		node = header;
-		
-		int lengthOfFirstName =node.name.length();
-		int lengthOfSecondName =node.next.name.length();
-        int index = 0;
-		if(lengthOfFirstName > lengthOfSecondName)
-		{
-			boolean flag = true;
-			int(flag == false)
-			{
-			if(node.name.charAt(index) > node.next.name.charAt(index))	
-			{
-			
-			}
-			else if(node.name.charAt(index) < node.name.next.charAt(index))
-			{
-				
-			}
-			else
-				index++;
-		}
-		
-		}
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+	public String getEmployeeAddress() {
+		return employeeAddress;
+	}
+
+	public void setEmployeeAddress(String employeeAddress) {
+		this.employeeAddress = employeeAddress;
 	}
 }
