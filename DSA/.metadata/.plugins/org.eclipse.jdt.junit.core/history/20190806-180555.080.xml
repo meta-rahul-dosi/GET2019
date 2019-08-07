@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="ViratAndBowlerTest" project="Assignment-3" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="Kohli.ViratAndBowlerTest" time="0.003">
-    <testcase name="getBowlerOrder_WhenViratPlayMoreBowlsThanBowlers_CorrectOrder" classname="Kohli.ViratAndBowlerTest" time="0.001"/>
-    <testcase name="getBowlerOrder_WhenViratPlayLesserThanBowlers_CorrectOrder" classname="Kohli.ViratAndBowlerTest" time="0.002"/>
-  </testsuite>
-</testrun>

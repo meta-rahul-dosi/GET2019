@@ -1,0 +1,17 @@
+package Employee;
+
+public class Employee {
+
+	void createLinkedList()
+	{
+		Node node = new Node(); 
+		
+		if(header == null)
+			header = name;
+	}
+	
+	public static void main(String arg[])
+	{
+		
+	}
+}

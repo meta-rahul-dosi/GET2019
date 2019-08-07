@@ -1,0 +1,20 @@
+package Employee;
+
+public class Employee {
+
+	void createLinkedList() {
+		Node node = new Node();
+
+		if (header == null)
+			header = name;
+	}
+
+	Employee(String name, float salary, int age) {
+		setName(name);
+		getName();
+	}
+
+	public static void main(String arg[]) {
+		Employee emp = new Employee();
+	}
+}

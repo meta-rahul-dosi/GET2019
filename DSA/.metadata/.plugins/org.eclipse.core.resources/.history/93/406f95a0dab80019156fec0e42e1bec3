@@ -1,0 +1,9 @@
+package Employee;
+
+public class EmployeeNode {
+
+	int id;
+	String name;
+	float salary;
+	int age;
+}

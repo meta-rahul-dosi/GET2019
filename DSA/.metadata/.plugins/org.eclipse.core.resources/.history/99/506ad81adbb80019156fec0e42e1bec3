@@ -1,0 +1,9 @@
+package Employee;
+
+public class Employee {
+
+	void createLinkedList()
+	{
+		
+	}
+}

@@ -7,18 +7,12 @@ public class MainClass {
 		MainClass main = new MainClass();
 		StringOperations object = new StringOperations();
 
-		System.out.println("string is ");
-		String expression = main.inputString();
-		System.out.println(expression);
-		
+		String expression = "expresiion";
+		System.out.println("string is \n "+ expression);
+
 		System.out.println("number of unique characters in string is "
 				+ object.findTotalUniqueCharacters(expression));
 
-	}
-
-	String inputString() {
-		// return scanner.nextLine();
-		return "expression";
 	}
 
 }
