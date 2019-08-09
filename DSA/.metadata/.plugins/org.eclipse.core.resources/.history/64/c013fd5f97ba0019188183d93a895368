@@ -1,0 +1,12 @@
+package Dictionary;
+
+public class BSTNode {
+
+	String key = null;
+
+	BSTNode next = null;
+	
+	public BSTNode(String key) {
+		this.key = key;
+	}
+}

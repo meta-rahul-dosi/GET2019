@@ -1,0 +1,32 @@
+package rough;
+
+import java.io.PrintWriter;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Rough {
+
+	Rough() {
+		// creating JSONObject
+		JSONObject jo = new JSONObject();
+
+		// putting data to JSONObject
+		jo.put("tp", "topper");
+		jo.put("ss", "Sunshine");
+		jo.put("fi", "fiestel");
+
+	}
+
+	public static void main(String[] args) {
+		// creating JSONObject
+		JSONObject jo = new JSONObject();
+
+		// writing JSON to file:"JSONExample.json" in cwd
+		PrintWriter pw = new PrintWriter(
+				"C:\\eclipse-jee-luna-R-win32\\eclipse\\GET2019\\DSA\\Assignment-5\\Dictionary\\JSONExample.json");
+		pw.write(jo.toJSONString());
+
+		pw.flush();
+		pw.close();
+	}
+}

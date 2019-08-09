@@ -1,0 +1,35 @@
+package rough;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class Rough {
+
+	Rough() {
+		// creating JSONObject
+		JSONObject jo = new JSONObject();
+
+		// putting data to JSONObject
+		jo.put("tp", "topper");
+		jo.put("ss", "Sunshine");
+		jo.put("fi", "fiestel");
+
+	}
+
+	public static void main(String[] args) {
+
+		// for phone numbers, first create JSONArray
+		JSONArray ja = new JSONArray();
+
+		// writing JSON to file:"JSONExample.json" in cwd
+		PrintWriter pw = new PrintWriter("JSONExample.json");
+		pw.write(jo.toJSONString());
+
+		pw.flush();
+		pw.close();
+	}
+}

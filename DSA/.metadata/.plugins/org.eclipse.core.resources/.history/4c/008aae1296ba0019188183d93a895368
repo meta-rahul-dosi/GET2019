@@ -1,0 +1,13 @@
+package Dictionary;
+
+public class BSTLinkedListNode {
+
+	String key = null;
+
+	BSTLinkedListNode left = null;
+	BSTLinkedListNode right = null;
+	
+	public BSTLinkedListNode(String key) {
+		this.key = key;
+	}
+}
