@@ -1,0 +1,11 @@
+package quickSort;
+
+public class Employee {
+
+	class Node {
+		String name;
+		int age;
+		float salary;
+	}
+
+}

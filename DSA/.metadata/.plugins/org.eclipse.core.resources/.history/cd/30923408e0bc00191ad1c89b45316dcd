@@ -1,0 +1,15 @@
+package quickSort;
+
+public class Employee {
+
+	void addEmployee(String name, int age, float salary)
+	{
+		Node node = new Node();
+		node.setName(name);
+		node.getName();
+		node.setAge(age);
+		node.getAge();
+		node.setSalary();
+		node.getSalary();
+	}
+}

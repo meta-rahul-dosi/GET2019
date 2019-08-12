@@ -1,0 +1,8 @@
+package graph;
+
+public interface UndirectedGraph {
+
+	boolean isConnected();
+	
+	int [] reachable(int vertex);
+}
