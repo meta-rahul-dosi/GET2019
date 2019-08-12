@@ -1,7 +1,0 @@
-package Chemistry;
-
-public class Node {
-
-	String element;
-	List<Node> subMolecule;
-}

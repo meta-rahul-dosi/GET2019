@@ -1,9 +1,0 @@
-package PriorityQueue;
-
-public interface PriorityQueue {
-
-	getHighestPriorityElement();
-	
-	deleteHighestPriorityElement();
-	
-}

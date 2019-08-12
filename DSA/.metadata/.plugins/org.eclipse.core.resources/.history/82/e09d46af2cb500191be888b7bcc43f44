@@ -1,7 +1,0 @@
-package PriorityQueue;
-
-public class Node {
-
-	int data;
-	int priority;
-}

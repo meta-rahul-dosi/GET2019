@@ -1,9 +1,0 @@
-package Queue;
-
-public class CircularQueue implements Queue {
-
-	public static void main(String args[])
-	{
-		
-	}
-}
