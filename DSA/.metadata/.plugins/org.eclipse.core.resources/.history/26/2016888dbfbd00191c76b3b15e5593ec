@@ -1,0 +1,10 @@
+package graph;
+
+public class Graph implements UndirectedGraph {
+
+	class Node 
+	{
+		
+	}
+	
+}

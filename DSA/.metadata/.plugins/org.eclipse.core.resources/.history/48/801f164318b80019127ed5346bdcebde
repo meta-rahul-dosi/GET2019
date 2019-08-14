@@ -1,7 +1,0 @@
-package Dictionary;
-
-public class Node {
-
-	int key;
-	String Word;
-}

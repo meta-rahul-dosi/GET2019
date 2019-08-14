@@ -1,0 +1,14 @@
+package graph;
+
+public class Graph implements UndirectedGraph {
+
+	public class Node 
+	{
+		int destination;
+		int weight;
+		Node next;
+	}
+
+	
+}
+
