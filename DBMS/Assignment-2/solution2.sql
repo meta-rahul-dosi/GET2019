@@ -10,10 +10,10 @@ from products
 where image_id = null;
 
 
-select category_id, category_name, parent_category_name
+select category_id, category_name, parent_category_name, if(parent_category_id == null, "top category", "10")
 from categories full join parent_categories on categories.category_id = parent_categories.parent_category_id
-if(parent_category_id == null, "top category")
 order by parent_category_name asc;
+
 
 select product_name 
 from products

@@ -1,19 +1,22 @@
 package VCP;
 
 import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Scanner;
 
 public class MainClass {
 
 	private Scanner scanner = new Scanner(System.in);
 	private static MainClass main = new MainClass();
-	private static CommandPrompt commandPrompt = new CommandPrompt();
+	private static CommandPrompt cmd = new CommandPrompt();
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 
-		commandPrompt.root();
+		cmd.root();
 		main.inputCommand();
 	}
 
@@ -27,11 +30,11 @@ public class MainClass {
 			switch (command.charAt(0)) {
 
 			case 'm':
-				commandPrompt.mkdir(command);
+				cmd.mkdir(command);
 				break;
 
 			case 'c':
-				commandPrompt.cd(command);
+				cmd.cd(command);
 				break;
 
 			case 'e':
