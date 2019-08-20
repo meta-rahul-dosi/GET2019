@@ -1,0 +1,14 @@
+package quickSort;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+
+		Employee employee = new Employee();
+		employee.addEmployee("ram",39,3450994f);
+		employee.addEmployee("radha",39,4450994f);
+		addEmployee("anirudh",39,5450994f);
+		addEmployee("keshav",39,4450994f);
+	}
+
+}

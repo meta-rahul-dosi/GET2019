@@ -27,7 +27,7 @@ public class GraphOperations implements Graph {
 		// for vertex 1
 		Node node1 = new Node();
 		node1.vertex = 0;
-		node1.weight = 4;
+		node1.weight = 3;
 		node1.next = null;
 		graph.add(node1);
 	}
@@ -37,7 +37,7 @@ public class GraphOperations implements Graph {
 		Node node1 = new Node();
 		Node node2 = new Node();
 		node1.vertex = 0;
-		node1.weight = 1;
+		node1.weight = 7;
 		node2.vertex = 3;
 		node2.weight = 4;
 		graph.add(node1);
@@ -50,7 +50,7 @@ public class GraphOperations implements Graph {
 		Node node1 = new Node();
 		Node node2 = new Node();
 		node1.vertex = 0;
-		node1.weight = 3;
+		node1.weight = 2;
 		node2.vertex = 2;
 		node2.weight = 4;
 		graph.add(node1);
@@ -73,7 +73,7 @@ public class GraphOperations implements Graph {
 	@Override
 	public List<Integer> reachable(int vertex) {
 		Node node = graph.get(vertex);
-		List<Integer> desiredVertices = new ArrayList<Integer>();
+		List<Integer> desiredVertices = new ArrayList<>();
 		while (node != null) {
 			desiredVertices.add(node.vertex);
 			node = node.next;
@@ -91,5 +91,27 @@ public class GraphOperations implements Graph {
 	@Override
 	public void mst() {
 
+		List<Integer> mst = new ArrayList<>();
+
+		int[][] weight = new int[][] { { 0, 3, 7, 2 }, { 3, 0, 0, 0 },
+				{ 7, 0, 0, 4 }, { 2, 0, 4, 0 } };
+
+		int[][] mstSet = new int[4][4];
+
+		int noOfNodes = 4;
+
+		int temp[] = new int[4];
+		temp[0] = 0;
+
+		while (temp.length != noOfNodes) {
+			int tempIndex = 0;
+			int times = 0;
+			while (++times <= temp.length) {
+				for (int i = temp[tempIndex]; i < temp.length; i = temp[tempIndex++]) {
+					for (int j = 0; j <= 3; j++)
+						weight[i][j] = 9;
+				}
+			}
+		}
 	}
 }

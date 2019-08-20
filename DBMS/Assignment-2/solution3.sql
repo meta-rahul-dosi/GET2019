@@ -1,11 +1,11 @@
 select order_id, date, amount
-from orders
+from bill
 limit 50;
 
 
 
-select order_id
-from orders
+select *
+from bill
 order by amount desc
 limit 10;
 
@@ -14,7 +14,10 @@ limit 10;
 SELECT * 
 FROM orders
 WHERE date < NOW() - INTERVAL 10 DAY 
-      AND (SELECT count(*) FROM orders WHERE shopperorderId = orders.order_id AND status <> "shipped") > 0;
+      AND (SELECT count(*) FROM orders WHERE bill.order_id = orders.order_id AND status <> "shipped") > 0;
       
       
-      
+
+select * 
+from orders join products
+where amount between 10 and 50;

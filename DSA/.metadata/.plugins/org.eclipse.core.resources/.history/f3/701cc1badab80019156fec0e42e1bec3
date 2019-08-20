@@ -1,8 +1,0 @@
-package Employee;
-
-public class EmployeeNode {
-
-	String name;
-	float salary;
-	int age;
-}

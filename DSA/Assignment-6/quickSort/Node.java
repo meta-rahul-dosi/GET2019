@@ -4,6 +4,7 @@ public class Node {
 	String name;
 	int age;
 	float salary;
+	Node next;
 	
 	public String getName() {
 		return name;
