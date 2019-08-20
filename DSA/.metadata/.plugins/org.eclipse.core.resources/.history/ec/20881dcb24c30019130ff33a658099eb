@@ -25,7 +25,8 @@ public class BSTDictionary {
 		// Use FileReader to read JSON file and pass it to parser
 		try {
 			JSONParser parser = new JSONParser();
-			jsonArray = (JSONArray) parser.parse(new FileReader(FILE_PATH));
+			jsonArray = (JSONArray) parser
+					.parse(new FileReader(FILE_PATH));
 
 			// Read JSON file
 			for (Object o : jsonArray) {

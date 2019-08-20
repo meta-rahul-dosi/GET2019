@@ -5,7 +5,7 @@ public class BSTLinkedListNode {
 
 	String key;
 	
-	BSTLinkedListNode next = null;
+	BSTLinkedListNode next;
 	
 	public BSTLinkedListNode(String key) {
 		this.key = key;

@@ -40,7 +40,4 @@ public class Employee {
 			node1 = node1.next;
 		}
 	}
-	
-	
-	
 }

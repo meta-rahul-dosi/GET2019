@@ -1,0 +1,90 @@
+package quickSort;
+
+import quickSort2.EmployeeNode;
+
+public class Employee {
+
+	Node header = null;
+
+	/**
+	 * this function adds a new node to existing linked list with incoming
+	 * attributes
+	 * @param name, age , salary
+	 */
+	void addEmployee(String name, int age, float salary) {
+		Node node = new Node();
+		node.setName(name);
+		node.getName();
+		node.setAge(age);
+		node.getAge();
+		node.setSalary(salary);
+		node.getSalary();
+
+		LinkedList(node);
+
+	}
+
+	void LinkedList(Node node) {
+		if (header == null)
+			header = node;
+		else {
+			node.next = header;
+			header = node;
+		}
+	}
+
+	// printing List
+	void printList() {
+		Node node1 = new Node();
+		node1 = header;
+		while (node1 != null) {
+			System.out.println(node1.name);
+			node1 = node1.next;
+		}
+	}
+	
+	
+	/**
+	 * function to implement quickSort
+	 * 
+	 * @param low
+	 * @param high
+	 */
+	public void quickSortBySalary(EmployeeNode low, EmployeeNode high) {
+		if (high != null && low != high && low != high.next) {
+			EmployeeNode temp = partition(low, high);
+			quickSortBySalary(low, temp.prev);
+			quickSortBySalary(temp.next, high);
+
+			for (EmployeeNode iterator = low; iterator != high; iterator = iterator.next) {
+				if (iterator != high
+						&& iterator.next.getEmployee().getSalary() == iterator
+								.getEmployee().getSalary()) {
+					if (iterator.next.getEmployee().getBirthYear() > iterator
+							.getEmployee().getBirthYear()) {
+						int tempSalary = iterator.next.getEmployee()
+								.getSalary();
+						int tempId1 = iterator.next.getEmployee().getEmpId();
+						String tempName1 = iterator.next.getEmployee()
+								.getName();
+						String tempDob1 = iterator.next.getEmployee().getdob();
+
+						iterator.next.getEmployee().salary = iterator
+								.getEmployee().getSalary();
+						iterator.next.getEmployee().dob = iterator
+								.getEmployee().getdob();
+						iterator.next.getEmployee().empId = iterator
+								.getEmployee().getEmpId();
+						iterator.next.getEmployee().name = iterator
+								.getEmployee().getName();
+
+						iterator.getEmployee().salary = tempSalary;
+						iterator.getEmployee().dob = tempDob1;
+						iterator.getEmployee().empId = tempId1;
+						iterator.getEmployee().name = tempName1;
+					}
+				}
+			}
+		}
+	}
+}
