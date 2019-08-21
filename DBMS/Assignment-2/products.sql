@@ -1,6 +1,6 @@
 create table products
 (
-    product_id int primary key,
+    product_id int,
     product_name varchar(20),
     price int(5),
     quantity int(3),
@@ -11,11 +11,14 @@ describe products;
 
 insert into products 
 values
-(1243, 'skybag', 1210, 22,12),
-(1852, 'j7-duo', 12000, 12,43),
-(654, 'chocobox', 230, 2,8);
+(101, 'skybag', 1210, 12, 1111),
+(101, 'skybag', 1210, 12, 1112),
+(102, 'j7-duo', 12000, 2, null),
+(103, 'chocobox', 230, 22,11132);
 
 select * from products;
+
+delete from products;
 
 drop table products;
 

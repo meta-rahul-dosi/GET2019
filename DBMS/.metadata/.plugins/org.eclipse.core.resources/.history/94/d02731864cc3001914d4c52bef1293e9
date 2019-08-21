@@ -1,0 +1,3 @@
+package jdbc;
+
+import java.sql.* ;  // for standard JDBC programs

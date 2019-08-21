@@ -1,0 +1,14 @@
+package jdbc;
+
+public class ConnectionFactory {
+	
+	try {
+		   Driver myDriver = new oracle.jdbc.driver.OracleDriver();
+		   DriverManager.registerDriver( myDriver );
+		}
+		catch(ClassNotFoundException ex) {
+		   System.out.println("Error: unable to load driver class!");
+		   System.exit(1);
+		}
+
+}

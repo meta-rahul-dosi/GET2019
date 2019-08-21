@@ -2,17 +2,20 @@ create table categories
 (
     category_id int primary key not null,
     category_name varchar(20),
-    product_id int, foreign key(product_id) references products(product_id),
-    parent_id int
+    parent_id int,
+    product_id int
 );
-
 
 describe categories;
 
-insert into users
+insert into categories
 values 
-(50, "mobiles", 1852),
-(51, "bag", 1243);
+(50, "mobiles", null, 102),
+(51, "bag", null, 101),
+(52, "skybag", 51, 101),
+(53, "chocalates", null, 103);
+
+select * from categories;
 
 drop table categories;
 

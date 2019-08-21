@@ -1,0 +1,11 @@
+package jdbc;
+
+public class JDBC {
+	public static void getConnection()
+	{
+	try
+	{
+		
+	}catch
+	}
+}

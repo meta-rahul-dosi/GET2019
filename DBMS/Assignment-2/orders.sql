@@ -1,14 +1,20 @@
 create table orders
 ( 
   order_id int,
-  user_id int, foreign key (user_id) references users(user_id),
-  product_id int, foreign key(product_id) references products(product_id),
-  status varchar(10)
+  user_id int,
+  product_id int,
+  status varchar(10),
+  quantity int,
+  price int
 );
 
 describe orders;
 
-insert into orders values (212, 1243, 'shipped' ,'vaishali nagar');
+insert into orders values 
+(1001, 1, 101, 'shipped', 2, 1210),
+(1001, 1, 102, 'cancelled', 1, 12000),
+(1002, 2, 103, 'shipped', 3, 230),
+(1003, 3, 103, 'returned', 2, 230);
 
 select * from orders;
 
