@@ -15,9 +15,9 @@ LIMIT 10;
 
 
 
-select o.order_id
-from bill as o
-where o.order_date > (now() - INTERVAL 30 day);
-
-
+select o.product_id 
+from orders as o inner join bill as b
+where o.status = 'cancelled'
+order by b.order_date desc
+limit 10;
 
