@@ -8,4 +8,3 @@ show tables;
 
 drop database store_front;
 
-

@@ -1,0 +1,16 @@
+package jdbc;
+
+import java.sql.*;
+import java.util.*;
+
+/**
+ * controller class used to perform the operation
+ */
+public class MainClass {
+
+	public static void main(String[] args) throws SQLException {
+
+		JDBC jdbc = new JDBC();
+		jdbc.getConnection();
+	}
+}

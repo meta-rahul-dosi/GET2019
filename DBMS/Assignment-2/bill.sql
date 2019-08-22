@@ -1,7 +1,7 @@
 create table bill
 (
     order_id int,
-    datetime datetime,
+    order_date datetime,
     shipping_address varchar(100),
     amount int
 );

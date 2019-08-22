@@ -1,0 +1,13 @@
+package jdbc;
+
+public class Queries {
+
+	private Statement statement = createStatement();
+	
+	
+	public void orderDetails(int user_id)
+	{
+		
+	}
+	
+}

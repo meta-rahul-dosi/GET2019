@@ -4,13 +4,17 @@ import java.sql.*;
 import java.util.*;
 
 /**
- * controller class used to perform the operation
+ * Main Class
  */
+
 public class MainClass {
 
 	public static void main(String[] args) throws SQLException {
 
 		JDBC jdbc = new JDBC();
+		Queries queries = new Queries();
 		jdbc.getConnection();
+		queries.orderDetails(1);
+
 	}
 }

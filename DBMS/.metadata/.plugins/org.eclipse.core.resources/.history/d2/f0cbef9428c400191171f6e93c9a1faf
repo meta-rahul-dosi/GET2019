@@ -1,0 +1,49 @@
+package jdbc;
+
+import java.sql.*;
+import java.util.*;
+
+public class JDBC {
+
+	private Connection connection = null;
+	
+	public static Connection getConnection() throws SQLException {
+
+		
+
+		try {
+
+			// loading the driver
+			Class.forName("com.mysql.cj.jdbc.Driver");
+
+			// connection creation
+			connection = DriverManager.getConnection(
+					"jdbc:mysql://localhost:3306/store_front", "root", "root");
+
+			// statement creation
+			Statement statement = connection.createStatement();
+
+			// query execution
+			ResultSet rs = statement.executeQuery("SELECT * FROM products");
+			ResultSetMetaData resultSet = rs.getMetaData();
+
+			int columnsNumber = resultSet.getColumnCount();
+
+			while (rs.next()) {
+				for (int i = 1; i <= columnsNumber; i++) {
+					String columnValue = rs.getString(i);
+					System.out.print(resultSet.getColumnName(i) + "   "
+							+ columnValue + "\n");
+
+				}
+				System.out.println("\n");
+			}
+
+			connection.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return connection;
+	}
+
+}

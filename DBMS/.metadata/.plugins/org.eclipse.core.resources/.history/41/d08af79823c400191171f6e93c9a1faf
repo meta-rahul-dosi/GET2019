@@ -1,0 +1,17 @@
+package jdbc;
+
+import java.sql.*;
+import java.util.*;
+
+/**
+ * Main Class
+ */
+
+public class MainClass {
+
+	public static void main(String[] args) throws SQLException {
+
+		JDBC jdbc = new JDBC();
+		System.out.println(jdbc.getConnection());
+	}
+}
