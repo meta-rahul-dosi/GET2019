@@ -14,7 +14,7 @@ Union
 
 
 
-select c.category_name, count(category_id) as noOfProducts
+select c.category_name, count(c.category_id) as noOfProducts
 from categories as c
 group by c.category_name;
 

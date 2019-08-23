@@ -32,3 +32,5 @@ limit 5;
 
 
 drop view Store_View
+
+

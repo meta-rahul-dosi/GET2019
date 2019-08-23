@@ -1,18 +1,18 @@
-select distinct products.product_id, product_name, price, category_name 
-from products inner join categories on products.product_id = categories.product_id
+select p.product_id, p.product_name, p.price, c.category_name 
+from products p inner join categories c on p.product_id = c.product_id
 where quantity > 0;
 
 
 
 select product_name
-from products
-where image_id is null;
+from products p inner join images i on p.product_id = i.image_id
+where i.product_id not in (select product_id from products);
 
 
 
-select category_id, category_name, if(parent_id is null, "top_category", parent_id) as parent_id
+select category_id, category_name, if(parent_name is null, "top_category", parent_name) as parent_name
 from categories
-order by parent_id asc;
+order by parent_name asc;
 
 
 
@@ -24,9 +24,7 @@ where parent_id not in (select category_id from categories);
 
 select product_name, price 
 from products natural join categories
-where category_name = "mobile";
-
-
+where category_name = 'mobiles';
 
 
 
