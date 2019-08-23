@@ -1,6 +1,7 @@
 create table bill
 (
-    order_id int,
+    bill_id int primary key not null unique,
+    order_id int, foreign key (order_id) references orders(order_id),
     order_date datetime,
     shipping_address varchar(100),
     amount int

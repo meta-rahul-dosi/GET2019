@@ -18,3 +18,4 @@ values(282001,'Agra','Uttar Pradesh'),
 select zipcode,city,state
 from zipcode_map
 order by state asc, city asc;
+

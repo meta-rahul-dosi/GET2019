@@ -1,11 +1,11 @@
 create table users
 (
-    user_id int primary key,
+    user_id int primary key not null unique,
     user_name varchar(20),
+    order_id int,
     type varchar(10),
     contact varchar(10),
-    addresses varchar(100),
-    product_id int
+    address varchar(200)
 );
 
 describe users;

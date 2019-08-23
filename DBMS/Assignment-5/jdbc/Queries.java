@@ -5,25 +5,20 @@ import java.sql.*;
 
 public class Queries {
 
-	public void orderDetails(int user_id) throws SQLException {
-		// statement creation
-		Statement statement = JDBC.connection.createStatement();
-
-		// query execution
-		ResultSet rs = statement.executeQuery("SELECT * FROM products");
-		ResultSetMetaData resultSet = rs.getMetaData();
-
-		int columnsNumber = resultSet.getColumnCount();
-
-		while (rs.next()) {
-			for (int i = 1; i <= columnsNumber; i++) {
-				String columnValue = rs.getString(i);
-				System.out.print(resultSet.getColumnName(i) + "   "
-						+ columnValue + "\n");
-
-			}
-			System.out.println("\n");
-		}
+	/**
+	 * It is a method to return query which get details of order from the database.
+	 * @param user_Id id of user
+	 * @return sql query
+	 */
+	public String query1(int user_id) {
+		String query1 = "SELECT o.order_id, b.order_date, SUM((p.product_price*(100-oi.discount)/100)*oi.ordered_quantity) AS Order_Total FROM shopping_order so"
+				+ " INNER JOIN order_item oi ON so.order_id = oi.order_id "
+				+ " INNER JOIN stock s ON s.stock_id = oi.stock_id "
+				+ " INNER JOIN product p ON p.product_id = s.product_id "
+				+ " WHERE u.user_id = '" + user_id + "' AND o.status = 'shipped' "
+				+ " GROUP BY order_id "
+				+ " ORDER BY order_date" ;
+		return query1;
 	}
 
 }

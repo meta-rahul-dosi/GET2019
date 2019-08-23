@@ -1,9 +1,10 @@
 create table categories
 (
-    category_id int primary key not null,
-    category_name varchar(20),
-    parent_id int,
-    product_id int
+    category_id int,
+    category_no int primary key not null unique,
+    category_name varchar(30),
+    product_id int, foreign key(product_id) references products(product_id),
+    parent_id int
 );
 
 describe categories;

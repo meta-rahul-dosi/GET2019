@@ -4,10 +4,19 @@ import java.sql.*;
 import java.util.*;
 
 public class JDBC {
-
-	public static Connection connection = null;
-
-	public static Connection getConnection() throws SQLException {
+	/**
+	 * It is a method used to open a connection with the database
+	 * 
+	 * @return connection object
+	 * @throws SQLException
+	 */
+	public Connection connectDB() throws SQLException {
+		String host = "jdbc:mysql://localhost:3306/";
+		String dbName = "store_front";
+		String mysqlURL = host + dbName;
+		String userId = "root";
+		String password = "root";
+		Connection connection;
 
 		try {
 
@@ -15,14 +24,15 @@ public class JDBC {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			// connection creation
-			connection = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/store_front", "root", "root");
+			connection = (Connection) DriverManager.getConnection(mysqlURL,
+					userId, password);
+			return connection;
 
-			connection.close();
-		} catch (Exception e) {
+		} catch (ClassNotFoundException e) {
+			System.out.println(e);
+		} catch (SQLException e) {
 			System.out.println(e);
 		}
-		return connection;
+		return null;
 	}
-
 }
