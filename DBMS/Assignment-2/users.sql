@@ -4,8 +4,7 @@ create table users
     user_name varchar(20),
     order_id int,
     type varchar(10),
-    contact varchar(10),
-    address varchar(200)
+    contact varchar(10)
 );
 
 describe users;
