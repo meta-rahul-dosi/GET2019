@@ -14,7 +14,7 @@ insert into categories values
 (51, 4, 'dairy milk silk', 102, 50, 'choclates'),
 (65, 5, 'sports', null, null, null),
 (66, 6, 'volleyball', 103, 65, 'sports'),
-(67, 7, 'cricket', null, null, null),
+(67, 7, 'cricket', null, 65 , 'sports'),
 (68, 8, 'ball', 104, 67, 'cricket'),
 (69, 9, 'bat', 105, 67, 'cricket' );
 

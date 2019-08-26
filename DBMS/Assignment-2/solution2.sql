@@ -35,5 +35,7 @@ from products
 where quantity < 50;
 
 
-
 select * from images;
+
+delete from images 
+where product_id = 105;

@@ -26,13 +26,12 @@ public class Query4 {
 		Queries queryObj = new Queries();
 
 		try (Connection connection = jdbcObj.connectDB();
-				PreparedStatement stmt = connection.prepareStatement(queryObj
-						.query4())) {
+				PreparedStatement stmt = connection
+						.prepareStatement(queryObj.query4())) {
 			ResultSet rs = stmt.executeQuery();
-			System.out.println("Category_Name    NumberOfSubCategories");
-
+			System.out.println("Category_Name  NumberOfSubCategories");
 			while (rs.next()) {
-				System.out.println(rs.getString("category_name") + "\t");
+				System.out.println(rs.getString("category_name") + "\t" + rs.getInt(1));
 			}
 		}
 	}

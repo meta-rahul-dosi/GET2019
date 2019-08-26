@@ -14,3 +14,7 @@ select * from categories;
 
 drop table categories;
 
+
+select category_name
+from categories
+where parent_id = null;

@@ -66,9 +66,9 @@ public class Queries {
 	 * @return sql query
 	 */
 	public String query4() {
-		String query4 = " SELECT category_name"
-				+ " FROM categories "
-				+ " WHERE parent_id is null "
+		String query4 = " SELECT category_name, count(category_id)"
+				+ " FROM categories c"
+				+ " WHERE parent_id = 'null' "
 				+ " ORDER BY category_name ";
 		
 		return query4;
