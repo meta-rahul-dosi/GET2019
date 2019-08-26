@@ -3,10 +3,12 @@ from products p inner join categories c on p.product_id = c.product_id
 where quantity > 0;
 
 
+select product_id from products;
 
-select product_name
-from products p inner join images i on p.product_id = i.image_id
-where i.product_id not in (select product_id from products);
+
+select p.product_id, p.product_name
+from products p, images i
+where i.product_id not in(select product_id from products);
 
 
 
@@ -24,7 +26,7 @@ where parent_id not in (select category_id from categories);
 
 select product_name, price 
 from products natural join categories
-where category_name = 'mobiles';
+where category_name = 'bags';
 
 
 
@@ -34,3 +36,4 @@ where quantity < 50;
 
 
 
+select * from images;

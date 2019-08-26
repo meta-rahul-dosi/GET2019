@@ -11,6 +11,8 @@ public class JDBC {
 	 * @throws SQLException
 	 */
 	public Connection connectDB() throws SQLException {
+
+		// defining the connection
 		String host = "jdbc:mysql://localhost:3306/";
 		String dbName = "store_front";
 		String mysqlURL = host + dbName;

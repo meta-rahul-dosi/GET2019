@@ -1,0 +1,32 @@
+package jdbc;
+
+import java.util.*;
+import java.sql.*;
+
+public class Queries {
+
+	/**
+	 * It is a method to return query which get details of order from the
+	 * database.
+	 * 
+	 * @param user_id
+	 * @return sql query
+	 */
+	public String query1(int user_id) {
+		String query1 = "SELECT o.order_id, b.order_date, b.amount"
+				+ " FROM users as u INNER JOIN orders as o ON u.order_id = o.order_id INNER JOIN bill as b ON o.order_no = b.order_no "
+				+ " WHERE u.user_id = " + user_id
+				+ " ORDER BY order_date";
+		return query1;
+	}
+	
+	
+	/**
+	 * It is a method to return query to insert image of a product into image table.
+	 * @return sql query
+	 */
+	public String query2() {
+		String query2 = "INSERT INTO image VALUES (?, ?)";
+		return query2;
+	}
+}

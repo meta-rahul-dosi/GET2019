@@ -1,0 +1,36 @@
+package jdbc;
+
+import java.util.*;
+import java.sql.*;
+
+public class Query1 {
+
+	/**
+	 * It is a main method to get order details.
+	 * 
+	 * @param args
+	 *            unused
+	 * @throws SQLException
+	 */
+	public static void main(String args[]) throws SQLException {
+
+		Queries queryObj = new Queries();
+		JDBC jdbcObj = new JDBC();
+
+		try (Connection connection = jdbcObj.connectDB();) {
+
+			try (PreparedStatement stmt = connection.prepareStatement(queryObj
+					.query1(2));) {
+				ResultSet rs = stmt.executeQuery("select * from users");
+				System.out.println("Order_id  order_date  order_amount");
+
+				while (rs.next()) {
+					System.out.println(rs.getString("order_id") + "\t"
+							+ rs.getDate("order_date") + "\t"
+							+ rs.getInt("order_Total"));
+				}
+			}
+		}
+	}
+
+}

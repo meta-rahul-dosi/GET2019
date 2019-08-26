@@ -1,23 +1,22 @@
 insert into products values
 (101,'skybag1213',1250,12,81),
-(102,'dairy milk silk',120,100,51),
+(102,'silk',120,100,51),
 (103,'volleyball',350,20,66),
-(104,'cricket ball',140,90,68),
-(105,'cricket bat',700,18,69);
-
+(104,'cricket-ball',140,90,68),
+(105,'cricket-bat',700,18,69);
 
 
 
 insert into categories values 
-(80, 1, 'bag', null, null, null),
-(81, 2, 'skybag1213', 101, 80, 'bag'),
+(80, 1, 'bags', null, null, null),
+(81, 2, 'skybags', 101, 80, 'bag'),
 (50, 3, 'choclates', null, null, null),
 (51, 4, 'dairy milk silk', 102, 50, 'choclates'),
 (65, 5, 'sports', null, null, null),
 (66, 6, 'volleyball', 103, 65, 'sports'),
 (67, 7, 'cricket', null, null, null),
-(68, 8, 'cricket ball', 104, 67, 'cricket'),
-(69, 9, 'cricket bat', 105, 67, 'cricket' );
+(68, 8, 'ball', 104, 67, 'cricket'),
+(69, 9, 'bat', 105, 67, 'cricket' );
 
 
 
@@ -47,9 +46,11 @@ insert into orders values
 
 
 insert into bill values 
-(601, 1, 1, '24-11-2018 10:23:10', 'vaishali nagar', 1250),
-(601, 2, 2,  '01-02-019 11:22:17', 'pratap nagar', 306),
-(602, 3, 3, '22-03-2019 17:00:00', 'pink city', 280),
-(603, 4, 4, '18-04-2019 12:12:08', 'sindhi camp', 700);
+(601, 1, 1, '2018-01-24 10:23:10', 'vaishali nagar', 1250),
+(601, 2, 2,  '2019-01-02 11:22:17', 'pratap nagar', 306),
+(602, 3, 3, '2019-03-03 17:00:00', 'pink city', 280),
+(603, 4, 4, '2019-04-23 12:12:08', 'sindhi camp', 700);
+
+
 
 

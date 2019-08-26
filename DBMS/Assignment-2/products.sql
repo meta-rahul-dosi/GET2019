@@ -4,7 +4,7 @@ create table products
     product_name varchar(100),
     price int(8),
     quantity int(5), CHECK(quantity > 0),
-    category_id int, foreign key(category_id) references categories(category_id)
+    category_id int
 );
 
 describe products;

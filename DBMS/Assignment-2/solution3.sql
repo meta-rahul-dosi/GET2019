@@ -29,13 +29,13 @@ where ( extract(month from order_date) > 1);
 
 select *
 from orders
-where status = 'shipped' and order_id = '1';
+where status = 'shipped' and order_no = '1';
 
 
 
 select order_no, order_date
 from bill
-where amount between 10 and 50;
+where amount between 100 and 500;
 
 
 

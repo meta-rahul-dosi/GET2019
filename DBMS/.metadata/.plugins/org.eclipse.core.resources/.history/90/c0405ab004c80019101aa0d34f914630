@@ -1,0 +1,10 @@
+package jdbc;
+
+import java.sql.SQLException;
+
+public class Query2 {
+
+	public static void main(String args[]) throws SQLException {
+	
+	}
+}
