@@ -69,7 +69,6 @@ public class Queries {
 		String query4 = " SELECT category_name, count(category_id) as children"
 				+ " FROM categories "
 				+ " WHERE parent_id is null "
-				+ " GROUP BY category_name"
 				+ " ORDER BY category_name ";
 		
 		return query4;

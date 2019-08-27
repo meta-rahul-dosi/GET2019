@@ -32,7 +32,7 @@ public class Query4 {
 			System.out.println("Category_Name    NumberOfSubCategories");
 
 			while (rs.next()) {
-				System.out.println(rs.getString("category_name") + "\t" + rs.getInt("children"));
+				System.out.println(rs.getString("category_name") + "\t" + rs.getInt(children));
 			}
 		}
 	}

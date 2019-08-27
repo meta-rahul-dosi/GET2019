@@ -7,8 +7,8 @@ select product_id from products;
 
 
 select p.product_id, p.product_name
-from products p, images i
-where i.product_id not in(select product_id from products);
+from products p natural join images i on i.product_id = p.product_id
+where p.product_id not in(select product_id from images);
 
 
 
@@ -25,7 +25,7 @@ where parent_id not in (select category_id from categories);
 
 
 select product_name, price 
-from products natural join categories
+from products p inner join categories c on p.product_id = c.product_id 
 where category_name = 'bags';
 
 

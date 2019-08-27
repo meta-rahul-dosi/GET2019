@@ -1,7 +1,7 @@
 select *
 from bill b inner join orders o on o.order_no = b.order_no
-order by order_date
-limit 50;
+order by order_date desc
+limit 3;
 
 
 
@@ -18,22 +18,18 @@ where datediff(now(), b.order_date) > 10 and o.status != 'shipped'
 
     
 
-
--- Display list of shoppers which haven't ordered anything since last month.
-
 select u.user_id, u.user_name
-from ((users u outer join orders o on u.order_id = o.order_id)
-    inner join bill b on b.order_no = o.order_no) 
-where ( extract(month from order_date) > 1);
+from users u inner join orders o on u.order_id = o.order_id inner join bill b on b.order_no = o.order_no
+where extract(days from order_date);
 
 
 select *
 from orders
-where status = 'shipped' and order_no = '1';
+where status = 'shipped' and order_id = '1001';
 
 
 
-select order_no, order_date
+select order_no, order_date, amount
 from bill
 where amount between 100 and 500;
 

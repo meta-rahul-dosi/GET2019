@@ -1,6 +1,6 @@
 create table products
 (
-    product_id int primary key unique not null,
+    product_id int primary key,
     product_name varchar(100),
     price int(8),
     quantity int(5), CHECK(quantity > 0),

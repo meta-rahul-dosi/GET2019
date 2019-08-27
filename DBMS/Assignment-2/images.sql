@@ -8,5 +8,5 @@ describe  images;
 
 select * from images;
 
-drop table images;
+
 

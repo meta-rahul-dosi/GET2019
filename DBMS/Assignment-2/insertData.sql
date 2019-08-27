@@ -6,7 +6,6 @@ insert into products values
 (105,'cricket-bat',700,18,69);
 
 
-
 insert into categories values 
 (80, 1, 'bags', null, null, null),
 (81, 2, 'skybags', 101, 80, 'bag'),
