@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form method="post" action="addStudent">
+First name: <input type="text" name="firstName" ><br>
+Last name: <input type="text" name="lastName" ><br>
+<input type="submit" value="addStudent"><br>
+</form>
+</body>
+</html>

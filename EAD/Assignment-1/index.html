@@ -13,41 +13,40 @@
 </head>
 
 <body>
-    <h1 align="center ">Welcome to Metacube Parking System</h1>
+    <h1 style="text-align:center; color:skyblue;">Welcome to Metacube Parking System</h1>
     <!--
         Register form for employee.
     -->
     <div align="center" id="employeeRegistration">
         <form action="" name="registrationForm" method="GET">
-            <h2>Employee Registration</h1>
-                Full name:
-                <input type="text" name="name" id="name" onchange="fullNameValidation()" required>
-                <br><br>
+            <h2>Employee Registration</h2>
+            Full name
+            <input type="text" name="name" id="name" onchange="fullNameValidation()" required>
+            <br><br>
 
-                Email :
-                <input type="email" id="email" name="email" onchange="emailValidation()" required>
-                <br><br>
+            Email
+            <input type="email" id="email" name="email" onchange="emailValidation()" required>
+            <br><br>
 
-                Gender :
-                <input type="radio" name="gender" value="male" checked> Male
-                <input type="radio" name="gender" value="female"> Female
-                <input type="radio" name="gender" value="other"> Other
-                <br><br>
+            Gender
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            </br></br>
 
-                Password :
-                <input type="password" id="password" name="password" onchange="passwordValidation()" required>
-                <br><br>
+            Password
+            <input type="password" id="password" name="password" onchange="passwordValidation()" required>
+            <br><br>
 
-                Confirm Password :
-                <input type="password" id="confirmPassword" name="Confirm password"
-                    onchange="confirmPasswordValidation()" required>
-                <br><br>
+            Confirm Password
+            <input type="password" id="confirmPassword" name="Confirm password" onchange="confirmPasswordValidation()"
+                required>
+            <br><br>
 
-                Contact Number :
-                <input type="text" id="contact" name="Contact Number" onchange="contactValidation()" required>
-                <br><br>
+            Contact
+            <input type="text" id="contact" name="Contact Number" onchange="contactValidation()" required>
+            <br><br>
 
-                <input type="submit" value="Submit" onclick="submitData()">
+            <input type="submit" value="Register" onclick="submitData()">
         </form>
     </div>
 
@@ -57,10 +56,11 @@
     <div id="addVehicle" align="center">
         <form action="" method="GET">
             <h2>Add Vehicle</h2>
-            Vehicle Name:
+            Vehicle Name
             <input id="vehicleName" type="text" name="vehicleName" required>
             </br></br>
-            Type :
+
+            Type
             <select id="type" value="type" onchange="showPrice()">
                 <option value="type">type</option>
                 <option value="cycle">Cycle</option>
@@ -69,15 +69,15 @@
             </select>
             </br></br>
 
-            Vehicle Number:
+            Vehicle Number
             <input id="vehicleNumber" type="text" name="vehicleNumber" required>
             </br></br>
 
-            EmployeeId:
+            EmployeeId
             <input id="empId" type="text" name="empId" required>
             </br></br>
 
-            Identification:
+            Identification
             <textarea cols="20"></textarea></br></br>
 
             <input type="submit" value="Add Vehicle" onclick="registerVehicle()">
