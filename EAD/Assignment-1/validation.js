@@ -2,7 +2,7 @@
   It have method to validate html form.
 */
 
-//Method to validate name.
+//Method to validate full name.
 function fullNameValidation() {
     var name = document.getElementById("name").value;
     var pattern = /^[A-Za-z]+$/;
