@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="addStudent.html">add student</a>
+	<a href="showStudents.html">show students list</a>
+	<a href="searchStudent">search a student</a>
+</body>
+</html>

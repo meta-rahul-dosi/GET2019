@@ -52,7 +52,7 @@ function confirmPasswordValidation() {
 //Method to validate contact .
 function contactValidation() {
     var contact = document.getElementById("contact").value;
-    if (isNaN(contact) || contact.length != 10) {
+    if (isNaN(contact) || contact.length <= 8) {
         alert("Not a valid number");
         document.getElementById("contact").value = "";
     }

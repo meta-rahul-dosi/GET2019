@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<a href="äddStudent">jgdjklfhrelkfj;wrlghl</a>
+
+	<form method="post">
+		First Name <input type="text" name="name" id="first_name" required>
+		</br> </br> Last Name <input type="text" id="last_name" name="last_name"
+			required> </br> </br> Father Name <input type="text" name="father_name"
+			required> </br> </br> Email <input type="email" id="email" name="email"
+			required> </br> </br> Class <input type="class" id="class" name="class"
+			required> </br> </br> Age <input type="number" name="age" required>
+		</br> </br> <input type="Submit" name="submit"> </br> </br>
+	</form>
+</body>
+</html>

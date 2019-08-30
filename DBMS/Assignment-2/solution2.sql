@@ -7,7 +7,7 @@ select product_id from products;
 
 
 select p.product_id, p.product_name
-from products p natural join images i on i.product_id = p.product_id
+from products p inner join images i on i.product_id = p.product_id
 where p.product_id not in(select product_id from images);
 
 

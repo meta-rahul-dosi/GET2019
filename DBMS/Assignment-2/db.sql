@@ -7,3 +7,5 @@ use store_front;
 show tables;
 
 drop database store_front;
+
+create database servlet;
