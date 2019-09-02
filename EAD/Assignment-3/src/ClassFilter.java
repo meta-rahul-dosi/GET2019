@@ -23,8 +23,6 @@ public class ClassFilter extends HttpServlet {
 		try {
 			JDBC jdbc = new JDBC();
 			Connection dbConn = jdbc.connectDB();
-			// Create a SQL query to insert data into demo table
-			// demo table consists of two columns, so two '?' is used
 
 			int classId = Integer.parseInt(request.getParameter("classList"));
 			System.out.println(classId);
