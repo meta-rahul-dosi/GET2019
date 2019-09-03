@@ -1,119 +1,125 @@
-<!DOCTYPE html> 
+<!--
+    It is web page for metacube parking system.
+-->
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-        <meta charset="UTF-8" >
-        <meta  content="width=device-width, initial-scale=1.0">
-        <title>Metacube Parking System</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="validation.js"></script>
+    <title> Metacube Parking System</title>
+</head>
 
-        <script src="main.js"></script>
-        <style>
-           
-        </style>
-    </head>
-    <body>
-        
-        <div id="empDetail" align = center>
-            <h1>Register Employee</h1><hr><br><br>
-            <form id="employeeDetails" action="#">
-                    Full name:
-                    <input type="text" id="fullName" minlength="2" onchange="validateName()" required><br><br>
+<body>
+    <h1 style="text-align:center; color:skyblue;">Welcome to Metacube Parking System</h1>
+    <!--
+        Register form for employee.
+    -->
+    <div align="center" id="employeeRegistration">
+        <form action="" name="registrationForm" method="GET">
+            <h2>Employee Registration</h2>
+            Full name
+            <input type="text" name="name" id="name" onchange="fullNameValidation()" required>
+            <br><br>
 
-                    Gender:
-                    <input type="radio" id="gender" value="male" checked> Male
-                    <input type="radio" id="gender" value="female"> Female
-                    <input type="radio" id="gender" value="other"> Other<br><br>
+            Email
+            <input type="email" id="email" name="email" onchange="emailValidation()" required>
+            <br><br>
 
-                    Email Id:
-                    <input type="text" id="email" placeholder="abc@gmail.com" onchange="validateEmail()" required>
-                    <br><br>
+            Gender
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            </br></br>
 
-                    Password:
-                    <input type="password" id="password" onchange="validatePassword()" required><br><br>
+            Password
+            <input type="password" id="password" name="password" onchange="passwordValidation()" required>
+            <br><br>
 
-                    Confirm Password:
-                    <input type="password" id="confirmPassword" onchange="isPassEqual()" required><br><br>
+            Confirm Password
+            <input type="password" id="confirmPassword" name="Confirm password" onchange="confirmPasswordValidation()"
+                required>
+            <br><br>
 
-                    Contact Number:
-                    <input type="text" id="contact" onchange="validateContact()" required><br><br>
+            Contact
+            <input type="text" id="contact" name="Contact Number" onchange="contactValidation()" required>
+            <br><br>
 
-                    <input type="submit" onclick="hideEmpDetail()"/>
+            <input type="submit" value="Register" onclick="submitData()">
+        </form>
+    </div>
 
-                    <input type="reset">
-            </form>
-        </div>
+    <!--
+        Form to add vehicle of employee.
+    -->
+    <div id="addVehicle" align="center">
+        <form action="" method="GET">
+            <h2>Add Vehicle</h2>
+            Vehicle Name
+            <input id="vehicleName" type="text" name="vehicleName" required>
+            </br></br>
 
+            Type
+            <select id="type" value="type" onchange="showPrice()" required>
+                <option>type</option>
+                <option value="cycle">Cycle</option>
+                <option value="motorCycle">MotorCycle</option>
+                <option value="fourWheelers">Four Wheelers </option>
+            </select>
+            </br></br>
 
-        <div id = "vehicleForm" align = center style="display:none">
-            <h1>Add Vehicle</h1><hr><br><br>
-            <form id = "vehicleInformation" action="#" method=>
-                Name:
-                <input type="text" id="vehicleName" minlength="2" required><br><br>
+            Vehicle Number
+            <input id="vehicleNumber" type="text" name="vehicleNumber" required>
+            </br></br>
 
-                Type:
-                <select id="vehicleType" >
-                    <option>select type</option>
-                    <option id = "cycle" value="cycle">cycle</option>
-                    <option id = "twoWheeler" value="twoWheeler">two Wheeler</option>
-                    <option id = "fourWheeler" value="fourWheeler">Four Wheeler</option>
-                </select><br><br>
+            EmployeeId
+            <input id="empId" type="text" name="empId" required>
+            </br></br>
 
-                Vehicle Number:
-                <input type="text" id="vehicleNumber" pattern="[A-Z]{2}[0-9]{2}[A-Z0-9]{2}[0-9]{4}" placeholder="RJ14AA0000" required><br><br>
+            Identification
+            <textarea cols="20"></textarea></br></br>
 
-                Employee Id
-                <input type="text" id="employeeId" pattern=[Ee]{1}[0-9]{2}[/]{1}[0-9]{6} required><br><br>
+            <input type="submit" value="Add Vehicle" onclick="registerVehicle()">
+        </form>
+    </div>
 
+    <!--
+            This div section to show the price sheet.
+            and generate the pass for parking.
+        -->
+    <div id="tableForPass" style="display:none" align="center">
+        <h2>Select your plan</h2>
+        <table border="5px">
+            <tr>
+                <th>Plan</th>
+                <th>Price in INR</th>
+            </tr>
+            <tr>
+                <td>Daily</td>
+                <td id="dailyPrice"> </td>
+            </tr>
+            <tr>
+                <td>Montly</td>
+                <td id="monthlyPrice"></td>
+            </tr>
+            <tr>
+                <td>Yearly</td>
+                <td id="yearlyPrice"></td>
+            </tr>
+        </table>
+        </br>
 
-                Identification:
-                <textarea rows="2" cols="50">
-                </textarea><br><br>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="daily"
+                onchange="getPassOption(this.value)">Daily</label>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="monthly"
+                onchange="getPassOption(this.value)">Monthly</label>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="yearly"
+                onchange="getPassOption(this.value)">Yearly</label>
+        <br> <br>
 
-                <input type="submit" onclick = "displayRate()"/>
-                <input type="reset">
-
-            </form>
-        </div> <br><br>
-
-        <div id="rateInfo" style="display:none" align="center">
-            <select id="currencyName" onchange="rateCard()">
-                    <option>select type</option>
-                    <option id="INR" value="INR">Indian Rupees</option>
-                    <option id="USD" value="USD">US Dollars</option>
-                    <option id="YEN" value="YEN">Japanese Yen</option>
-                </select><br><br>
-        <div id = "rateTable" style="display:none">
-            <table>
-                <tr id="vehicleTypeName">
-                </tr>
-                <tr>
-                    <th> Duration</th>
-                    <th id="NameOfCurrency"></th> 
-                    
-                </tr>
-                <tr>
-                    <th>one day  </th>
-                    <th id="dailyPrice"></th>  
-                    <th><button id = "dayPlanButton" type="button" onclick="priceList('dailyPrice')">SELECT</button></input></th>  
-                </tr>
-                <tr>
-                    <th>one month  </th> 
-                    <th id="monthlyPrice"></th> 
-                    <th><button id = "monthPlanButton" type="button" onclick="priceList('monthlyPrice')">SELECT</button></input></th>
-                </tr>
-                <tr>
-                    <th>one year  </th> 
-                    <th id="yearlyPrice"></th>
-                    <th><button id = "yearPlanButton" type="button" onclick="priceList('yearlyPrice')">SELECT</button></input></th>
-                </tr>
-            </table>
-
-
-
-            <button id = "getPass" type="button" onclick="generatePass()">GET PASS</button>
-
-            <p id = "passID" style ="display:none"></p>
-        </div> <br><br>
-    </body>
+        <input type="submit" value="get Pass" onclick="getPass()">
+    </div>
+</body>
 
 </html>

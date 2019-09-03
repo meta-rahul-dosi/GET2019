@@ -1,175 +1,134 @@
-// function to validate employee name 
-function validateName()
-{
-  var nameFormat = /^[a-zA-Z ]*$/;
-  var name = document.getElementById("fullName").value;
-  const min = 2;
-  console.log('dddddddd');
-  if((name.match(nameFormat))){
-    return true;
-    
-    console.log('name matched;');
-  }
-  else if ((name.length < min))
-  {
-      alert("Length of name should be minimum 2");
-      document.getElementById("fullName").value = "";
-      return false;
-  }
-  else{
-    alert("not all charaters");
-    document.getElementById("fullName").value = "";
-    return false;
-  }
+/*
+  It have method to validate html form.
+*/
+
+//Method to validate full name.
+function fullNameValidation() {
+
+    var status = false;
+
+    var name = document.getElementById("name").value;
+    var pattern = /^[A-Za-z]+$/;
+
+    if (pattern.test(name) == false) {
+        alert(" name does not allow special charater or number.");
+        document.getElementById("name").value = "";
+        status = true;
+    }
+    if (name.length < 2) {
+        alert("Name should contain at least 2 charater ");
+        document.getElementById("name").value = "";
+        status = true;
+    }
+    return status;
 }
 
+//Method to validate email.
+function emailValidation() {
+    var status = false;
+    var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var email = document.getElementById("email").value;
 
-// function to validate email id
-function validateEmail()
-{
-  var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  var email = document.getElementById("email").value;
-  var atPosition=email.indexOf("@");  
-  var dotPosition=email.lastIndexOf(".");  
-  
-  if(email.match(mailFormat)){
-    return true;
-  
-    console.log('email matched;');
-  }
-  else if (atPosition<1 || dotPosition<atPosition+2 || dotPosition+2>=email.length){  
-      alert("Please enter a valid e-mail address");  
-      document.getElementById("email").value = "";
-      return false;  
-  }
-  else{
-   alert("Please enter valid email address!");
-    document.getElementById("email").value = "";
-    return false;
-  }
+    if (pattern.test(email) == false) {
+        alert("Please enter valid email address.");
+        document.getElementById("email").value = "";
+        status = true;
+    }
+    return status;
 }
 
-// function to validate password
-function validatePassword()
-{
-  var pass = document.getElementById("password").value
-  var passFormat = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
+//Method to validate password.
+function passwordValidation() {
+    var status = false;
+    var pattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
+    var password = document.getElementById("password").value;
 
-  if(pass.match(passFormat))
-  {
-      return true;
-  }
-  else{
-      alert("Password -> should contains Uppercase, Lowercase, Numeric, Alphanumeric, and length minimum 8");
-      document.getElementById("password").value = "";
-      return false;
-  }
+    if (pattern.test(password) == false) {
+        alert("Password should have contains Uppercase, Lowercase, Numeric, Alphanumeric, and length minimum 8");
+        document.getElementById("password").value = "";
+        status = true;
+    }
+    return status;
 }
 
-// function to check weather the password and confirm password are equal or not
-function isPassEqual()
-{
-  const pass = document.getElementById("password").value;
-  const confirmPass = document.getElementById("confirmPassword").value;
-  if(pass != confirmPass)
-  {
-    alert("password not matched");
-    document.getElementById("confirmPassword").value = "";
-    return false;
-  }
-  else{
-      console.log('passmatched;');
-    return true;
-  }
+//Method to validate confirm pass word.
+function confirmPasswordValidation() {
+    var status = false;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+    if (password != confirmPassword) {
+        alert("Confirm password do not match!");
+        document.getElementById("confirmPassword").value = "";
+    }
+    return status;
 }
 
-//   function to validate contact details
-function validateContact()
-{
+//Method to validate contact .
+function contactValidation() {
+    var status = false;
     var contact = document.getElementById("contact").value;
-    if(isNaN(contact) || contact.length < 9) {
-      alert("Not a valid number");
-      document.getElementById("contact").value = "";
-      return false;
-  }
-  else {
-      return true;
-  }
-
+    if (isNaN(contact) || contact.length <= 8) {
+        alert("Not a valid number");
+        document.getElementById("contact").value = "";
+    }
+    return status;
 }
 
-// function to hid the employee details
-function hideEmpDetail()
-{
-  if( validateEmail() && validateName() && validatePassword() && isPassEqual() )
-  {
-      document.getElementById("empDetail").style.display = "none";
-  document.getElementById("empDetail").innerHTML = "You have successfully registered! your reg. ID is : 1217"; 
-  document.getElementById("vehicleForm").style.display = "block";
-  }  
+//Methdo to submit register form of employee.
+function submitData() {
+
+    if (fullNameValidation() && emailValidation() && contactValidation() && passwordValidation() && confirmPasswordValidation()) {
+        var empId = 'E19/1216';
+        document.getElementById("employeeRegistration").innerHTML = "Congrats!! You are successfully registered. Your registration ID is" + " " + empId;
+        document.getElementById("empId").value = empId;
+    }
 }
 
-
-// used to show the rate cards in different currency
-function rateCard()
-{
-    var type = document.getElementById("vehicleType").value,
-      currency = document.getElementById("currencyName").value, 
-      exchangeFromRupee = 1;
-    
-    if(currency == "USD"){
-      exchangeFromRupee = 0.014;
-    }
-    else if(currency == "YEN"){
-      exchangeFromRupee = 1.47;
-    }
-
-    document.getElementById("vehicleTypeName").innerHTML = document.getElementById(type).innerHTML;
-    document.getElementById("NameOfCurrency").innerHTML = document.getElementById(currency).innerHTML;
-
-    if(type == "cycle"){
-      document.getElementById("dailyPrice").innerHTML = exchangeFromRupee * 5;
-      document.getElementById("monthlyPrice").innerHTML = exchangeFromRupee * 100;
-      document.getElementById("yearlyPrice").innerHTML = exchangeFromRupee * 500;
-    }
-    else if(type == "twoWheeler"){
-      document.getElementById("dailyPrice").innerHTML = exchangeFromRupee * 10;
-      document.getElementById("monthlyPrice").innerHTML = exchangeFromRupee * 200;
-      document.getElementById("yearlyPrice").innerHTML = exchangeFromRupee * 1000;
-    }
-    else if(type == "fourWheeler"){
-      document.getElementById("dailyPrice").innerHTML = exchangeFromRupee * 20;
-      document.getElementById("monthlyPrice").innerHTML = exchangeFromRupee * 500;
-      document.getElementById("yearlyPrice").innerHTML = exchangeFromRupee * 3500;
-    }
-    document.getElementById("rateTable").style.display = "block";
-} 
-
-
-
-// display the price
-function displayRate()
-{
-  var vehicleName = document.getElementById("vehicleName").value,
-    vehicleType = document.getElementById("vehicleType").value,
-    vehicleNumber = document.getElementById("vehicleNumber").value,
-    employeeId = document.getElementById("employeeId").value;
-
-  if(vehicleName != "" && vehicleType != "select type" && vehicleNumber != "" && employeeId != ""){
-    document.getElementById("vehicleForm").style.display = "none";
-    document.getElementById("rateInfo").style.display = "block";
-  }
+//Method to add vehicle of employee.
+function registerVehicle() {
+    document.getElementById("addVehicle").innerHTML = "Your Vehicle has been added!!"
 }
 
-// generate a price message for selected of selected plan
-function priceList(duration)
-{
-  var price = document.getElementById(duration).innerHTML;
-  document.getElementById("passID").innerHTML = "Pass price of your selected plan is" + price;
- }
- 
- // function to generate pass for selected plan
- function generatePass()
- {
-   document.getElementById("passID").style.display = "block";
- }
+//Method to show the parking price sheet.
+function showPrice() {
+    value = document.getElementById("type").value;
+    document.getElementById("tableForPass").style.display = 'block';
+    console.log(value);
+    if (value == "cycle") {
+        document.getElementById("dailyPrice").innerHTML = "5";
+        document.getElementById("monthlyPrice").innerHTML = "100";
+        document.getElementById("yearlyPrice").innerHTML = "500";
+    }
+    if (value == "motorCycle") {
+        document.getElementById("dailyPrice").innerHTML = "10";
+        document.getElementById("monthlyPrice").innerHTML = "200";
+        document.getElementById("yearlyPrice").innerHTML = "1000";
+    }
+
+    if (value == "fourWheelers") {
+        document.getElementById("dailyPrice").innerHTML = "20";
+        document.getElementById("monthlyPrice").innerHTML = "500";
+        document.getElementById("yearlyPrice").innerHTML = "3500";
+    }
+}
+
+var passSelect;
+function getPassOption(value) {
+    passSelect = value;
+}
+
+//Method to generate pass of vehicle. 
+function getPass() {
+    if (passSelect == "daily") {
+        console.log("1");
+        document.getElementById("tableForPass").innerHTML = "Your pass price is " + document.getElementById("dailyPrice").innerHTML;
+    }
+    else if (passSelect == "monthly") {
+        console.log("2");
+        document.getElementById("tableForPass").innerHTML = "Your pass price is " + document.getElementById("monthlyPrice").innerHTML;
+    }
+    else if (passSelect == "yearly") {
+        console.log("3");
+        document.getElementById("tableForPass").innerHTML = "Your pass price is " + document.getElementById("yearlyPrice").innerHTML;
+    }
+}
