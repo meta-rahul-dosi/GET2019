@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h1 style="text-align:center; color:skyblue;">Welcome to Metacube Parking System</h1>
+    <h1 style="text-align:center; color:rgb(75, 107, 196);">Welcome to Metacube Parking System</h1>
     <!--
         Register form for employee.
     -->
@@ -21,7 +21,7 @@
         <form action="" name="registrationForm" method="GET">
             <h2>Employee Registration</h2>
             Full name
-            <input type="text" name="name" id="name" onchange="fullNameValidation()" required>
+            <input type="text" name="name" id="name" onfocusout="fullNameValidation()" required>
             <br><br>
 
             Email
@@ -62,10 +62,9 @@
 
             Type
             <select id="type" value="type" onchange="showPrice()" required>
-                <option>type</option>
-                <option value="cycle">Cycle</option>
-                <option value="motorCycle">MotorCycle</option>
-                <option value="fourWheelers">Four Wheelers </option>
+                <option value="cycle">cycle</option>
+                <option value="motorCycle">2 wheeler</option>
+                <option value="fourWheelers">4 wheeler</option>
             </select>
             </br></br>
 

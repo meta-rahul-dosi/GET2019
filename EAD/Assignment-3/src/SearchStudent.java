@@ -24,8 +24,8 @@ public class SearchStudent extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		try {
-			JDBC jdbc = new JDBC();
-			Connection conn = jdbc.connectDB();
+			DBConnection DBConnection = new DBConnection();
+			Connection conn = DBConnection.connectDB();
 
 			String fName = request.getParameter("first_name");
 			String lName = request.getParameter("last_name");

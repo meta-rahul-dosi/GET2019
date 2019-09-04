@@ -1,5 +1,5 @@
 /*
-  It have method to validate html form.
+  It has methods to validate html form.
 */
 
 //Method to validate full name.
@@ -51,7 +51,7 @@ function passwordValidation() {
     return status;
 }
 
-//Method to validate confirm pass word.
+//Method to validate confirm password.
 function confirmPasswordValidation() {
     var status = false;
     var password = document.getElementById("password").value;

@@ -7,7 +7,7 @@ select product_id from products;
 
 
 select p.product_id, p.product_name
-from products p inner join images i on i.product_id = p.product_id
+from products p
 where p.product_id not in(select product_id from images);
 
 
@@ -20,7 +20,8 @@ order by parent_name asc;
 
 select category_id, category_name
 from categories
-where parent_id not in (select category_id from categories);
+where category_id not in (select distinct parent_id from categories);
+
 
 
 

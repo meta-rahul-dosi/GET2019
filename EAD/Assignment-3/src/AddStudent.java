@@ -38,11 +38,11 @@ public class AddStudent extends HttpServlet {
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		JDBC jdbc = new JDBC();
+		DBConnection DBConnection = new DBConnection();
 		Connection connection = null;
 
 		try {
-			connection = jdbc.connectDB();
+			connection = DBConnection.connectDB();
 			Statement stmt = connection.createStatement();
 
 			// getting data from user

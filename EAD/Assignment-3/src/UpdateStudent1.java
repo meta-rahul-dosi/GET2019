@@ -40,8 +40,8 @@ public class UpdateStudent1 extends HttpServlet {
 		
 		 try {
 
-				JDBC jdbc = new JDBC();
-				Connection connection = jdbc.connectDB(); 				
+				DBConnection DBConnection = new DBConnection();
+				Connection connection = DBConnection.connectDB(); 				
 				
 				int id = Integer.parseInt(request.getParameter("id")),
 						class1 = Integer.parseInt(request.getParameter("class")),

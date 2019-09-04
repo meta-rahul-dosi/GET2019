@@ -21,9 +21,8 @@ public class ClassFilter extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		try {
-			JDBC jdbc = new JDBC();
-			Connection dbConn = jdbc.connectDB();
-
+			DBConnection DBConnection = new DBConnection();
+			Connection dbConn = DBConnection.connectDB();
 			int classId = Integer.parseInt(request.getParameter("classList"));
 			System.out.println(classId);
 			String query = " SELECT * FROM student_information AS SI "

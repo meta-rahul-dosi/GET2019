@@ -1,7 +1,9 @@
-create database EAD4;
+create database ead4;
+
+use ead4;
 
 show tables;
 
-delete from EAD4;
+delete from ead4;
 
-drop database EAD4;
+drop database ead4;

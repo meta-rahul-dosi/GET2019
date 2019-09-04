@@ -1,69 +1,84 @@
+import java.sql.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
 
-//Servlet Name 
+/**
+ * Servlet implementation class EmpRegistration
+ */
 public class EmpRegistration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public EmpRegistration() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-//		try {
-//
-//			DBConnection dbConn = new DBConnection();
-//					//dbConn1 = new DBConnection();
-//			int empId=-1;
+
+		try {
+			DBConnection dbconn = new DBConnection();
+			Connection conn = dbconn.connectDB();
+			String empId = request.getParameter("empID");
+			String query = "INSERT INTO emp_details "
+					+ " (fullName, gender, email, password, contact, organization, empID)"
+					+ " values(?, ?, ?, ?, ?,?, ?)";
+
+			PreparedStatement st = conn.prepareStatement(query);
+
+			st.setString(1, request.getParameter("fullName"));
+			st.setString(2, request.getParameter("gender"));
+			st.setString(3, request.getParameter("email"));
+			st.setString(4, request.getParameter("password"));
+			st.setString(5, request.getParameter("contact"));
+			st.setString(6, request.getParameter("organization"));
+			st.setString(7, request.getParameter("empID"));
+
+			// feeding input data into database
+			try {
+				st.executeUpdate();
+			} catch (Exception e) {
+				System.out.println("data cannot be put into db   " + e);
+			}
+
+//			// Validation of email for logging in user
 //			String email = request.getParameter("email");
-//			String query = "INSERT INTO `EAD-4`.`employee_detail`"
-//					+ " (fullName, gender, email, password, contactNumber, organization)"
-//					+ " values(?, ?, ?, ?, ?, ?)",
-//					queryId = "SELECT * FROM `EAD-4`.`employee_detail` AS ED"
-//						+" WHERE ED.email=\""+email+"\";";
-//			PreparedStatement st = dbConn.executeQuery(query);
-//			
-//			st.setString(1, request.getParameter("fullName"));
-//			st.setString(2, request.getParameter("gender"));
-//			st.setString(3, email);
-//			st.setString(4, request.getParameter("password"));
-//			st.setInt(5, Integer.parseInt(request.getParameter("contactNumber")));
-//			st.setString(6, request.getParameter("organization"));
-//
-//			
-//			try{
-//				// Execute the insert command using executeUpdate()
-//				// to make changes in database
-//				st.executeUpdate();
-//				
-//				// get empId
-//				ResultSet rs = st.executeQuery(queryId);
-//				rs.next();
-//				empId = rs.getInt(1);
-//
-//				// Close all the connections
-//				st.close();
-//				//dbConn.closeConnection();
-//				// Get a writer pointer
-//				// to display the successful result
-//				PrintWriter out = response.getWriter();
-//				out.println("<b>Successfully Inserted"
-//						+ "</b>");
-//				RequestDispatcher rd = request.getRequestDispatcher("VehicleForm?empId="+empId); 
-//				rd.forward(request, response); 
-//			} catch(java.sql.SQLIntegrityConstraintViolationException e){
-//				PrintWriter out = response.getWriter();
-//				out.println("<html><body><b>email already exists"
-//						+ "</b><br/><br/></body></html>");
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+//			String queryForValidation = "SELECT empID FROM emp_details ED WHERE ED.email='"
+//					+ email +"'";
+//			ResultSet rs = st.executeQuery(queryForValidation);
+//			rs.next();
+//			int empidd = rs.getInt(1);
+
+			// calling AddVehicle servlet
+			System.out.println("rahul gya gyaa");
+			RequestDispatcher rd = request.getRequestDispatcher("AddVehicle?empId="+empId);
+			rd.forward(request, response); 
+
+		} catch (SQLException e) {
+			System.out.println("SQLException is " + e);
+		}
 	}
+
 }

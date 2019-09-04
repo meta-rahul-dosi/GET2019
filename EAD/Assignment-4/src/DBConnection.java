@@ -1,7 +1,7 @@
 import java.sql.*;
+import java.util.*;
 
 public class DBConnection {
-
 	/**
 	 * It is a method used to open a connection with the database
 	 * 
@@ -12,7 +12,7 @@ public class DBConnection {
 
 		// defining the connection
 		String host = "jdbc:mysql://localhost:3306/";
-		String dbName = "EAD4";
+		String dbName = "ead4";
 		String mysqlURL = host + dbName;
 		String userId = "root";
 		String password = "root";
@@ -24,8 +24,8 @@ public class DBConnection {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			// connection creation
-			connection =  DriverManager.getConnection(mysqlURL,
-					userId, password);
+			connection = DriverManager
+					.getConnection(mysqlURL, userId, password);
 			System.out.println("connection successful");
 			return connection;
 

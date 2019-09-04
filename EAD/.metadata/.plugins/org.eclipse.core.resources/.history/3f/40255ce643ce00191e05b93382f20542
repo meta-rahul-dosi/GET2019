@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Registration</title>
+<script src="checks.js"></script>
+</head>
+<body>
+  <div id="empDetail" align = center>
+            <h1>Register Employee</h1><hr><br/><br/>
+            <form id="employeeDetails" action="EmpRegistration" method="post">
+                    Full name:
+                    <input type="text" id="fullName" name="fullName" onchange="fullNameValidation()" required/><br/><br/>
+
+                    Gender:
+                    <input type="radio" id="gender" name="gender" value="male" /> Male
+                    <input type="radio" id="gender" name="gender" value="female"/> Female
+                    <input type="radio" id="gender" name="gender" value="other"/> Other<br/><br/>
+
+                    Email Id:
+                    <input type="email" id="email" name="email" placeholder="abc@gmail.com" onchange="emailValidation()" required/>
+                    <br/><br>
+
+                    Password:
+                    <input type="Password"  id="password" name="password" onchange="passwordValidation()" required/><br/><br/>
+
+                    Confirm Password:
+                    <input type="Password"  id="confirmPassword" onchange="confirmPasswordValidation()" required/><br/><br/>
+
+                    Contact Number:
+                    <input type="text"  id="contact" name="contact" pattern="[0-9]{8,}" onchange="contactValidation()" required/><br/><br/>
+
+					Organization:
+					<select id="organization" name="organization" onchange="">
+                    	<option name = "Metacube" id = "Metacube" value="Metacube">Metacube</option>
+                    	<option name = "abc" id = "abc" value="abc">IN Time Tec</option>
+                    	<option name = "bcd" id = "bcd" value="bcd">Appirio</option>
+                    	<option name = "efg" id = "efg" value="efg">Pratham</option>
+                	</select><br><br>
+                
+                    <input type="submit" value="submit" onclick="hideEmpDetail()"/>
+
+                    <input type="reset"/><br/><br/>
+                    
+                    Already registered?<br/>
+                    <a href="login.html">Login</a>
+                                
+            </form>
+        </div>
+</body>
+</html>

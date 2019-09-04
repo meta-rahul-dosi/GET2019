@@ -34,11 +34,11 @@ public class ShowStudents1 extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 
-		JDBC jdbc = new JDBC();
+		DBConnection DBConnection = new DBConnection();
 		Connection connection = null;
 
 		try {
-			connection = jdbc.connectDB();
+			connection = DBConnection.connectDB();
 			Statement statement = connection.createStatement();
 
 			ResultSet rs = statement
