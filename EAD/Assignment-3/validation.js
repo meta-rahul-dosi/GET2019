@@ -9,4 +9,5 @@ function validationClass() {
 		alert("Not a valid class");
 	}
 	document.getElementById("class").value = "";
-return status;}
+	return status;
+}

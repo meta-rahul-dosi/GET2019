@@ -5,6 +5,8 @@
     <welcome-file>registrationForm.html</welcome-file>
   </welcome-file-list>
   
+  
+  
   <servlet>
     <servlet-name>reg</servlet-name>
     <servlet-class>EmpRegistration</servlet-class>
@@ -14,12 +16,9 @@
     <url-pattern>/EmpRegistration</url-pattern>
   </servlet-mapping>
   
-<!--    <servlet> -->
-<!--     <servlet-name>vehicle</servlet-name> -->
-<!--     <servlet-class>AddVehicle</servlet-class> -->
-<!--   </servlet> -->
-<!--   <servlet-mapping> -->
-<!--     <servlet-name>vehicle</servlet-name> -->
-<!--     <url-pattern>/AddVehicle</url-pattern> -->
-<!--   </servlet-mapping> -->
+  
+ 
+  
+  
+  
 </web-app>

@@ -72,8 +72,7 @@ public class EmpRegistration extends HttpServlet {
 //			int empidd = rs.getInt(1);
 
 			// calling AddVehicle servlet
-			System.out.println("rahul gya gyaa");
-			RequestDispatcher rd = request.getRequestDispatcher("AddVehicle?empId="+empId);
+			RequestDispatcher rd = request.getRequestDispatcher("vehicleForm.html");
 			rd.forward(request, response); 
 
 		} catch (SQLException e) {

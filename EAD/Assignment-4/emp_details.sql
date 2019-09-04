@@ -20,9 +20,5 @@ values
 
 truncate table emp_details;
 
-
-delete from emp_details
-where gender='female' and fullName='rahul';
-
 drop table emp_details;
 
