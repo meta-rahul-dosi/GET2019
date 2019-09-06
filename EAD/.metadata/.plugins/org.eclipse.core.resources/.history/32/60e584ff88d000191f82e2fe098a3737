@@ -1,0 +1,42 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" import="java.sql.*, temp.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+
+
+<body>
+
+<%
+	DBConnection dbconn = new DBConnection();
+    Connection connection = dbconn.connectDB();
+    
+    int empID = (int) session.getAttribute("empID");
+    
+    String queryForEmpDetails = "SELECT * FROM emp_details WHERE empID = '"
+			+ empID + "';";
+	Statement statement = connection.createStatement();
+	ResultSet resultSet = statement.executeQuery(queryForEmpDetails);
+	String fullName = resultSet.getString(1);
+	String gender = resultSet.getString(2);
+	String email = resultSet.getString(3);
+	String password = resultSet.getString(4);
+	String contact = resultSet.getString(5);
+	String organization = resultSet.getString(6);
+	
+	session.setAttribute("fullName", fullName);
+	session.setAttribute("gender", gender);
+	session.setAttribute("email", email);
+	session.setAttribute("password", password);
+	session.setAttribute("contact", contact);
+	session.setAttribute("organization", organization);
+	response.sendRedirect("AfterEditing.jsp");
+	
+	session.setAttribute("fullName", fullName);
+%>
+
+</body>
+</html>

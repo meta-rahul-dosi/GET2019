@@ -1,22 +1,21 @@
 create table emp_details
 (
-    fullName varchar(30),
-    gender varchar(10),
-    email varchar(40),
-    password varchar(30),
-    contact varchar(10),
-    organization varchar(20),
-    empID varchar(15) primary key
+    fullName varchar(30)NOT NULL ,
+    gender varchar(10) NOT NULL,
+    email varchar(40) NOT NULL,
+    password varchar(30) NOT NULL,
+    contact varchar(10) NOT NULL,
+    organization varchar(20) NOT NULL,
+    empID int(10) AUTO_INCREMENT NOT NULL,
+    primary key(empID) 
 );
 
 describe emp_details;
 
-select * from emp_details;
+insert into emp_details(fullName, gender, email, password, contact, organization)
+values ('r', 'male', 'email@gmail.com', 'Abc@12345', '7728017799', 'Metacube');
 
-insert into emp_details 
-values
-('rahul', 'male', 'email@gmail.com', 'Abc@12345', '7728017799', 'metacube', 'e19-1216'),
-('keshav', 'male', 'email1@gmail.com', 'Abc@123456', '7728017779', 'appirio', 'e19-1217');
+select * from emp_details;
 
 truncate table emp_details;
 

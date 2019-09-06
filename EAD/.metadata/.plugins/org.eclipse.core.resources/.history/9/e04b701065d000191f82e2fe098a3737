@@ -1,0 +1,66 @@
+import java.sql.*;
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.*;
+
+/**
+ * Servlet implementation class passPrice
+ */
+public class PassPrice extends HttpServlet {
+	private static final long serialVeresultSetionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public PassPrice() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		try {
+			String vehicleType = (String) request.getParameter("vehicleType");
+			String currency = (String) request.getParameter("currency");
+			String forTime = (String) request.getParameter("forTime");
+
+			System.out.println(vehicleType);
+
+			DBConnection dbconn = new DBConnection();
+			Connection connection = dbconn.connectDB();
+
+			String query = "SELECT dailyPrice, monthlyPrice, yearlyPrice FROM pass_prices WHERE vehicleType = "
+					+ "'" + vehicleType + "';";
+
+			Statement statement = connection.createStatement();
+			ResultSet resultSet = statement.executeQuery(query);
+			resultSet.next();
+			float dailyPrice = (float) resultSet.getFloat(1);
+			float monthlyPrice = (float) resultSet.getFloat(2);
+			float yearlyPrice = (float) resultSet.getFloat(3);
+			
+			PrintWriter out = response.getWriter();
+			out.print(<h2>Total Price For Parking Your Vehicle is </h2>);
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+}

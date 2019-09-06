@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		int empID = (int) session.getAttribute("empID");
+	%>
+	  
+	<form action="AddVehicle" method="GET">
+            <h2>Add Vehicle</h2>
+            Vehicle Name
+            <input id="vehicleName" type="text" name="vehicleName" required>
+            </br></br>
+
+            Vehicle Type
+            <select id="vehicleType" value="type" required>
+                <option name="cycle"  value="cycle">cycle</option>
+                <option name="2wheeler" value="2wheeler">2 wheeler</option>
+                <option name="4wheeler" value="4wheeler">4 wheeler</option>
+            </select>
+            </br></br>
+
+            Vehicle Number
+            <input id="vehicleNumber" type="text" name="vehicleNumber" required>
+            </br></br>
+
+            Employee Id
+            <input id="empID" type="text" name="empID"  value="<%=empID%>" required>
+            </br></br>
+
+            Identification
+            <textarea cols="20"></textarea></br></br>
+
+            <input type="submit" value="Add Vehicle" onclick="registerVehicle()">
+        </form>
+	
+</body>
+</html>

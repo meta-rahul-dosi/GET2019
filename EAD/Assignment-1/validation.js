@@ -68,7 +68,7 @@ function contactValidation() {
     var status = false;
     var contact = document.getElementById("contact").value;
     if (isNaN(contact) || contact.length <= 8) {
-        alert("Not a valid number");
+        alert("Not a valid contact number");
         document.getElementById("contact").value = "";
     }
     return status;

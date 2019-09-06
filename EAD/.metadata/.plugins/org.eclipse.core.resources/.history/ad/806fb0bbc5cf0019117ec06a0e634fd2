@@ -1,0 +1,78 @@
+
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.sql.*;
+
+/**
+ * Servlet implementation class AddVehicle
+ */
+public class AddVehicle extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public AddVehicle() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		try {
+
+			DBConnection dbConn = new DBConnection();
+			Connection conn = dbConn.connectDB();
+			String query = "INSERT INTO vehicle_details"
+					+ " (vehicleName, vehicleType, vehicleNumber, empID, identification)"
+					+ " values(?, ?, ?, ?, ?)";
+
+			PreparedStatement st = conn.prepareStatement(query);
+			st.setString(1, request.getParameter("vehicleName"));
+			st.setString(2, request.getParameter("vehicleType"));
+			st.setString(3, request.getParameter("vehicleNumber"));
+			st.setInt(4, Integer.parseInt(request.getParameter("empID")));
+			st.setString(5, request.getParameter("identification"));
+
+
+			
+			// Execute the insert command using executeUpdate()
+			// to make changes in database
+			st.executeUpdate();
+
+			// Close all the connections
+			st.close();
+			dbConn.closeConnection();
+			// Get a writer pointer
+			// to display the successful result
+			PrintWriter out = response.getWriter();
+			out.println("<b>Successfully Inserted"
+					+ "</b>");
+
+			HttpSession session = request.getSession();
+			session.setAttribute("empId", Integer.parseInt(request.getParameter("empId")));
+			session.setAttribute("type", request.getParameter("vehicleType"));
+			session.setAttribute("vehicleNumber", request.getParameter("vehicleNumber"));
+			RequestDispatcher rd = request.getRequestDispatcher("passPrice.jsp");
+			rd.forward(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+}
