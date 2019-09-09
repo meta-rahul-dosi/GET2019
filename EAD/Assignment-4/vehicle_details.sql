@@ -4,6 +4,7 @@ create table vehicle_details
     vehicleType varchar(15),
     vehicleNumber varchar(20),
     empID int(10),
+    foreign key(empID) references emp_details(empID), 
     identification varchar(30),
     vehicle_id int primary key auto_increment
 );

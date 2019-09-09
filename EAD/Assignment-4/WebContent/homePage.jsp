@@ -36,28 +36,20 @@
 	%>
 
 	<div>
-            <h1>Employee Details</h1>
-            <hr><br/><br/>
-            <form  action="EditDetails.jsp" method="post">
-                    Full name:
-                    <input type="text" name="fullName" value="<%=fullName%>"  readonly/><br/><br/>
+		<h1>Employee Details</h1>
+		<hr>
+		<br /> <br />
+		<form action="EditDetails.jsp" method="post">
+			Full name: <input type="text" name="fullName" value="<%=fullName%>"
+				readonly /><br /> <br /> Gender: <input type="type" name="gender"
+				value="<%=gender%>" readonly /><br /> <br /> Email Id: <input
+				type="email" name="email" value="<%=email%>>" readonly /> <br /> <br>
+			Contact Number: <input type="text" name="contact"
+				value="<%=contact%>" readonly /><br /> <br /> Organization: <input
+				name="organization" value="<%=organization%>" readonly /><br /> <br />
+			<input type="submit" value="EDIT" />
 
-                    Gender:
-                    <input type="type" name="gender" value="<%=gender%>" readonly/><br/><br/>           
-
-                    Email Id:
-                    <input type="email" id="email" name="email"  readonly/>
-                    <br/><br>
-
-                    Contact Number:
-                    <input type="text"  id="contact" name="contact"  readonly/><br/><br/>
-
-					Organization:
-					<input name="organization" value="<%=organization%>"  readonly/><br/><br/>
-                	
-                    <input type="submit" value="EDIT"/>
-                               
-            </form>
-        </div>            
+		</form>
+	</div>
 </body>
 </html>

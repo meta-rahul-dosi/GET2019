@@ -1,6 +1,6 @@
 create table emp_details
 (
-    fullName varchar(30)NOT NULL ,
+    fullName varchar(30)NOT NULL,
     gender varchar(10) NOT NULL,
     email varchar(40) NOT NULL,
     password varchar(30) NOT NULL,
@@ -16,6 +16,10 @@ insert into emp_details(fullName, gender, email, password, contact, organization
 values ('r', 'male', 'email@gmail.com', 'Abc@12345', '7728017799', 'Metacube');
 
 select * from emp_details;
+
+SELECT ALL fullName FROM emp_details WHERE empID != 14 AND organization = 'metacube';
+
+SELECT fullName, empID FROM emp_details WHERe organization = 'metacube';
 
 truncate table emp_details;
 
