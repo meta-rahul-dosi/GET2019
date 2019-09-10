@@ -13107,3 +13107,8 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2019-09-10 15:09:02.414
+!MESSAGE Removing obsolete files from server...
+!SUBENTRY 1 org.eclipse.wst.server.core 4 0 2019-09-10 15:09:02.414
+!MESSAGE Could not delete C:\Soft\apache-tomcat-8.0.9\work\Catalina\localhost\REST. May be locked by another process.
