@@ -3435,3 +3435,97 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/REST/pom.xml' 
 2019-09-09 08:01:38,741 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2019-09-09 08:01:38,742 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
 2019-09-09 08:03:37,016 [Worker-7] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 150265 ms
+2019-09-09 17:17:15,551 [Worker-9] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo.maven.apache.org/maven2
+2019-09-09 17:19:05,790 [Worker-9] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 110243 ms
+2019-09-09 17:23:31,634 [Worker-8] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo.maven.apache.org/maven2
+2019-09-09 17:24:36,283 [Worker-3] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Collecting project info '/pom.xml' C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml
+2019-09-09 17:24:46,382 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-09 17:24:55,260 [Worker-7] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-09 17:24:55,411 [Worker-3] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /REST/src/main/java
+2019-09-09 17:24:55,413 [Worker-3] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /REST/src/main/resources
+2019-09-09 17:24:55,442 [Worker-3] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /REST/src/test/java
+2019-09-09 17:25:05,124 [Worker-3] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 28 sec
+2019-09-09 17:25:08,808 [Worker-5] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-09 17:25:09,364 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 17:25:09,366 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 17:25:09,368 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 17:25:09,368 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 17:25:49,815 [Worker-8] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 138185 ms
+2019-09-09 18:21:16,177 [Worker-11] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-09 18:21:16,706 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:21:16,708 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:21:16,709 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:21:16,709 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:24:46,905 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:24:46,906 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:24:46,907 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:24:46,907 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:26:45,342 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-09 18:26:46,988 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:26:46,988 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:26:46,989 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:26:46,990 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:26:46,990 [Worker-3] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of REST
+2019-09-09 18:26:46,991 [Worker-3] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for REST
+2019-09-09 18:26:47,001 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:26:49,177 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-09 18:26:49,866 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:26:49,867 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:26:49,868 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:26:49,868 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:26:49,869 [Worker-2] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of REST
+2019-09-09 18:26:49,869 [Worker-2] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for REST
+2019-09-09 18:26:49,872 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:27:52,733 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:27:52,734 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:27:52,735 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:27:52,735 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:28:08,265 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:28:08,266 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:28:08,267 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:28:08,267 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:31:51,198 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:31:51,198 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:31:51,200 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:31:51,200 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:31:54,448 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:31:54,448 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:31:54,449 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:31:54,449 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:32:51,238 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:32:51,239 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:32:51,240 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:32:51,240 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:33:56,358 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:33:56,359 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:33:56,360 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:33:56,360 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:36:22,208 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:36:22,209 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:36:22,210 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:36:22,211 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:36:26,263 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:36:26,264 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:36:26,265 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:36:26,265 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:36:38,418 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:36:38,418 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:36:38,420 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:36:38,420 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-09 18:36:53,620 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:36:53,620 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-09 18:36:53,621 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-09 18:36:53,621 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-10 14:04:02,245 [Worker-4] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo.maven.apache.org/maven2
+2019-09-10 14:04:03,260 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-10 14:04:04,217 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-10 14:04:07,326 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 14:04:07,328 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 14:04:07,330 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 14:04:07,330 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-10 14:04:07,625 [Worker-1] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: com.metacube:REST:0.0.1-SNAPSHOT @ C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\pom.xml.
+2019-09-10 14:04:10,415 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 14:04:10,436 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2019-09-10 14:04:10,437 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-09-10 14:04:10,437 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eclipse-jee-luna-R-win32\eclipse\GET2019\EAD\REST\src\test\resources
+2019-09-10 14:05:41,955 [Worker-4] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo.maven.apache.org/maven2 in 99714 ms
