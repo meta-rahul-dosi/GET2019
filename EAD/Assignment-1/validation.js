@@ -5,80 +5,90 @@
 //Method to validate full name.
 function fullNameValidation() {
 
-    var status = false;
+    var status = true;
 
     var name = document.getElementById("name").value;
     var pattern = /^[A-Za-z]+$/;
 
-    if (pattern.test(name) == false) {
+    console.log(name);
+    if (name.match(pattern) == false) {
         alert(" name does not allow special charater or number.");
         document.getElementById("name").value = "";
-        status = true;
+        status = false;
     }
     if (name.length < 2) {
         alert("Name should contain at least 2 charater ");
         document.getElementById("name").value = "";
-        status = true;
+        status = false;
     }
     return status;
 }
 
 //Method to validate email.
 function emailValidation() {
-    var status = false;
+    var status = true;
     var pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var email = document.getElementById("email").value;
+    console.log(email)
 
-    if (pattern.test(email) == false) {
+    if (email.match(pattern) == false) {
         alert("Please enter valid email address.");
         document.getElementById("email").value = "";
-        status = true;
+        status = false;
     }
     return status;
 }
 
 //Method to validate password.
 function passwordValidation() {
-    var status = false;
-    var pattern = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
+    var status = true;
+    var pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}";
     var password = document.getElementById("password").value;
+    console.log(password)
 
-    if (pattern.test(password) == false) {
-        alert("Password should have contains Uppercase, Lowercase, Numeric, Alphanumeric, and length minimum 8");
+    if (password.match(pattern) == false) {
+        alert("Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters");
         document.getElementById("password").value = "";
-        status = true;
+        status = false;
     }
     return status;
 }
 
 //Method to validate confirm password.
 function confirmPasswordValidation() {
-    var status = false;
+    var status = true;
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirmPassword").value;
+    console.log(confirmPassword)
+
     if (password != confirmPassword) {
         alert("Confirm password do not match!");
+        console, log("hereeeeeeee")
         document.getElementById("confirmPassword").value = "";
+        status = false;
     }
     return status;
 }
 
 //Method to validate contact .
 function contactValidation() {
-    var status = false;
+    var status = true;
     var contact = document.getElementById("contact").value;
-    if (isNaN(contact) || contact.length <= 8) {
+    console.log(contact)
+    if (contact.length <= 8) {
         alert("Not a valid contact number");
         document.getElementById("contact").value = "";
+        status = false;
     }
     return status;
 }
 
-//Methdo to submit register form of employee.
+//Method to submit register form of employee.
 function submitData() {
-
     if (fullNameValidation() && emailValidation() && contactValidation() && passwordValidation() && confirmPasswordValidation()) {
         var empId = 'E19/1216';
+        document.getElementById("employeeRegistration").style.display = 'none';
+        document.getElementById("addVehicle").style.display = 'block';
         document.getElementById("employeeRegistration").innerHTML = "Congrats!! You are successfully registered. Your registration ID is" + " " + empId;
         document.getElementById("empId").value = empId;
     }
@@ -86,6 +96,8 @@ function submitData() {
 
 //Method to add vehicle of employee.
 function registerVehicle() {
+
+    if()
     document.getElementById("addVehicle").innerHTML = "Your Vehicle has been added!!"
 }
 
@@ -120,15 +132,12 @@ function getPassOption(value) {
 //Method to generate pass of vehicle. 
 function getPass() {
     if (passSelect == "daily") {
-        console.log("1");
         document.getElementById("tableForPass").innerHTML = "Your pass price is " + document.getElementById("dailyPrice").innerHTML;
     }
     else if (passSelect == "monthly") {
-        console.log("2");
         document.getElementById("tableForPass").innerHTML = "Your pass price is " + document.getElementById("monthlyPrice").innerHTML;
     }
     else if (passSelect == "yearly") {
-        console.log("3");
         document.getElementById("tableForPass").innerHTML = "Your pass price is " + document.getElementById("yearlyPrice").innerHTML;
     }
 }

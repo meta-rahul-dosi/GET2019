@@ -18,10 +18,10 @@
         Register form for employee.
     -->
     <div align="center" id="employeeRegistration">
-        <form action="" name="registrationForm" method="GET">
+        <form method="POST">
             <h2>Employee Registration</h2>
             Full name
-            <input type="text" name="name" id="name" onfocusout="fullNameValidation()" required>
+            <input type="text" name="name" id="name" onchange="fullNameValidation()" required>
             <br><br>
 
             Email
@@ -38,23 +38,24 @@
             <br><br>
 
             Confirm Password
-            <input type="password" id="confirmPassword" name="Confirm password" onchange="confirmPasswordValidation()"
+            <input type="password" id="confirmPassword" name="confirmPassword" onchange="confirmPasswordValidation()"
                 required>
             <br><br>
 
             Contact
-            <input type="text" id="contact" name="Contact Number" onchange="contactValidation()" required>
+            <input type="text" id="contact" name="contact" onchange="contactValidation()" required>
             <br><br>
 
-            <input type="submit" value="Register" onclick="submitData()">
+            <input type="button" value="Register" onclick="submitData()">
+            <input type="reset" value="Reset" />
         </form>
     </div>
 
     <!--
         Form to add vehicle of employee.
     -->
-    <div id="addVehicle" align="center">
-        <form action="" method="GET">
+    <div id="addVehicle" align="center" style="display : none">
+        <form method="GET">
             <h2>Add Vehicle</h2>
             Vehicle Name
             <input id="vehicleName" type="text" name="vehicleName" required>

@@ -4,10 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
 public class BSTDictionary {
 	static final String FILE_PATH = "C:\\eclipse-jee-luna-R-win32\\eclipse\\GET2019\\DSA\\Assignment-5\\dictionary\\test.json";
 	BSTNode root = null;
