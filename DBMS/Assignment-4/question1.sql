@@ -5,31 +5,45 @@ RETURNS INT DETERMINISTIC
 begin
 DECLARE count_of_orders INT;
 SELECT COUNT(order_id) INTO count_of_orders
-FROM bill
-WHERE EXTRACT( MONTH FROM ( bill.order_date ) ) = mon
-AND EXTRACT( YEAR FROM ( bill.order_date ) ) = yr;
+FROM orders o
+WHERE EXTRACT( MONTH FROM ( o.order_date ) ) = month
+AND EXTRACT( YEAR FROM ( o.order_date ) ) = year;
 RETURN count_of_orders;
 end
 
 //DELIMITER
 
-
+drop function find_no_of_orders;
 
 
 DELIMITER //
 
-CREATE FUNCTION maxOrderMonth(yr INT)
+CREATE FUNCTION maxOrderMonth(year INT)
 RETURNS INT DETERMINISTIC
 BEGIN
- DECLARE resulted_month INT;
- SELECT MAX( order_count ) INTO resulted_month 
- FROM(  SELECT COUNT( order_id ) AS Order_count 
-        FROM bill 
-        WHERE EXTRACT( YEAR FROM (bill.order_date ) ) = yr
-        GROUP BY EXTRACT( MONTH FROM (bill.order_date ) ) ) AS T;
- RETURN resulted_month;
+ DECLARE result_month INT;
+ SELECT MAX(orders_per_month) INTO result_month 
+ FROM(  SELECT COUNT( order_id ) AS orders_per_month 
+        FROM orders o 
+        WHERE EXTRACT( YEAR FROM (o.order_date ) ) = year
+        GROUP BY EXTRACT( MONTH FROM (o.order_date))) as t;
+RETURN result_month;
 END
 
-// DELIMITER 
+//DELIMITER 
 
-SELECT maxOrderMonth( 2019 );
+drop function maxOrderMonth;
+
+
+
+select max(orders_per_month)
+from (select count(order_id) as orders_per_month 
+from orders
+where EXTRACT( YEAR FROM (orders.order_date ) ) = 2019
+group by EXTRACT(MONTH from (orders.order_date))) as t;
+
+
+
+SELECT find_no_of_orders(9,2019);
+
+SELECT maxOrderMonth(2019);

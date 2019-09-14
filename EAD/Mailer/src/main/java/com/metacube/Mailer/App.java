@@ -1,6 +1,7 @@
 package com.metacube.Mailer;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -11,12 +12,14 @@ public class App {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new ClassPathXmlApplicationContext(
-				"com/metacube/Mailer/spring.xml");
+		ApplicationContext context = new AnnotationConfigApplicationContext(
+				Config.class);
 
-		MailSender mailSender = (MailSender) context.getBean("appController");
+		AppController appController = (AppController) context
+				.getBean("appController");
 
-		System.out.println(mailSender.writeContent());
-
+		// MailSender mailSender = (MailSender)context.getBean("appController");
+		System.out.println(appController.getMailSender().writeContent());
+		System.out.println("FINISH");
 	}
 }

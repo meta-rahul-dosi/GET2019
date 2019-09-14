@@ -2,12 +2,13 @@
 
 create view Store_View
 as
-select p.product_id, p.product_name, p.price, u.user_name, u.user_id, b.order_date, o.status
-from products as p inner join orders as o on p.product_id = o.product_id
+select distinct p.product_id, p.product_name, p.price, u.user_name, u.user_id, o.order_date, opm.status
+from products as p inner join ordes_products_mapping opm on p.product_id = opm.product_id
+inner join orders as o on o.order_id = opm.order_id
 inner join bill as b on o.order_id = b.order_id
-inner join users as u on u.user_id = o.user_id
-where datediff( now(), b.order_date) < 60
-order by b.order_date desc;
+inner join users as u on u.order_id = o.order_id
+where datediff( now(), o.order_date) < 60
+order by o.order_date desc;
 
 
 

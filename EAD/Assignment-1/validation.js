@@ -97,7 +97,7 @@ function submitData() {
 //Method to add vehicle of employee.
 function registerVehicle() {
 
-    if()
+    
     document.getElementById("addVehicle").innerHTML = "Your Vehicle has been added!!"
 }
 

@@ -8,21 +8,20 @@ modify price float not null;
 
 alter table users
 modify user_name varchar(100) not null,
-modify password varchar(100) not null,
-add check (gender in( 'male', 'female'));
+modify contact varchar(10) not null;
 
 -- applying constraint in category table
 
-alter table category
+alter table categories
 modify category_name varchar(100) not null;
 
 -- applying constraint in image table
 
 alter table images
-modify image_id varchar(100) not null;
+modify image_id int auto_increment;
 
 -- applying constraint in orders table
 
-alter table orders
+alter table ordes_products_mapping
 modify quantity int not null,
 add check (status in ( 'shipped', 'cancelled', 'returned' ));

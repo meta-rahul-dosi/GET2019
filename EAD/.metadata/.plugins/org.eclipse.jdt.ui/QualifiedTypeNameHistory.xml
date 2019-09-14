@@ -10,4 +10,11 @@
 <fullyQualifiedTypeName name="java.sql.ResultSetMetaData"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.core.io.Resource"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Configurable"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+<fullyQualifiedTypeName name="com.metacube.Mailer.MailSender"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
 </qualifiedTypeNameHistroy>

@@ -1,7 +1,7 @@
-select  p.product_id, p.product_name, c.category_name 
-from products as p inner join categories as c on p.product_id = c.product_id
-group by c.product_id
-having count(c.product_id) > 1;
+select  p.product_name 
+from products_categories_mapping pcm natural join products p
+group by pcm.product_id
+having count(pcm.product_id) > 1;
 
 
 
@@ -15,7 +15,7 @@ Union
 
 
 select c.category_name, count(c.category_id) as noOfProducts
-from categories as c
+from categories c natural join products_categories_mapping pcm
 group by c.category_name;
 
 
