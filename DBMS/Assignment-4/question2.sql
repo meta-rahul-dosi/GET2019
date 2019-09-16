@@ -3,15 +3,21 @@
 
 DELIMITER //
 
-CREATE PROCEDURE avg_sales(month int, year int)
-BEGIN
-SELECT o.product_id, COUNT(product_id), COUNT(o.price)
-FROM orders as o INNER JOIN bill as b ON orders.order_id = b.order_id
-WHERE (EXTRACT(MONTH FROM(b.order_date)) = month) AND (EXTRACT(YEAR FROM(b.order_date)) = year)
-GROUP BY o.product_id;
-END;
+create procedure avg_sales(month int, year int)
+begin
+select opm.product_id, count(opm.product_id), sum(p.price)
+from ordes_products_mapping opm natural join orders o inner join products p on p.product_id = opm.product_id 
+where EXTRACT(MONTH FROM(o.order_date)) = month AND EXTRACT(YEAR FROM (o.order_date)) = year
+group by opm.product_id;
+end;
 
 // DELIMITER
+
+
+call avg_sales(09, 2019);
+
+drop procedure avg_sales;
+
 
 
 
@@ -26,13 +32,17 @@ BEGIN
     ELSE
         SELECT start INTO startDate;
     END IF;
- SELECT p.product_id, p.product_name, o.order_id, o.status, b.order_date
- FROM orders as o INNER JOIN bill as b
- ON o.order_id = b.order_id
- INNER JOIN products as p ON p.product_id = o.product_id
- WHERE DATE(b.order_date) BETWEEN startDate AND finish;
+ SELECT o.order_id, opm.status, o.order_date
+ FROM orders as o inner join ordes_products_mapping as opm
+ ON o.order_id = opm.order_id
+ WHERE DATE(o.order_date) BETWEEN startDate AND finish;
 END;
 
 // DELIMITER 
 
-CALL orderDetails( '2019-08-01', '2019-08-14' );
+
+drop procedure orderDetails;
+
+CALL orderDetails( '2019-08-01', '2019-09-16' );
+
+

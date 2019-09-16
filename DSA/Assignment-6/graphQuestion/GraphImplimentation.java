@@ -56,7 +56,7 @@ public class GraphImplimentation implements IGraph
 	 *Method to add edges in undirected graph 
 	 * @param source
 	 * @param destination
-	 * @param weight weight of edge.
+	 * @param weight of edge.
 	 */
 	public void addEdge(int source, int destination,int weight) 
 	{

@@ -12,14 +12,13 @@ public class App {
 
 	public static void main(String[] args) {
 
-		ApplicationContext context = new AnnotationConfigApplicationContext(
-				Config.class);
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
 
-		AppController appController = (AppController) context
-				.getBean("appController");
+		AppController appController = (AppController) context.getBean("appController");
 
 		// MailSender mailSender = (MailSender)context.getBean("appController");
-		System.out.println(appController.getMailSender().writeContent());
+		
+		appController.getMailSender().sendMessage();
 		System.out.println("FINISH");
 	}
 }
