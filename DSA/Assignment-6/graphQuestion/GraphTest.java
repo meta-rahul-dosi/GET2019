@@ -13,13 +13,13 @@ import org.junit.Test;
 
 public class GraphTest {
 	
-	GraphImplimentation graphObj;
+	GraphImplementation graphObj;
 	List<Integer> listOfReachable;
 	List<Edge> list;
 
 	@Before
 	public void iniTialize() {
-		graphObj = new GraphImplimentation(4);
+		graphObj = new GraphImplementation(4);
 	}
 
 	int[] listToArrayForTest(List<Edge> list) {
@@ -80,7 +80,6 @@ public class GraphTest {
 		assertArrayEquals(new int[] { 1,2,3}, this.listToArrayForTest(list));
 	}
 
-	
 	@Test
 	public void shortestPathTest() {
 		graphObj.addEdge(0, 1, 4);
@@ -90,17 +89,5 @@ public class GraphTest {
 		graphObj.addEdge(2, 3, 4);
 		int shortestPathWeight = graphObj.shortestPath(0, 2);
 		assertEquals(5, shortestPathWeight);
-	}
-
-	@Test
-	public void shortestPathTest2() {
-
-		graphObj.addEdge(0, 1, 4);
-		graphObj.addEdge(0, 2, 3);
-		graphObj.addEdge(1, 2, 1);
-		graphObj.addEdge(1, 3, 2);
-		graphObj.addEdge(2, 3, 4);
-		int shortestPathWeight = graphObj.shortestPath(0, 2);
-		assertEquals(3, shortestPathWeight);
 	}
 }

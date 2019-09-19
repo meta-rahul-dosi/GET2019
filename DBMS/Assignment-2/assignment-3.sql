@@ -1,6 +1,7 @@
 select *
 from orders
-limit 50;
+order by order_date desc
+limit 2;
 
 
 
@@ -8,7 +9,7 @@ limit 50;
 select *
 from bill b natural join orders o
 order by amount desc
-limit 10;
+limit 2;
 
 
 
