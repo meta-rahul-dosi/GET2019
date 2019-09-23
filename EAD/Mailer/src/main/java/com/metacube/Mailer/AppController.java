@@ -18,12 +18,12 @@ public class AppController {
 		this.mailSender = mailSender;
 	}
 
-	 // setter injection
-	 @Autowired
-	 @Qualifier("smtpMailSender")
-	 public void setMailSender(MailSender mailSender) {
-	 this.mailSender = mailSender;
-	 }
+	// setter injection
+	@Autowired
+	@Qualifier("smtpMailSender")
+	public void setMailSender(MailSender mailSender) {
+		this.mailSender = mailSender;
+	}
 
 	// getter
 	public MailSender getMailSender() {

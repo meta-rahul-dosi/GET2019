@@ -83,6 +83,7 @@ function contactValidation() {
     return status;
 }
 
+
 //Method to submit register form of employee.
 function submitData() {
     if (fullNameValidation() && emailValidation() && contactValidation() && passwordValidation() && confirmPasswordValidation()) {

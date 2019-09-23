@@ -33,7 +33,7 @@
 
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link" href="#">Home</a>
+				<li class="nav-item active"><a class="nav-link" href="/SpringMVCStudentDetails/">Home</a>
 				</li>
 				<li class="nav-item"><a class="nav-link" href="showStudentForm">add
 						Student</a></li>
@@ -48,7 +48,7 @@
 		<form:form action="ProcessStudentForm" modelAttribute="student">
 			<div class="form-group">
 
-				<p>required fields are indicated by *</p>
+				<p>mandatory fields are indicated by *</p>
 
 				<div class="form-group">
 					<label for="firstName">First name*:</label>

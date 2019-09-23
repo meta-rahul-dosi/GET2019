@@ -1,76 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
-  
-  <servlet>
-  	<servlet-name>addToCart</servlet-name>
-  	<servlet-class>Controller.addToCart</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>addToCart</servlet-name>
-  	<url-pattern>/addToCart</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>deleteProduct</servlet-name>
-  	<servlet-class>Controller.deleteProduct</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>deleteProduct</servlet-name>
-  	<url-pattern>/deleteProduct</url-pattern>
-  </servlet-mapping>
-  
-   <servlet>
-  	<servlet-name>displayProduct</servlet-name>
-  	<servlet-class>Controller.displayProduct</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>displayProduct</servlet-name>
-  	<url-pattern>/displayProduct</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>getProductQuantityInCart</servlet-name>
-  	<servlet-class>Controller.getProductQuantityInCart</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>getProductQuantityInCart</servlet-name>
-  	<url-pattern>/getProductQuantityInCart</url-pattern>
-  </servlet-mapping>
-  
-   <servlet>
-  	<servlet-name>Login</servlet-name>
-  	<servlet-class>Controller.Login</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Login</servlet-name>
-  	<url-pattern>/Login</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>updateQuantity</servlet-name>
-  	<servlet-class>Controller.updateQuantity</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>updateQuantity</servlet-name>
-  	<url-pattern>/updateQuantity</url-pattern>
-  </servlet-mapping>
-  
-   <servlet>
-  	<servlet-name>viewCart</servlet-name>
-  	<servlet-class>Controller.viewCart</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>viewCart</servlet-name>
-  	<url-pattern>/viewCart</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-  	<servlet-name>Logout</servlet-name>
-  	<servlet-class>Controller.Logout</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>Logout</servlet-name>
-  	<url-pattern>/Logout</url-pattern>
-  </servlet-mapping>
-  
+  <display-name>Assignment-5</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>

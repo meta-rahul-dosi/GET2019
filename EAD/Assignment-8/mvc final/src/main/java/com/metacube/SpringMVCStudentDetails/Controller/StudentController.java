@@ -14,62 +14,58 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.metacube.SpringMVCStudentDetails.Model.Student;
 
-/** controller class to handle requrest to resolve the mapping
+/**
+ * controller class to handle requrest to resolve the mapping
+ * 
  * @author Rahul
  *
  */
 @Controller
 public class StudentController {
 
-	List<Student> listOfStudents =  new ArrayList<Student>();
-	
+	List<Student> listOfStudents = new ArrayList<Student>();
+
 	@Value("${welcome.message}")
 	String message;
-	
+
 	@RequestMapping("/")
-	public String home(Model model)
-	{
+	public String home(Model model) {
 		model.addAttribute("message", message);
 		return "home";
 	}
-	
+
 	@RequestMapping("/showStudentForm")
-	public String addStudent(Model model)
-	{
+	public String addStudent(Model model) {
 		model.addAttribute("student", new Student());
 		return "student-form";
 	}
-	
+
 	@RequestMapping("/ProcessStudentForm")
-	public String processStudentForm(@Valid @ModelAttribute("student")Student student, BindingResult bindingResult, Model model)
-	{
+	public String processStudentForm(@Valid @ModelAttribute("student") Student student, BindingResult bindingResult,
+			Model model) {
 		System.out.println("student information");
 		System.out.println();
 		System.out.println();
-		
+
 		System.out.println("first name: " + student.getFirstName());
-		
+
 		System.out.println("last name: " + student.getLastName());
-		
+
 		System.out.println("father's name: " + student.getFatherName());
-		
+
 		System.out.println("email: " + student.getEmail());
-		
-	
+
 		System.out.println("age: " + student.getAge());
-		
+
 		model.addAttribute("listOfStudents", listOfStudents);
-		
-		if(bindingResult.hasErrors())
-		{
+
+		if (bindingResult.hasErrors()) {
 			System.out.println("form has error:");
 			return "student-form";
-		}
-		else
-		{	
+		} else {
 			listOfStudents.add(student);
 			return "show-students";
 		}
 	}
-	
+
 }

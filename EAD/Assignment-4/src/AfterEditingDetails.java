@@ -86,7 +86,7 @@ public class AfterEditingDetails extends HttpServlet {
 			String columnName1 = rsmd.getColumnName(1);
 			String columnName2 = rsmd.getColumnName(2);
 
-			out.print("<html><h2><a href='#friend'>Friends</a></h2><html>");
+			out.print("<html><h2><a href='friend'>Friends</a></h2><html>");
 
 			// numberOfFriends
 			while (resultSet1.next()) {

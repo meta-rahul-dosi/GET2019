@@ -20,9 +20,9 @@
    <!-- 	 nav bar -->
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<ul class="navbar-nav">
-			<li class="nav-item "><a class="nav-link" href="http://www.google.com">Home</a>
+			<li class="nav-item "><a class="nav-link" href="/SpringMVCStudentDetails/">Home</a>
 			</li>
-			<li class="nav-item"><a class="nav-link" href="showStudentForm">add
+			<li class="nav-item"><a class="nav-link" href="showStudentForm">Add
 					Student</a></li>
 		</ul>
 	</nav>

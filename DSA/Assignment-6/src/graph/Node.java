@@ -1,0 +1,16 @@
+package graph;
+
+public class Node {
+
+	int data;
+
+	Node next = null;
+
+	public Node(int data) {
+		this.data = data;
+	}
+
+	public int getData() {
+		return this.data;
+	}
+}

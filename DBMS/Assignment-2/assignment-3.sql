@@ -21,6 +21,7 @@ and opm.status != 'shipped';
 
 
 
+
 select u.user_name, u.user_id
 from users u natural join orders o
 where datediff(current_timestamp(),o.order_date)>3;
@@ -28,10 +29,10 @@ where datediff(current_timestamp(),o.order_date)>3;
 
 
 
-
 select u.user_name, u.user_id
 from users u natural join orders o
 where datediff(current_timestamp(),o.order_date)<15;
+
 
 
 
@@ -45,3 +46,5 @@ where order_id=1001 AND status = 'shipped';
 select order_id, order_date
 from orders o natural join bill b
 where amount between 200 and 2000;
+
+

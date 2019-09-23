@@ -1,10 +1,9 @@
- server:
+server:
   port: 8080
- spring:
+spring:
   mvc:
-   view:
-    prefix: /WEB-INF/View/
-    suffix: .jsp
-   
- welcome:
-  message: Welcome to Student Registration Form !! 
+    view:
+      prefix: /WEB-INF/View/
+      suffix: .jsp
+welcome:
+  message: Welcome to Student Registration Form !!
