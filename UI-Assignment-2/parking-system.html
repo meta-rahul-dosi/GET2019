@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="parking-system.css">
+    <script type="text/javascript" src="parking-system.js"></script>
+</head>
+
+<body>
+    <header>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <div class="navBar">
+            <ul>
+                <li><a href="#employeeForm">Employee Form</a></li>
+                <li><a href="#vehicleForm">Vehicle Form</a></li>
+                <li><a href="#feedbackForm">Feedback Form</a></li>
+                <li><a href="#vehiclePlans">Plan Form</a></li>
+            </ul>
+        </div>
+        <div class="heading">
+            <h1>Metacube Parking Portal</h1>
+            <img src="parking.jpg" alt="parking image not available" />
+        </div>
+    </header><br><br>
+
+    <section class="employeeSection">
+        <button class="collapsible">Employee Registration Form</button>
+        <div class="allForm">
+            <form>
+
+                <input type="text" placeholder="First Name" id="FirstName" pattern="[a-zA-Z]+" required><br>
+
+                <input type="text" placeholder="Last Name" id="LastName" pattern="[a-zA-Z]+" required><br>
+
+                <input type="text" placeholder="Select Gender : " readonly>
+                <input type="radio" name="Gender" id="Male" value="Male"> Male
+                <input type="radio" name="Gender" id="Female" value="Female">Female
+                <br>
+
+                <input type="text" name="number" id="ContactNumber" placeholder="Contact Number" pattern="[0-9]+"
+                    minlength="8" maxlength="10" required><br>
+
+                <input type="email" name="email" id="EmailId" placeholder="Email Id" required><br>
+
+                <input type="password" name="password" id="Password" placeholder="Password" required><br>
+
+                <input type="password" name="password" id="ConfirmPassword" placeholder="Confirm Password" required><br>
+
+                <input type="submit" value="Submit Employee Details" /><br>
+            </form>
+        </div>
+    </section>
+
+    <!-- <section>
+        <button class="collapsible">Vehicle Form</button>
+        <div id="vehicleForm" class="formStyle" align="left">
+            <h2>Vehicle Details Form</h2>
+            <form>
+                <div class='form-row'>
+                    <label for="VehicleName">Vehicle Name : *</label><br>
+                    <input type="text" placeholder="Vehicle Name" id="VehicleName" required>
+                </div>
+                <div class='form-row'>
+                    <span id="radio">Vehicle Type * </span>
+                    <select id="VehicleType">
+                        <option value="Bicycle">Bicycle</option>
+                        <option value="Two Wheeler">Two Wheeler</option>
+                        <option value="Four Wheeler">Four Wheeler</option>
+                    </select>
+                </div>
+                <div class='form-row'>
+                    <label for="VehicleNumber">Vehicle Number : *</label><br>
+                    <input type="text" placeholder="Vehicle Number" id="VehicleNumber" required><br /><br />
+                </div>
+                <div class='form-row'>
+                    <label for="VehicleDetails">Vehicle Details : </label><br /><br />
+                    <textarea rows="10" cols="50" id="VehicleDetails" placeholder="Input Vehicle Details Here"
+                        required></textarea><br /><br />
+                </div>
+                <input type="submit" value="Submit Vehicle Details"></br></br></br></br>
+            </form>
+        </div>
+    </section> -->
+
+
+    <br><br><br>
+    <section class="feedbackForm">
+        <h2>FeedBack Form</h2><br>
+        <input type="text" name="fullName" placeholder="fullName" required><br><br>
+        <input type="text" name="email" placeholder="email" required><br><br>
+        <input type="text" name="subject" placeholder="subject" required><br><br>
+        <textarea placeholder="message"></textarea><br><br>
+    </section>
+
+    <br><br>
+</body>
+
+</html>
