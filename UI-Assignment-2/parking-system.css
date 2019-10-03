@@ -46,31 +46,18 @@ s .heading {
     height: 400px;
 }
 
-.collapsible
-{
-    background-color : pink;
-    color : white;
+.collapsible {
+    background-color: pink;
+    color: white;
 }
 
-.employeeSection {
+.formContainer {
     border-style: double;
     border-radius: 20px;
     width: 50%;
     margin-left: 20px;
     padding: 20px;
     background-color: MediumAquaMarine;
-}
-
-.allForm{
-    display : none;
-}
-
-.allForm input {
-    outline: none;
-    border-radius: 30px;
-    border-style: none;
-    padding: 10px;
-    margin: 10px;
 }
 
 .feedbackForm {
@@ -91,18 +78,57 @@ s .heading {
     color: white;
 }
 
-.feedbackForm input {
+.feedbackForm input, .formContainer input {
     outline: none;
     border-radius: 30px;
     border-style: none;
     padding: 10px;
 }
 
-.feedbackForm textarea {
+.feedbackForm textarea, .formContainer textarea {
+    resize: none;
     border-style: 1px ridge;
     outline: none;
     width: 80%;
     height: 100px;
     font-size: 20px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.feedbackForm input[type=submit] {
+    background-color: rgb(42, 163, 42);
+    color: purple;
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 100px;
+}
+
+.footer {
+    display: flex;
+    margin-left: 20px;
+}
+
+.footer>div {
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.pricingSection {
+    width: 20%;
+    text-align: center;
+}
+
+#vehicleType {
+    font-weight: 600;
+}
+
+#priceButton {
+    border-radius: 500px;
+    padding: 20px;
+    border: 1px solid blue;
+}
+
+#purchaseNow{
+    color:blue
 }

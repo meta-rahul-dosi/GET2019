@@ -4,6 +4,9 @@
 <head>
     <link rel="stylesheet" type="text/css" href="parking-system.css">
     <script type="text/javascript" src="parking-system.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -11,88 +14,102 @@
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         <div class="navBar">
             <ul>
-                <li><a href="#employeeForm">Employee Form</a></li>
-                <li><a href="#vehicleForm">Vehicle Form</a></li>
-                <li><a href="#feedbackForm">Feedback Form</a></li>
-                <li><a href="#vehiclePlans">Plan Form</a></li>
+                <li><a href="#empFormId">Employee Form</a></li>
+                <li><a href="#vehicleFormId">Vehicle Form</a></li>
+                <li><a href="#feedbackFormId">Feedback Form</a></li>
+                <li><a href="#vehiclePlansId">Plan Form</a></li>
             </ul>
         </div>
-        <div class="heading">
+        <div class="heading" id="empFormId">
             <h1>Metacube Parking Portal</h1>
             <img src="parking.jpg" alt="parking image not available" />
         </div>
     </header><br><br>
 
-    <section class="employeeSection">
-        <button class="collapsible">Employee Registration Form</button>
-        <div class="allForm">
+    <section class="formContainer">
+        <button class="btn btn-success" data-toggle="collapse" data-target="#toEmpForm">Employee Registration
+            Form</button><br><br>
+        <div id="toEmpForm" class="collapse">
             <form>
-
-                <input type="text" placeholder="First Name" id="FirstName" pattern="[a-zA-Z]+" required><br>
-
-                <input type="text" placeholder="Last Name" id="LastName" pattern="[a-zA-Z]+" required><br>
-
+                <input type="text" placeholder="First Name" id="FirstName" pattern="[a-zA-Z]+" required><br><br>
+                <input type="text" placeholder="Last Name" id="LastName" pattern="[a-zA-Z]+" required><br><br>
                 <input type="text" placeholder="Select Gender : " readonly>
                 <input type="radio" name="Gender" id="Male" value="Male"> Male
                 <input type="radio" name="Gender" id="Female" value="Female">Female
-                <br>
-
+                <br><br>
                 <input type="text" name="number" id="ContactNumber" placeholder="Contact Number" pattern="[0-9]+"
-                    minlength="8" maxlength="10" required><br>
-
-                <input type="email" name="email" id="EmailId" placeholder="Email Id" required><br>
-
-                <input type="password" name="password" id="Password" placeholder="Password" required><br>
-
-                <input type="password" name="password" id="ConfirmPassword" placeholder="Confirm Password" required><br>
-
-                <input type="submit" value="Submit Employee Details" /><br>
+                    minlength="8" maxlength="10" required><br><br>
+                <input type="email" name="email" id="EmailId" placeholder="Email Id" required><br><br>
+                <input type="password" name="password" id="Password" placeholder="Password" required><br><br>
+                <input type="password" name="password" id="ConfirmPassword" placeholder="Confirm Password"
+                    required><br><br>
+                <input type="submit" value="Submit Employee Details" /><br><br>
             </form>
         </div>
     </section>
+    <br>
 
-    <!-- <section>
-        <button class="collapsible">Vehicle Form</button>
-        <div id="vehicleForm" class="formStyle" align="left">
-            <h2>Vehicle Details Form</h2>
-            <form>
-                <div class='form-row'>
-                    <label for="VehicleName">Vehicle Name : *</label><br>
-                    <input type="text" placeholder="Vehicle Name" id="VehicleName" required>
-                </div>
-                <div class='form-row'>
-                    <span id="radio">Vehicle Type * </span>
-                    <select id="VehicleType">
-                        <option value="Bicycle">Bicycle</option>
-                        <option value="Two Wheeler">Two Wheeler</option>
-                        <option value="Four Wheeler">Four Wheeler</option>
-                    </select>
-                </div>
-                <div class='form-row'>
-                    <label for="VehicleNumber">Vehicle Number : *</label><br>
-                    <input type="text" placeholder="Vehicle Number" id="VehicleNumber" required><br /><br />
-                </div>
-                <div class='form-row'>
-                    <label for="VehicleDetails">Vehicle Details : </label><br /><br />
-                    <textarea rows="10" cols="50" id="VehicleDetails" placeholder="Input Vehicle Details Here"
-                        required></textarea><br /><br />
-                </div>
-                <input type="submit" value="Submit Vehicle Details"></br></br></br></br>
+    <section class="formContainer" id="vehicleFormId">
+        <button class="btn btn-success" data-toggle="collapse" data-target="#toVehicleForm">Vehicle Registration
+            Form</button><br><bR>
+        <div id="toVehicleForm" class="collapse">
+            <input type="text" placeholder="Vehicle Name" id="VehicleName" required><br><bR>
+            <input type="text" placeholder="vehicle type is " readonly>
+            <select id="VehicleType">
+                <option value="Bicycle">Bicycle</option>
+                <option value="Two Wheeler">Two Wheeler</option>
+                <option value="Four Wheeler">Four Wheeler</option>
+            </select>
+            <br><br>
+            <input type="text" placeholder="Vehicle Number" id="VehicleNumber" required><br>
+            <br><br>
+            <textarea rows="10" cols="50" id="VehicleDetails" placeholder="Input Vehicle Description Here"
+                required></textarea><br><br>
+            <input type="submit" value="Submit Vehicle Details"><br><br>
             </form>
         </div>
-    </section> -->
+    </section>
+    <br><br>
 
-
-    <br><br><br>
-    <section class="feedbackForm">
+    <section class="feedbackForm" id="feedbackFormId">
         <h2>FeedBack Form</h2><br>
         <input type="text" name="fullName" placeholder="fullName" required><br><br>
         <input type="text" name="email" placeholder="email" required><br><br>
         <input type="text" name="subject" placeholder="subject" required><br><br>
         <textarea placeholder="message"></textarea><br><br>
+        <input type="submit" value="send mail"><br><br>
     </section>
-
     <br><br>
+
+    <div class="footer" id="vehiclePlansId">
+        <div class="pricingSection">
+            <p id="vehicleType">cycle</p>
+            <button id="priceButton">$100</button>
+            <p>$10 daily</p>
+            <p>$100 monthly</p>
+            <p>$700 yearly</p>
+            <button id="purchaseNow">PURCHASE NOW</button> <br><br>
+        </div>
+        <div class="pricingSection">
+            <p id="vehicleType">two wheeler</p>
+            <button id="priceButton">$200</button>
+            <p>$20 daily</p>
+            <p>$200 monthly</p>
+            <p>$1000 yearly</p>
+            <button id="purchaseNow">PURCHASE NOW</button> <br><br>
+        </div>
+        <div class="pricingSection">
+            <p id="vehicleType">four wheeler</p>
+            <button id="priceButton">$500</button>
+            <p>$40 daily</p>
+            <p>$500 monthly</p>
+            <p>$1200 yearly</p>
+            <button id="purchaseNow">PURCHASE NOW</button>
+            <br><br>
+        </div>
+    </div>
+    <br>
+    <br>
 </body>
 
 </html>
