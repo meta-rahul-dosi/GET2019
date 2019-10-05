@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="parking.css">
+    <script src="parking.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- employee details -->
+    <div id="empName">
+        <label>Enter your full name</label>
+        <input type="text" id="fullName" name="fullName">
+        <button class="btn btn-default" onclick="genderSection()">Enter</button>
+    </div>
+
+    <div id="empGender">
+        <h2 id="fullNameInGender">Hi!</h2>
+        <label>Can we have your gender ?</label>
+        <input type="radio" name="gender" value="male" checked>Male
+        <input type="radio" name="gender" value="female">Female
+        <button class="btn btn-default" onclick="emailSection()">Enter</button>
+    </div>
+
+    <div id="empEmail">
+        <label>Can we have your email ?</label>
+        <input type="email" id="email" name="fullName" value="">
+        <button class="btn btn-default" onclick="passwordSection()">Enter</button>
+    </div>
+
+    <div id="empPassword">
+        <label>Can we have the password ?</label>
+        <input type="password" id="password" name="password" value="" placeholder="enter your password">
+        <input type="password" id="confirmPassword" name="confirmPassword" value="" placeholder="confirm  the password">
+        <button class="btn btn-default" onclick="contactSection()">Enter</button>
+    </div>
+
+    <div id="empContact">
+        <label>Can we have your contact ?</label>
+        <input type="text" id="contact" name="contact" value="">
+        <button class="btn btn-default" onclick="vehicleNameSection()">Submit</button>
+    </div>
+    <!-- employee details -->
+
+    <!-- vehicle details -->
+    <div id="empVehicleName">
+        <label>Can we have your vehicle name ?</label>
+        <input type="text" id="vehicleName" name="vehcileName" value="">
+        <button class="btn btn-default" onclick="vehicleTypeSection()">Enter</button>
+    </div>
+
+    <div id="empVehicleType">
+        <label>Which vehicle do you have ?</label>
+        <select id="vehicleType" name="vehicleType">
+            <option name="cycle" id="cycle">cycle</option>
+            <option name="twoWheeler" id="twoWheeler">two wheeler</option>
+            <option name="fourWheeler" id="fourWheeler">four wheeler</option>
+        </select>
+        <button class="btn btn-default" onclick="vehicleNumberSection()">Enter</button>
+    </div>
+
+    <div id="empVehicleNumber">
+        <label>Can we have your vehicle number ?</label>
+        <input type="text" id="vehicleNumber" name="vehcileNumber" value="">
+        <button class="btn btn-default" onclick="empIdSection()">Enter</button>
+    </div>
+
+    <div id="empId">
+        <label>Your employee ID is</label>
+        <input type="text" id="employeeId" name="employeeId">
+        <button class="btn btn-default" onclick="vehicleIdentificationSection()">Proceed</button>
+    </div>
+
+    <div id="empVehicleIdentification">
+        <label>Can we have your vehicle identification ?</label>
+        <textarea type="text" id="vehicleIdentification" name="vehicleIdentification" value=""></textarea>
+        <button class="btn btn-default" onclick="showPassPrice()">Show Pass Prices</button>
+    </div>
+
+    <!-- vehicle details -->
+
+    <!-- pass prices -->
+    <div id="tableForPass" style="display:none" align="center">
+        <h2>Select your plan</h2>
+        <table border="5px">
+            <tr>
+                <th>Plan</th>
+                <th>Price in INR</th>
+            </tr>
+            <tr>
+                <td>Daily</td>
+                <td id="dailyPrice"> </td>
+            </tr>
+            <tr>
+                <td>Montly</td>
+                <td id="monthlyPrice"></td>
+            </tr>
+            <tr>
+                <td>Yearly</td>
+                <td id="yearlyPrice"></td>
+            </tr>
+        </table>
+        </br>
+
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="daily"
+                onchange="getPassOption(this.value)">Daily</label>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="monthly"
+                onchange="getPassOption(this.value)">Monthly</label>
+        <label><input type="radio" id="pricePlan" name="pricePlan" value="yearly"
+                onchange="getPassOption(this.value)">Yearly</label>
+        <br> <br>
+
+        <input type="submit" value="get Pass" onclick="getPass()">
+    </div>
+    <!-- pass prices -->
+</body>
+
+</html>
