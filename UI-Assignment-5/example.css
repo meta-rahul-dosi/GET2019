@@ -1,0 +1,29 @@
+.parent {
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-style: solid;
+}
+
+header {
+    display: flex;
+}
+
+#olderButton {
+    border-radius: 50px;
+}
+
+#newerButton {
+    border-radius: 50px;
+    opacity: 0.8;
+}
+
+footer {
+    background-color: #f9f9f9;
+    opacity: 0.4;
+    display: flex;
+}
+
+footer>div{
+    
+}
