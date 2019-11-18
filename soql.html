@@ -1,0 +1,27 @@
+SELECT FirstName__c, sex__c, DOB__c FROM Student__c WHERE LastName__c LIKE '%S'
+
+SELECT Name, Sex__c, DOB__c FROM Student__c where Class__r.Name like 'X%'
+
+SELECT Class__r.Name, Name, Sex__c, DOB__c FROM Student__c
+
+SELECT Name, (SELECT Name from students__r) FROM Class__c
+
+SELECT name , class__r.classteacher__r.name,class__r.name from student__c where class__r.classteacher__r.name like 'V%
+
+SELECT Name, DOB__c FROM Student__c where CALENDAR_YEAR(DOB__c) > 1990
+
+SELECT Title, LastModifiedDate FROM Lead where LastModifiedDate = THIS_MONTH
+
+SELECT Name, (SELECT Name from students__r where name like 's%') FROM Class__c
+
+SELECT Name FROM Teach__c WHERE Subject__c = 'Hindi;English'
+
+SELECT FirstName__c FROM Students WHERE Subject__c = 'Hindi;Maths'
+
+SELECT MyCount__c FROM Class__c
+
+SELECT calendar_month(DOB__C), count(Name) FROM Student__c group by calendar_month(DOB__C)
+
+FIND {Joe} IN NAME FIELDS RETURNING Contact(name),Student__c(lastname__c)
+
+FIND {Vrinda} IN NAME FIELDS RETURNING student__c(name where sex__c = 'female'),contact(name)
