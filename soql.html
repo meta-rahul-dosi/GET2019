@@ -6,7 +6,7 @@ SELECT Class__r.Name, Name, Sex__c, DOB__c FROM Student__c
 
 SELECT Name, (SELECT Name from students__r) FROM Class__c
 
-SELECT name , class__r.classteacher__r.name,class__r.name from student__c where class__r.classteacher__r.name like 'V%
+SELECT name , class__r.classteacher__r.name,class__r.name from student__c where class__r.classteacher__r.name like 'V%'
 
 SELECT Name, DOB__c FROM Student__c where CALENDAR_YEAR(DOB__c) > 1990
 
@@ -24,4 +24,4 @@ SELECT calendar_month(DOB__C), count(Name) FROM Student__c group by calendar_mon
 
 FIND {Joe} IN NAME FIELDS RETURNING Contact(name),Student__c(lastname__c)
 
-FIND {Vrinda} IN NAME FIELDS RETURNING student__c(name where sex__c = 'female'),contact(name)
+FIND {Rahul} IN NAME FIELDS RETURNING student__c(name where sex__c = 'male'),contact(name)
