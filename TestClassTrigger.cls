@@ -22,4 +22,12 @@ private class TestClassTrigger {
         Database.DeleteResult result =Database.delete(cls);
         System.assert(result.isSuccess());
     }
+    
+    @isTest static void TestClassDeletionWithMultipleFemalesStudent(){
+        Class__c cls = new Class__c(Name='Class With Multiple Girl');
+        Student__c stdnt = new Student__c(Sex__c='female', class__c = cls.id);
+        Student__c stdnt1 = new Student__c(Sex__c='female', class__c = cls.id);
+        Database.DeleteResult result =Database.delete(cls);
+        System.assert(!result.isSuccess());
+    }
 }
