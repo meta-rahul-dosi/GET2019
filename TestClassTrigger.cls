@@ -1,7 +1,7 @@
 @isTest
 private class TestClassTrigger {
     
-    @isTest static void TestClassDeletionWithOneFemaleStudent(){
+    @isTest static void TestDeleteAllRelatedStudentsToAClass(){
         Class__c cls = new Class__c(Name='Test Class', Custom_Status__c='New');
         cls.MaxSize__c = 100;
         insert cls;
@@ -16,6 +16,10 @@ private class TestClassTrigger {
                             'Students were not deleted from the class when its Custom_Status Field is modified to Reset');        
     }
     
-    @isTest static void TestDeleteAllRelatedStudentsToAClass(){
+    @isTest static void TestClassDeletionWithOneFemaleStudent(){
+        Class__c cls = new Class__c(Name='Class With One Girl');
+        Student__c stdnt = new Student__c(Sex__c='female', class__c = cls.id); 
+        Database.DeleteResult result =Database.delete(cls);
+        System.assert(result.isSuccess());
     }
 }
