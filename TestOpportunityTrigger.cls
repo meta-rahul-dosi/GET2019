@@ -6,11 +6,7 @@ private class TestOpportunityTrigger {
         opp.StageName = 'CLOSED WON';
         update opp;
         Date checkCloseDate = opp.CloseDate;
-        
-        Test.startTest();
-        
-        Test.stopTest();
-		        System.assertEquals(checkCloseDate,System.today());
-
+		System.assertEquals(checkCloseDate,System.today());
     }
+    
 }
