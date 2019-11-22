@@ -1,0 +1,14 @@
+@isTest
+private class TestStudentTrigger {
+
+    @isTest static void TestStudentInsertionWithNoAvailability(){
+        Class__c cls = new Class__c(MaxSize__c=1);
+        insert cls;
+        Student__c firstStudent = new Student__c(Name='hayagriva', class__c=cls.id);
+        insert firstStudent;
+        Student__c secondStudent = new Student__c(Name='keshav', class__c=cls.id);
+        insert secondStudent;
+        Database.insertResults result = Database.insert(secondStudent);
+        System.assert(!result.isSuccess());
+    }
+}
