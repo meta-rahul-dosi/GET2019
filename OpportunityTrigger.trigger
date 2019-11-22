@@ -1,4 +1,4 @@
-trigger OpportunityTrigger on Opportunity (before update) {
+trigger OpportunityTrigger on Opportunity (before update){
 
     // trigger code to update closed date field if stage field is modified
 	List<Opportunity> oppList = new List<Opportunity>();
