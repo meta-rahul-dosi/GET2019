@@ -1,12 +1,12 @@
-trigger OpportunityTrigger on Opportunity (before update){
+trigger OpportunityTrigger on Opportunity (after update){
 
     // trigger code to update closed date field if stage field is modified
-	List<Opportunity> oppList = new List<Opportunity>();
-    for(Opportunity opp : trigger.new){
-        if(opp.stageName == 'CLOSED WON' || opp.stageName == 'CLOSED LOST'){
-            opp.closeDate = System.today();
-            oppList.add(opp);
+    List<Opportunity> modifiedOpps = new List<Opportunity>();
+    for(opportunity op : [SELECT Id , stageName , CloseDate FROM Opportunity WHERE Id IN :Trigger.New AND (StageName = 'Closed Won' OR StageName = 'Closed Lost')]){
+        if(Trigger.oldMap.get(op.Id).StageName != op.StageName){
+            opp.CloseDate = System.today();
+            modifiedOpps.add(opp);
         }        
     }
-    update oppList;
+    update modifiedOpps;
 }
